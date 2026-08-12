@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "驾驭AI（创造应用篇）",
   lesson: "09",
   title: "多Agent协作实战-打造自动助手",

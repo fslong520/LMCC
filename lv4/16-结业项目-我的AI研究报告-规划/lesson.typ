@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "思辨AI（素养未来篇）",
   lesson: "16",
   title: "结业项目-我的AI研究报告-规划",

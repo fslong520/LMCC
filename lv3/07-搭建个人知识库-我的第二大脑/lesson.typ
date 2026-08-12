@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "驾驭AI（创造应用篇）",
   lesson: "07",
   title: "搭建个人知识库-我的第二大脑",

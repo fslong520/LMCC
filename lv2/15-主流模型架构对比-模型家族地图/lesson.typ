@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "懂AI（原理认知篇）",
   lesson: "15",
   title: "主流模型架构对比-模型家族地图",

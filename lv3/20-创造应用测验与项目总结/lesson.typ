@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "驾驭AI（创造应用篇）",
   lesson: "20",
   title: "创造应用测验与项目总结",

@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "懂AI（原理认知篇）",
   lesson: "08",
   title: "Transformer结构与预训练-超级猜词机",

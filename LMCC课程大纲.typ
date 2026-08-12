@@ -1,9 +1,9 @@
 // ============================================================
-// 智国学堂AI通识课程大纲
+// CCF大模型能力认证（LMCC）课程大纲
 // 智国学堂 TeachZero · 出品
 // 核心理念：先用后懂——先从"用AI"开始，再进化到"AI背后的知识"
 // ============================================================
-#import "ai-theme.typ": *
+#import "lmcc-theme.typ": *
 
 // ========== 封面 ==========
 #set page(
@@ -69,7 +69,7 @@
       columns: (1fr, 1fr, 1fr),
       align(left, text(size: 8pt, fill: rgb("#bbb"))[智国学堂 TeachZero]),
       align(center, text(size: 9pt, fill: rgb("#999"))[#counter(page).display("1")]),
-      align(right, text(size: 8pt, fill: rgb("#bbb"))[AI通识课程大纲]),
+      align(right, text(size: 8pt, fill: rgb("#bbb"))[LMCC课程大纲]),
     )
   },
   numbering: none,

@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "驾驭AI（创造应用篇）",
   lesson: "05",
   title: "扣子智能体与自动化-替我跑腿",

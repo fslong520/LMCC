@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "懂AI（原理认知篇）",
   lesson: "09",
   title: "自注意力机制-如何找重点",

@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "思辨AI（素养未来篇）",
   lesson: "12",
   title: "AGI之问-强人工智能是科幻吗",

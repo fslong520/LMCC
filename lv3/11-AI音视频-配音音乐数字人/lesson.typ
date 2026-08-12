@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "驾驭AI（创造应用篇）",
   lesson: "11",
   title: "AI音视频-配音音乐数字人",

@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "懂AI（原理认知篇）",
   lesson: "11",
   title: "大模型简史-从统计到ChatGPT",

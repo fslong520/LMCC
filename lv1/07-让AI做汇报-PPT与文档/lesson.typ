@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "会用AI（应用体验篇）",
   lesson: "07",
   title: "让AI做汇报-PPT与文档",

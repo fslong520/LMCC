@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "思辨AI（素养未来篇）",
   lesson: "11",
   title: "看不见的成本-能源与环境",

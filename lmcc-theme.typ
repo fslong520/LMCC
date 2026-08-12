@@ -1,7 +1,7 @@
 // ============================================================
-// 智国学堂AI通识课程主题 — 智国学堂 TeachZero
-// 用法： #import "../../ai-theme.typ": *
-//        #show: ai-theme.with(
+// CCF大模型能力认证（LMCC）课程主题 — 智国学堂 TeachZero
+// 用法： #import "../../lmcc-theme.typ": *
+//        #show: lmcc-theme.with(
 //          level: "LV1", lesson: "01",
 //          title: "认识人工智能", date: "2026-09"
 //        )
@@ -27,7 +27,7 @@
     []
   },
   footer: context {
-    align(right, text(size: 8pt, fill: rgb("#aaa"), "智国学堂 TeachZero · AI通识"))
+    align(right, text(size: 8pt, fill: rgb("#aaa"), "智国学堂 TeachZero · LMCC"))
   },
   numbering: "1",
   number-align: center,
@@ -226,14 +226,14 @@
   v(2em)
   align(center, text(size: 11pt, fill: rgb("#888"), date))
   v(1em)
-  align(center, text(size: 10pt, fill: rgb("#aaa"), "智国学堂AI通识课程体系"))
+  align(center, text(size: 10pt, fill: rgb("#aaa"), "CCF大模型能力认证（LMCC）课程体系"))
   v(8em)
 }
 
 // ============================================================
 // 整体模板（show 规则）
 // ============================================================
-#let ai-theme(
+#let lmcc-theme(
   level: "LV1",
   lesson: "01",
   title: "课程标题",

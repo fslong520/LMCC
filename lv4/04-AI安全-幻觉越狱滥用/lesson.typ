@@ -1,6 +1,6 @@
-#import "../../ai-theme.typ": *
+#import "../../lmcc-theme.typ": *
 
-#show: ai-theme.with(
+#show: lmcc-theme.with(
   level: "思辨AI（素养未来篇）",
   lesson: "04",
   title: "AI安全-幻觉越狱滥用",
