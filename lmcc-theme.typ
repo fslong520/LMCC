@@ -185,7 +185,7 @@
     fill: bg-light,
     inset: 10pt,
     radius: 4pt,
-    stroke: left + 3pt + success-color,
+    stroke: (left: 3pt + success-color),
     above: 0.5em,
     below: 0.5em,
     [
@@ -198,7 +198,7 @@
 #let definition(body) = {
   block(
     inset: (left: 1em, top: 0.3em, bottom: 0.3em),
-    stroke: left + 3pt + primary-color,
+    stroke: (left: 3pt + primary-color),
     above: 0.5em,
     below: 0.5em,
     _ => body
