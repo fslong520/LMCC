@@ -201,7 +201,7 @@
     stroke: (left: 3pt + primary-color),
     above: 0.5em,
     below: 0.5em,
-    _ => body
+    [ #body ]
   )
 }
 
