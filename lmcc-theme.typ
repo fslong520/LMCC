@@ -6,6 +6,10 @@
 //          title: "认识人工智能", date: "2026-09"
 //        )
 // ============================================================
+//
+// 注意：Typst 中 import 仅导入命名项，模块顶层 set/show 规则
+// 不传播到导入方。故页面/文本/标题/代码等所有样式规则一律
+// 置于 lmcc-theme 函数体内，随函数调用一并生效。
 
 // ========== 色彩定义 ==========
 #let primary-color  = rgb("#1a5fb4")   // 深蓝（CCF品牌色）
@@ -19,91 +23,7 @@
 #let heading-color  = rgb("#1a5fb4")  // 标题色
 #let brand-color    = rgb("#5797c3")  // 智国学堂品牌色
 
-// ========== 页面设置 ==========
-#set page(
-  paper: "a4",
-  margin: (top: 2.5cm, bottom: 2cm, left: 2.5cm, right: 2.5cm),
-  header: context {
-    []
-  },
-  footer: context {
-    align(right, text(size: 8pt, fill: rgb("#aaa"), "智国学堂 TeachZero · LMCC"))
-  },
-  numbering: "1",
-  number-align: center,
-)
-
-#set text(
-  font: ("LXGW WenKai Mono GB", "STSong", "Noto Serif CJK SC"),
-  size: 11pt,
-  fill: text-color,
-  lang: "zh",
-)
-
-// ========== 标题层级 ==========
-// Typst 0.13 移除了 set heading 的 fill/align 参数，
-// 颜色和对齐由下方 show heading 规则单独控制
-#set heading(
-  numbering: "1.1",
-)
-
-#show heading.where(level: 1): it => {
-  v(1em)
-  block(
-    inset: (bottom: 0.3em),
-    stroke: (bottom: 2pt + primary-color),
-    fill: none,
-    text(size: 20pt, weight: "bold", fill: heading-color, it.body)
-  )
-  v(0.5em)
-}
-
-#show heading.where(level: 2): it => {
-  v(0.6em)
-  text(size: 15pt, weight: "bold", fill: primary-color, it.body)
-  v(0.3em)
-}
-
-#show heading.where(level: 3): it => {
-  text(size: 12pt, weight: "bold", fill: primary-color, it.body)
-}
-
-// ========== 段落 ==========
-// Typst 0.13 移除了 set paragraph，参数迁移如下
-#set par(leading: 0.65em, first-line-indent: 2em)
-
-// ========== 代码块 ==========
-#show raw: it => {
-  if it.block {
-    block(
-      fill: bg-light,
-      inset: 12pt,
-      radius: 4pt,
-      stroke: 0.5pt + border-color,
-      above: 0.6em,
-      below: 0.6em,
-      it.body.text(
-        size: 9.5pt,
-        family: "JuliaMono, 'JetBrains Mono', 'Fira Code', 'Courier New'",
-      )
-    )
-  } else {
-    text(size: 9.5pt, fill: rgb("#c01c28"), it.body)
-  }
-}
-
-// ========== 列表 ==========
-#set list(
-  body-indent: 1.5em,
-  spacing: 0.3em,
-)
-
-// ========== 链接 ==========
-#show link: it => text(fill: primary-color, deco: underline, it.body)
-
-// ============================================================
-// 工具函数
-// ============================================================
+// ========== 工具函数 ==========
 
 /// 学习目标框
 #let objective(body) = {
@@ -241,11 +161,92 @@
   subtitle: none,
   body,
 ) = {
+  // ===== 页面设置 =====
+  set page(
+    paper: "a4",
+    margin: (top: 2.5cm, bottom: 2cm, left: 2.5cm, right: 2.5cm),
+    header: context {
+      []
+    },
+    footer: context {
+      align(right, text(size: 8pt, fill: rgb("#aaa"), "智国学堂 TeachZero · LMCC"))
+    },
+    numbering: "1",
+    number-align: center,
+  )
+
+  // ===== 文本设置 =====
+  set text(
+    font: ("LXGW WenKai Mono GB", "STSong", "Noto Serif CJK SC"),
+    size: 11pt,
+    fill: text-color,
+    lang: "zh",
+  )
+
+  // ===== 标题层级 =====
+  // Typst 0.13 移除了 set heading 的 fill/align 参数，
+  // 颜色和对齐由下方 show heading 规则单独控制
+  set heading(
+    numbering: "1.1",
+  )
+
+  show heading.where(level: 1): it => {
+    v(1em)
+    block(
+      inset: (bottom: 0.3em),
+      stroke: (bottom: 2pt + primary-color),
+      fill: none,
+      text(size: 20pt, weight: "bold", fill: heading-color, it.body)
+    )
+    v(0.5em)
+  }
+
+  show heading.where(level: 2): it => {
+    v(0.6em)
+    text(size: 15pt, weight: "bold", fill: primary-color, it.body)
+    v(0.3em)
+  }
+
+  show heading.where(level: 3): it => {
+    text(size: 12pt, weight: "bold", fill: primary-color, it.body)
+  }
+
+  // ===== 段落 =====
+  set par(leading: 0.65em, first-line-indent: 2em)
+
+  // ===== 代码块 =====
+  show raw: it => {
+    if it.block {
+      block(
+        fill: bg-light,
+        inset: 12pt,
+        radius: 4pt,
+        stroke: 0.5pt + border-color,
+        above: 0.6em,
+        below: 0.6em,
+        it.body.text(
+          size: 9.5pt,
+          family: "JuliaMono, 'JetBrains Mono', 'Fira Code', 'Courier New'",
+        )
+      )
+    } else {
+      text(size: 9.5pt, fill: rgb("#c01c28"), it.body)
+    }
+  }
+
+  // ===== 列表 =====
+  set list(
+    body-indent: 1.5em,
+    spacing: 0.3em,
+  )
+
+  // ===== 链接 =====
+  show link: it => text(fill: primary-color, deco: underline, it.body)
+
   // 封面
   cover(level, lesson, title, date, subtitle: subtitle)
   pagebreak()
-  
+
   // 正文
-  set page(numbering: "1")
   body
 }
