@@ -34,7 +34,7 @@
 )
 
 #set text(
-  font: ("GB_KT_GB18030", "国标楷体", "Noto Serif CJK SC", "Noto Sans CJK SC"),
+  font: ("Noto Serif CJK SC", "Noto Sans CJK SC"),
   size: 11pt,
   fill: text-color,
   lang: "zh",
