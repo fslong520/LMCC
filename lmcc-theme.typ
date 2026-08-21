@@ -125,29 +125,76 @@
   )
 }
 
+/// 科技论文三线表（booktabs 风格）
+/// 用法：#three-line-table(caption, (col1, col2, ...), (header1, header2, ...), ((r1c1, r1c2), (r2c1, r2c2)))
+/// 顶线、表头下线、底线三线；无竖线，无其他横线。
+#let three-line-table(
+  caption-text,
+  columns: (auto,),
+  align: (left,),
+  header: (),
+  rows: (),
+) = {
+  figure(
+    table(
+      columns: columns,
+      align: align,
+      inset: (x: 8pt, y: 4pt),
+      stroke: (
+        top: 1.2pt + text-color,
+        bottom: 1.2pt + text-color,
+        x: none,
+        y: none,
+      ),
+      table.header(
+        ..header.map(c => table.cell(
+          stroke: (bottom: 0.6pt + text-color),
+          c,
+        )),
+      ),
+      ..rows.flatten(),
+    ),
+    placement: top,
+    caption: [*#caption-text*],
+  )
+}
+
 // ============================================================
 // 封面模板
 // ============================================================
 #let cover(level, lesson, title, date, subtitle: none) = {
-  v(2em)
-  // 智国学堂品牌标识
-  v(0.3em)
+  // 顶部色条
+  block(
+    width: 100%,
+    height: 6pt,
+    fill: primary-color,
+  )
+  v(3em)
   align(center, text(size: 13pt, weight: "bold", fill: brand-color, "智国学堂 TeachZero"))
-  v(1.5em)
-  align(center, text(size: 12pt, fill: primary-color, weight: "bold", level))
-  v(0.5em)
-  align(center, text(size: 28pt, weight: "bold", fill: heading-color, title))
-  v(0.5em)
-  if subtitle != none {
-    align(center, text(size: 14pt, fill: rgb("#777"), subtitle))
-    v(0.5em)
-  }
-  align(center, text(size: 11pt, fill: rgb("#999"), "第 " + lesson + " 课"))
   v(2em)
+  align(center, text(size: 12pt, fill: primary-color, weight: "bold", level))
+  v(0.8em)
+  align(center, text(size: 30pt, weight: "bold", fill: heading-color, title))
+  if subtitle != none {
+    v(0.4em)
+    align(center, text(size: 14pt, fill: rgb("#777"), subtitle))
+  }
+  v(0.8em)
+  // 装饰线
+  align(center, line(length: 40%, stroke: 0.8pt + primary-color))
+  v(0.8em)
+  align(center, text(size: 11pt, fill: rgb("#999"), "第 " + lesson + " 课"))
+  v(0.3em)
   align(center, text(size: 11pt, fill: rgb("#888"), date))
-  v(1em)
+  v(3em)
   align(center, text(size: 10pt, fill: rgb("#aaa"), "CCF大模型能力认证（LMCC）课程体系"))
-  v(8em)
+  v(6em)
+  // 底部色条
+  block(
+    width: 100%,
+    height: 3pt,
+    fill: brand-color,
+  )
 }
 
 // ============================================================
