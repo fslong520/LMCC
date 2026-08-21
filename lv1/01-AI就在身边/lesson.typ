@@ -5,6 +5,7 @@
   lesson: "01",
   title: "AI就在身边",
   date: "2026年",
+  cover-image: "imgs/lmcc-card.png",
 )
 
 = AI就在身边

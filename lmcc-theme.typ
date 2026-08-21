@@ -162,16 +162,20 @@
 // ============================================================
 // 封面模板
 // ============================================================
-#let cover(level, lesson, title, date, subtitle: none) = {
+#let cover(level, lesson, title, date, subtitle: none, cover-image: none) = {
   // 顶部色条
   block(
     width: 100%,
     height: 6pt,
     fill: primary-color,
   )
-  v(3em)
+  v(2.5em)
   align(center, text(size: 13pt, weight: "bold", fill: brand-color, "智国学堂 TeachZero"))
-  v(2em)
+  v(1.2em)
+  if cover-image != none {
+    align(center, image(cover-image, width: 55%))
+    v(1.5em)
+  }
   align(center, text(size: 12pt, fill: primary-color, weight: "bold", level))
   v(0.8em)
   align(center, text(size: 30pt, weight: "bold", fill: heading-color, title))
@@ -186,9 +190,9 @@
   align(center, text(size: 11pt, fill: rgb("#999"), "第 " + lesson + " 课"))
   v(0.3em)
   align(center, text(size: 11pt, fill: rgb("#888"), date))
-  v(3em)
+  v(2.5em)
   align(center, text(size: 10pt, fill: rgb("#aaa"), "CCF大模型能力认证（LMCC）课程体系"))
-  v(6em)
+  v(5em)
   // 底部色条
   block(
     width: 100%,
@@ -206,6 +210,7 @@
   title: "课程标题",
   date: "2026年9月",
   subtitle: none,
+  cover-image: none,
   body,
 ) = {
   // ===== 页面设置 =====
@@ -291,7 +296,7 @@
   show link: it => text(fill: primary-color, deco: underline, it.body)
 
   // 封面
-  cover(level, lesson, title, date, subtitle: subtitle)
+  cover(level, lesson, title, date, subtitle: subtitle, cover-image: cover-image)
   pagebreak()
 
   // 正文
