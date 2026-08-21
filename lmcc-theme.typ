@@ -150,6 +150,7 @@
     ),
     table.header(
       ..header.map(c => table.cell(
+        align: center,
         stroke: (bottom: 0.6pt + text-color),
         text(size: 12pt, font: "Noto Sans CJK SC", weight: "black", c),
       )),
