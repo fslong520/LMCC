@@ -128,14 +128,15 @@
 /// 科技论文三线表（booktabs 风格）
 /// 用法：#three-line-table(caption-text, columns: ..., align: ..., header: ..., rows: ...)
 /// 顶线、表头下线、底线三线；无竖线，无其他横线。完全嵌入文本流，不浮动。
-/// 表格居中；表头加粗加大；题注位于表下方中央，斜体小一号。
+/// 表格居中；表头加粗加大；题注位于表下方中央，斜体小一号，自动编号"表 N"。
 #let three-line-table(
   caption-text,
   columns: (auto,),
   column-align: (left,),
   header: (),
   rows: (),
-) = {
+) = context {
+  counter("table").step()
   v(0.5em)
   align(center, table(
     columns: columns,
@@ -156,7 +157,7 @@
     ..rows.flatten(),
   ))
   v(0.4em)
-  align(center, text(size: 9.5pt, style: "italic", fill: rgb("#444"), caption-text))
+  align(center, skew(ax: 14deg, text(size: 9.5pt, style: "italic", fill: rgb("#444"), [表 #counter("table").display() #caption-text])))
   v(0.5em)
 }
 
@@ -299,6 +300,9 @@
   // 封面
   cover(level, lesson, title, date, subtitle: subtitle, cover-image: cover-image)
   pagebreak()
+
+  // 表格计数器从1起
+  context { counter("table").update(1) }
 
   // 正文
   body
