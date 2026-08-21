@@ -128,34 +128,37 @@
 /// 科技论文三线表（booktabs 风格）
 /// 用法：#three-line-table(caption-text, columns: ..., align: ..., header: ..., rows: ...)
 /// 顶线、表头下线、底线三线；无竖线，无其他横线。完全嵌入文本流，不浮动。
+/// 表格居中；表头加粗加大；题注位于表下方中央，斜体小一号。
 #let three-line-table(
   caption-text,
   columns: (auto,),
-  align: (left,),
+  column-align: (left,),
   header: (),
   rows: (),
 ) = {
   v(0.5em)
-  text(size: 10pt, weight: "bold", fill: text-color, caption-text)
-  v(0.2em)
-  table(
-    columns: columns,
-    align: align,
-    inset: (x: 8pt, y: 4pt),
-    stroke: (
-      top: 1.2pt + text-color,
-      bottom: 1.2pt + text-color,
-      x: none,
-      y: none,
-    ),
-    table.header(
-      ..header.map(c => table.cell(
-        stroke: (bottom: 0.6pt + text-color),
-        c,
-      )),
-    ),
-    ..rows.flatten(),
+  block(
+    align(center, table(
+      columns: columns,
+      align: column-align,
+      inset: (x: 10pt, y: 5pt),
+      stroke: (
+        top: 1.2pt + text-color,
+        bottom: 1.2pt + text-color,
+        x: none,
+        y: none,
+      ),
+      table.header(
+        ..header.map(c => table.cell(
+          stroke: (bottom: 0.6pt + text-color),
+          text(size: 11.5pt, weight: "bold", c),
+        )),
+      ),
+      ..rows.flatten(),
+    ))
   )
+  v(0.4em)
+  align(center, text(size: 9.5pt, style: "italic", fill: rgb("#444"), caption-text))
   v(0.5em)
 }
 
