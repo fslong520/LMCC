@@ -137,26 +137,24 @@
   rows: (),
 ) = {
   v(0.5em)
-  block(
-    align(center, table(
-      columns: columns,
-      align: column-align,
-      inset: (x: 10pt, y: 5pt),
-      stroke: (
-        top: 1.2pt + text-color,
-        bottom: 1.2pt + text-color,
-        x: none,
-        y: none,
-      ),
-      table.header(
-        ..header.map(c => table.cell(
-          stroke: (bottom: 0.6pt + text-color),
-          text(size: 11.5pt, weight: "bold", c),
-        )),
-      ),
-      ..rows.flatten(),
-    ))
-  )
+  align(center, table(
+    columns: columns,
+    align: column-align,
+    inset: (x: 10pt, y: 5pt),
+    stroke: (
+      top: 1.2pt + text-color,
+      bottom: 1.2pt + text-color,
+      x: none,
+      y: none,
+    ),
+    table.header(
+      ..header.map(c => table.cell(
+        stroke: (bottom: 0.6pt + text-color),
+        text(size: 12pt, font: "Noto Sans CJK SC", weight: "black", c),
+      )),
+    ),
+    ..rows.flatten(),
+  ))
   v(0.4em)
   align(center, text(size: 9.5pt, style: "italic", fill: rgb("#444"), caption-text))
   v(0.5em)

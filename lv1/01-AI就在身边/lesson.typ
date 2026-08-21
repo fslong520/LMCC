@@ -27,7 +27,7 @@
 
 #three-line-table(
   "一位教师一年里用AI完成的工作",
-  columns: (auto, auto, auto),
+  columns: (auto, auto, 1fr),
   column-align: (left, left, left),
   header: ([*工作*], [*过去（人工）*], [*现在（借助AI）*]),
   rows: (
@@ -73,7 +73,7 @@ AI的能力可归纳为六类：写作、绘画、编程、推理、翻译、读
 
 #three-line-table(
   "AI的能力分类与示例",
-  columns: (auto, auto, auto),
+  columns: (auto, auto, 1fr),
   column-align: (left, left, left),
   header: ([*能力*], [*用途*], [*示例*]),
   rows: (
@@ -101,7 +101,7 @@ AI的能力可归纳为六类：写作、绘画、编程、推理、翻译、读
 
 #three-line-table(
   "AI进化75年",
-  columns: (auto, auto, auto, auto),
+  columns: (auto, 1fr, auto, auto),
   column-align: (center, left, left, left),
   header: ([*年代*], [*里程碑*], [*一句话*], [*今天的你*]),
   rows: (
