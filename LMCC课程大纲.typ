@@ -1,7 +1,8 @@
 // ============================================================
-// CCF大模型能力认证（LMCC）课程大纲
-// 智国学堂 TeachZero · 出品
-// 核心理念：先用后懂——先从"用AI"开始，再进化到"AI背后的知识"
+// 智国学堂 · 双体系 AI 课程大纲
+// 覆盖：CCF大模型能力认证（LMCC）+ 人工智能奥林匹克（NOAI）
+// 核心理念：先用后懂——先从"用AI"开始，再进化到"AI背后的知识"，继而亲手"做出自己的AI"
+// 环境：openKylin（开放麒麟，原生 / WSL 双形态）
 // ============================================================
 #import "lmcc-theme.typ": *
 
@@ -79,13 +80,29 @@
 #set text(font: ("LXGW WenKai Mono GB", "Noto Sans CJK SC"), size: 11pt, fill: black)
 #set par(first-line-indent: 0em)
 
-#content-header("1", "会用AI（应用体验篇）")
+#content-header("1", "会用AI·应用体验篇（双主线）")
 #v(0.3em)
-#text(size: 10pt, fill: rgb("#888"))[LV1 · 先玩起来 · 20课时]
+#text(size: 10pt, fill: rgb("#888"))[LV1 · 先震撼，再学会驾驭 + 亲手搓出AI Agent · 30课时]
+#v(0.4em)
+
+#text(size: 10pt, fill: rgb("#555"))[两大核心目标：
+① **驾驭AI**——学完能熟练驾驭市面上各种 AI 帮你干活；
+② **搓Agent**——能用 Python 在 openKylin 里亲手搓出一个自己的 AI Agent（部署百度文心 ERNIE-4.5-0.3B 端侧模型）。]
+#v(0.4em)
+
+#block(
+  width: 100%, inset: (x: 0.8em, y: 0.5em),
+  fill: rgb("#fff8e1"), stroke: (left: 3pt + accent-color),
+  [
+    #text(size: 10.5pt, weight: "bold", fill: accent-color)["🎯 贯穿项目：我的 AI Agent"]
+    #v(0.2em)
+    #text(size: 10pt, fill: rgb("#555"))[双主线贯穿 30 课：A线·驭AI（用别人的AI干活）+ B线·搓Agent（学Linux/Python，一步步把AI能力搬进自己的程序）。每课都是"用AI干个活 → 学段代码 → 往自己的Agent加一块"。]
+  ]
+)
 #v(0.8em)
 
 #let lv1-courses = (
-  ("01", "AI就在身边"),
+  ("01", "AI就在身边——被AI震撼"),
   ("02", "第一次与AI对话-把话说清楚"),
   ("03", "提示词三要素-角色任务要求"),
   ("04", "让AI帮我写作文"),
@@ -102,9 +119,19 @@
   ("15", "AI的局限-幻觉与偏见初探"),
   ("16", "用AI学AI-我的私人老师"),
   ("17", "综合实战-用AI完成一个任务"),
-  ("18", "作品展示与互评"),
-  ("19", "复盘-我的AI工具清单"),
-  ("20", "单元闯关测验"),
+  ("18", "我的AI Agent-认识Linux与第一个命令"),
+  ("19", "Python起步-让程序开口说话"),
+  ("20", "变量·类型·运算符-让AI学会「存东西」"),
+  ("21", "分支与循环-让AI会「做决定」"),
+  ("22", "列表与字典-让AI会「查资料」"),
+  ("23", "函数与模块-把能力「装盒子」"),
+  ("24", "文件读写与异常-让AI会「记东西」"),
+  ("25", "命令行与pip-管理你的AI"),
+  ("26", "部署百度ERNIE-4.5-0.3B-给AI装上「大脑」"),
+  ("27", "组装我的AI Agent-能对话"),
+  ("28", "AI Agent进阶-加查资料与答题"),
+  ("29", "作品展示-我的AI Agent首秀"),
+  ("30", "复盘与闯关-驾驭AI+搓Agent双考核"),
 )
 
 #for (i, (num, name)) in lv1-courses.enumerate() {
@@ -114,32 +141,34 @@
 // ========== LV2 ==========
 #pagebreak()
 
-#content-header("2", "懂AI（原理认知篇）")
+#content-header("2", "懂AI·原理认知篇")
 #v(0.3em)
-#text(size: 10pt, fill: rgb("#888"))[LV2 · 背后的知识 · 20课时]
+#text(size: 10pt, fill: rgb("#888"))[LV2 · 背后的知识 · 22课时（增补ML/DL考点，兼顾LMCC与NOAI）]
 #v(0.8em)
 
 #let lv2-courses = (
   ("01", "从用到懂-AI是怎么学会的"),
   ("02", "数据是AI的粮食"),
   ("03", "机器学习流程与模型-三范式与经典模型"),
-  ("04", "让机器认出猫-图像识别的秘密"),
-  ("05", "神经网络的直觉"),
-  ("06", "文字怎么变成数字"),
-  ("07", "Token之谜-AI眼中的文字"),
-  ("08", "Transformer结构与预训练-超级猜词机"),
-  ("09", "自注意力机制-如何找重点"),
-  ("10", "预训练微调与对齐-训练三部曲"),
-  ("11", "大模型简史-从统计到ChatGPT"),
-  ("12", "幻觉的根源-AI为什么会胡说"),
-  ("13", "大模型的超能力-越大越聪明"),
-  ("14", "解码部署与评测-模型的生命周期"),
-  ("15", "主流模型架构对比-模型家族地图"),
-  ("16", "AI编程初探-机器怎么学会写代码"),
-  ("17", "高效微调-训练我的专属模型"),
-  ("18", "动手实验-看见模型的注意力"),
-  ("19", "复盘-画出你心中的AI原理图"),
-  ("20", "原理认知测验"),
+  ("04", "机器学习经典模型-线性回归与逻辑回归"),
+  ("05", "模型评估-混淆矩阵·精确率·召回率·F1"),
+  ("06", "过拟合·正则化·交叉验证"),
+  ("07", "集成学习-随机森林思想"),
+  ("08", "让机器认出猫-图像识别的秘密"),
+  ("09", "神经网络的直觉"),
+  ("10", "感知机与反向传播"),
+  ("11", "梯度下降与优化器"),
+  ("12", "CNN结构与特征图计算"),
+  ("13", "文字怎么变成数字"),
+  ("14", "Token之谜-AI眼中的文字"),
+  ("15", "Transformer结构与预训练-超级猜词机"),
+  ("16", "自注意力机制-如何找重点"),
+  ("17", "预训练微调与对齐-训练三部曲"),
+  ("18", "大模型简史-从统计到ChatGPT"),
+  ("19", "大模型的超能力-越大越聪明"),
+  ("20", "解码部署与评测-模型的生命周期"),
+  ("21", "主流模型架构对比-模型家族地图"),
+  ("22", "复盘-画出你心中的AI原理图"),
 )
 
 #for (i, (num, name)) in lv2-courses.enumerate() {
@@ -184,9 +213,9 @@
 // ========== LV4 ==========
 #pagebreak()
 
-#content-header("4", "思辨AI（素养未来篇）")
+#content-header("4", "思辨AI·素养未来篇")
 #v(0.3em)
-#text(size: 10pt, fill: rgb("#888"))[LV4 · 与AI共处 · 20课时]
+#text(size: 10pt, fill: rgb("#888"))[LV4 · 与AI共处 · 20课时（覆盖LMCC伦理安全 + NOAI F区）]
 #v(0.8em)
 
 #let lv4-courses = (
@@ -216,6 +245,39 @@
   course-row(num, name, calc.rem(i, 2) == 0)
 }
 
+// ========== LV5 ==========
+#pagebreak()
+
+#content-header("5", "冲NOAI·算法冲刺篇（选学）")
+#v(0.3em)
+#text(size: 10pt, fill: rgb("#888"))[LV5 · 面向NOAI竞赛 · 18课时（ML/DL建模 + 真题）]
+#v(0.8em)
+
+#let lv5-courses = (
+  ("01", "NOAI全景-赛制/题型/真题巡礼"),
+  ("02", "机器学习建模实战-分类/回归"),
+  ("03", "深度学习建模-PyTorch入门"),
+  ("04", "CNN图像分类实战"),
+  ("05", "数据清洗与探索实战"),
+  ("06", "模型调优-GridSearchCV/超参"),
+  ("07", "大模型应用（RAG）冲刺"),
+  ("08", "数学强化-概率统计重难点"),
+  ("09", "数学强化-线代/微积分重难点"),
+  ("10", "初赛真题模拟（纸笔）"),
+  ("11", "复赛真题模拟（上机建模）"),
+  ("12", "综合项目-端到端AI建模"),
+  ("13", "NOAI备赛-时间管理与策略"),
+  ("14", "真题复盘-初赛考点精讲"),
+  ("15", "真题复盘-复赛建模精讲"),
+  ("16", "冲刺模拟（一）-水平测试"),
+  ("17", "冲刺模拟（二）-上机实战"),
+  ("18", "赛前总动员-心态与技巧"),
+)
+
+#for (i, (num, name)) in lv5-courses.enumerate() {
+  course-row(num, name, calc.rem(i, 2) == 0)
+}
+
 // ========== 课程特色 ==========
 #pagebreak()
 
@@ -242,9 +304,11 @@
   v(0.6em)
 }
 
-#feature("🎯", "先用后懂", "先从\"用AI\"开始，在真实场景中建立信心与兴趣，再深入\"AI背后的知识\"，由表及里。")
-#feature("🧰", "场景驱动", "写作、绘画、办公、学习、创作……每课一个真实场景，学完就能用。")
-#feature("🛠", "动手贯穿", "从提示词到API到Agent，每级都有实操项目，边做边学，做中学。")
+#feature("🎯", "先用后懂", "先从\"用AI\"开始，在真实场景中建立信心与兴趣，再深入\"AI背后的知识\"，继而亲手\"做出自己的AI\"，由表及里。")
+#feature("🔗", "双体系兼顾", "一条路径覆盖LMCC考纲12模块 + NOAI六大考区——学完既能考级，也能冲奖。")
+#feature("🌀", "双主线贯穿", "LV1以\"驭AI(应用)\"与\"搓Agent(动手)\"双主线贯穿30课：用别人AI干活 + 亲手写出自己的AI。")
+#feature("🛠", "动手造AI", "LV1结课，孩子在自己的openKylin上部署百度文心ERNIE-4.5-0.3B，做成能对话/查资料/答题的\"自己的AI Agent\"。")
+#feature("🖥", "国产环境", "以openKylin（开放麒麟）为学习环境——原生桌面 或 WSL 双形态，与考场Linux一致，契合国产/政企生态。")
 #feature("🌏", "通识素养", "伦理、安全、隐私、未来——培养AI时代独立思考的公民素养。")
 
 // ========== 学习路径 ==========
@@ -260,19 +324,19 @@
   stroke: 1.5pt + primary-color,
   [
     #grid(
-      columns: (1fr, auto, 1fr, auto, 1fr, auto, 1fr),
+      columns: (1fr, auto, 1fr, auto, 1fr, auto, 1fr, auto, 1fr),
       column-gutter: 0.5em,
       align(center + horizon, [
         #block(width: 100%, inset: 0.6em, radius: 0pt, fill: primary-color, align(center, [
-          #text(size: 16pt, weight: "bold", fill: white)[LV1]
+          #text(size: 15pt, weight: "bold", fill: white)[LV1]
           #v(0.1em)
-          #text(size: 9pt, fill: rgb("#bbdefb"))[用AI]
+          #text(size: 9pt, fill: rgb("#bbdefb"))[用AI·搓Agent]
         ]))
       ]),
       align(center + horizon, text(size: 20pt, fill: black)[→]),
       align(center + horizon, [
         #block(width: 100%, inset: 0.6em, radius: 0pt, fill: success-color, align(center, [
-          #text(size: 16pt, weight: "bold", fill: white)[LV2]
+          #text(size: 15pt, weight: "bold", fill: white)[LV2]
           #v(0.1em)
           #text(size: 9pt, fill: rgb("#c8e6c9"))[懂AI]
         ]))
@@ -280,17 +344,25 @@
       align(center + horizon, text(size: 20pt, fill: black)[→]),
       align(center + horizon, [
         #block(width: 100%, inset: 0.6em, radius: 0pt, fill: accent-color, align(center, [
-          #text(size: 16pt, weight: "bold", fill: white)[LV3]
+          #text(size: 15pt, weight: "bold", fill: white)[LV3]
           #v(0.1em)
-          #text(size: 9pt, fill: rgb("#ffe0b2"))[创造]
+          #text(size: 9pt, fill: rgb("#ffe0b2"))[驾驭AI]
         ]))
       ]),
       align(center + horizon, text(size: 20pt, fill: black)[→]),
       align(center + horizon, [
         #block(width: 100%, inset: 0.6em, radius: 0pt, fill: error-color, align(center, [
-          #text(size: 16pt, weight: "bold", fill: white)[LV4]
+          #text(size: 15pt, weight: "bold", fill: white)[LV4]
           #v(0.1em)
           #text(size: 9pt, fill: rgb("#ffcdd2"))[思辨]
+        ]))
+      ]),
+      align(center + horizon, text(size: 20pt, fill: black)[→]),
+      align(center + horizon, [
+        #block(width: 100%, inset: 0.6em, radius: 0pt, fill: rgb("#5e35b1"), align(center, [
+          #text(size: 15pt, weight: "bold", fill: white)[LV5]
+          #v(0.1em)
+          #text(size: 9pt, fill: rgb("#d1c4e9"))[冲NOAI]
         ]))
       ]),
     )
