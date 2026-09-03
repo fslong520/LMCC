@@ -86,8 +86,8 @@
 #v(0.4em)
 
 #text(size: 10pt, fill: rgb("#555"))[两大核心目标：
-① **驾驭AI**——学完能熟练驾驭市面上各种 AI 帮你干活；
-② **搓Agent**——能用 Python 在 openKylin 里亲手搓出一个自己的 AI Agent（部署百度文心 ERNIE-4.5-0.3B 端侧模型）。]
+① *驾驭AI*——学完能熟练驾驭市面上各种 AI 帮你干活；
+② *搓Agent*——能用 Python 在 openKylin 里亲手搓出一个自己的 AI Agent（部署百度文心 ERNIE-4.5-0.3B 端侧模型）。]
 #v(0.4em)
 
 #block(
