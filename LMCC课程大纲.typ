@@ -19,40 +19,45 @@
 #align(center + horizon, image("封面.png", height: 100%))
 
 // ---- 封面文字层（叠在纯背景图上，按图留白定位） ----
-// 右上角主办方
-#place(top + right, dx: 10mm, dy: 9mm, text(size: 8pt, fill: rgb("#6f7f96"))[CCF · 中国计算机学会])
+// 右上角主办方（深色、下移避开点阵区）
+#place(top + right, dx: 9mm, dy: 13mm, text(size: 9pt, weight: "bold", fill: rgb("#22304a"))[CCF · 中国计算机学会])
 
 // 中部大标题 + 副标题（落在左侧留白区）
-#place(left, dx: 26mm, dy: 0mm, [
-  #block(width: 100%, align(left, [
-    #text(size: 60pt, weight: "bold", fill: rgb("#1a5fb4"))[LMCC]
-    #v(7mm)
-    #text(size: 22pt, weight: "bold", fill: rgb("#1c2430"))[大模型能力认证 · 课程大纲]
-    #v(3mm)
-    #text(size: 11.5pt, fill: rgb("#7c8795"))[Large Model Competence Certification · Syllabus]
-  ]))
-])
+#place(center + horizon, dx: -52mm, dy: -30mm, align(left, [
+  #text(size: 54pt, weight: "bold", fill: rgb("#1a5fb4"))[LMCC]
+  #v(6mm)
+  #text(size: 21pt, weight: "bold", fill: rgb("#1c2430"))[大模型能力认证 · 课程大纲]
+  #v(3mm)
+  #text(size: 11pt, fill: rgb("#7c8795"))[Large Model Competence Certification · Syllabus]
+]))
 
 // 底部信息栏（三格，落在已预留的白色横带内）
-#place(bottom + horizon, dx: 2mm, dy: -14mm, [
+#place(bottom + center, dx: 0mm, dy: -6mm, block(width: 86%, [
   #grid(
-    columns: (1fr, 1fr, 1fr),
-    column-gutter: 6mm,
-    align(left,
-      [ #v(0mm) #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[5级] \
-        #v(1mm) #text(size: 8pt, fill: rgb("#7c8795"))[认证等级] ],
-      [ #v(0mm) #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[110课时] \
-        #v(1mm) #text(size: 8pt, fill: rgb("#7c8795"))[课程时长] ],
-      [ #v(0mm) #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[2026年] \
-        #v(1mm) #text(size: 8pt, fill: rgb("#7c8795"))[发布时间] ],
-    )
+    columns: (auto, auto, auto),
+    column-gutter: 14mm,
+    [
+      #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[5级]
+      #v(1mm)
+      #text(size: 8pt, fill: rgb("#7c8795"))[认证等级]
+    ],
+    [
+      #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[110课时]
+      #v(1mm)
+      #text(size: 8pt, fill: rgb("#7c8795"))[课程时长]
+    ],
+    [
+      #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[2026年]
+      #v(1mm)
+      #text(size: 8pt, fill: rgb("#7c8795"))[发布时间]
+    ],
   )
   #v(2mm)
   #grid(columns: (1fr, 1fr),
     [ #text(size: 8pt, fill: rgb("#7c8795"))[出品：智国学堂 DIMIT+] ],
     align(right, [#text(size: 8pt, fill: rgb("#7c8795"))[适用组别：LMCC-T / LMCC-A]]),
   )
-])
+]))
 
 
 // ========== 内容页通用设置 ==========
