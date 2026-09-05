@@ -35,7 +35,7 @@
 #place(bottom + center, dx: 0mm, dy: -6mm, block(width: 86%, [
   #grid(
     columns: (auto, auto, auto),
-    column-gutter: 14mm,
+    column-gutter: 44mm,
     [
       #text(size: 17pt, weight: "bold", fill: rgb("#1a5fb4"))[5级]
       #v(1mm)
@@ -86,16 +86,19 @@
   )
 }
 
-#let course-row(num, name, is-even) = {
-  let bg = if is-even { rgb("#f8f9fa") } else { white }
+#let course-row(num, name, accent) = {
   block(
     width: 100%,
-    inset: (x: 0.8em, y: 0.45em),
-    fill: bg,
+    inset: (x: 0.9em, y: 0.5em),
+    radius: 3pt,
+    fill: rgb("#f6f9fd"),
+    stroke: (left: 3pt + accent),
+    above: 0.3em,
+    below: 0.3em,
     [
-      #text(size: 10pt, weight: "bold", fill: primary-color)[#num]
-      #h(0.6em)
-      #text(size: 11pt, fill: black)[#name]
+      #text(size: 10pt, weight: "bold", fill: accent)[#num]
+      #h(0.7em)
+      #text(size: 11pt, fill: rgb("#2b2b2b"))[#name]
     ]
   )
 }
@@ -129,7 +132,7 @@
 
 #text(size: 10pt, fill: rgb("#555"))[两大核心目标：
 ① *驾驭AI*——学完能熟练驾驭市面上各种 AI 帮你干活；
-② *搓Agent*——能用 Python 在 openKylin 里亲手搓出一个自己的 AI Agent（部署百度文心 ERNIE-4.5-0.3B 端侧模型）。]
+② *搓Agent*——能用 Python 手搓出一个自己的 AI Agent（部署百度文心 ERNIE-4.5-0.3B 端侧模型）。]
 #v(0.4em)
 
 #block(
@@ -176,8 +179,8 @@
   ("30", "复盘与闯关-驾驭AI+搓Agent双考核"),
 )
 
-#for (i, (num, name)) in lv1-courses.enumerate() {
-  course-row(num, name, calc.rem(i, 2) == 0)
+#for ((num, name)) in lv1-courses {
+  course-row(num, name, primary-color)
 }
 
 // ========== LV2 ==========
@@ -213,8 +216,8 @@
   ("22", "复盘-画出你心中的AI原理图"),
 )
 
-#for (i, (num, name)) in lv2-courses.enumerate() {
-  course-row(num, name, calc.rem(i, 2) == 0)
+#for ((num, name)) in lv2-courses {
+  course-row(num, name, success-color)
 }
 
 // ========== LV3 ==========
@@ -248,8 +251,8 @@
   ("20", "创造应用测验与项目总结"),
 )
 
-#for (i, (num, name)) in lv3-courses.enumerate() {
-  course-row(num, name, calc.rem(i, 2) == 0)
+#for ((num, name)) in lv3-courses {
+  course-row(num, name, accent-color)
 }
 
 // ========== LV4 ==========
@@ -283,8 +286,8 @@
   ("20", "结业典礼与寄语"),
 )
 
-#for (i, (num, name)) in lv4-courses.enumerate() {
-  course-row(num, name, calc.rem(i, 2) == 0)
+#for ((num, name)) in lv4-courses {
+  course-row(num, name, error-color)
 }
 
 // ========== LV5 ==========
@@ -316,8 +319,8 @@
   ("18", "赛前总动员-心态与技巧"),
 )
 
-#for (i, (num, name)) in lv5-courses.enumerate() {
-  course-row(num, name, calc.rem(i, 2) == 0)
+#for ((num, name)) in lv5-courses {
+  course-row(num, name, rgb("#5e35b1"))
 }
 
 // ========== 课程特色 ==========
@@ -349,12 +352,12 @@
 #feature("🎯", "先用后懂", "先从「用AI」开始，在真实场景中建立信心与兴趣，再深入「AI背后的知识」，继而亲手「做出自己的AI」，由表及里。")
 #feature("🔗", "双体系兼顾", "一条路径覆盖LMCC考纲12模块 + NOAI六大考区——学完既能考级，也能冲奖。")
 #feature("🌀", "双主线贯穿", "LV1以「驭AI(应用)」与「搓Agent(动手)」双主线贯穿30课：用别人AI干活 + 亲手写出自己的AI。")
-#feature("🛠", "动手造AI", "LV1结课，孩子在自己的openKylin上部署百度文心ERNIE-4.5-0.3B，做成能对话/查资料/答题的「自己的AI Agent」。")
-#feature("🖥", "国产环境", "以openKylin（开放麒麟）为学习环境——原生桌面 或 WSL 双形态，与考场Linux一致，契合国产/政企生态。")
+#feature("🛠", "动手造AI", "LV1结课，孩子在自己的电脑上部署百度文心ERNIE-4.5-0.3B，做成能对话/查资料/答题的「自己的AI Agent」。")
 #feature("🌏", "通识素养", "伦理、安全、隐私、未来——培养AI时代独立思考的公民素养。")
 
 // ========== 学习路径 ==========
-#v(2em)
+#pagebreak()
+#v(0.5em)
 
 #text(size: 18pt, weight: "bold", fill: black)[学习路径]
 #v(0.5em)
