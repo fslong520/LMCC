@@ -279,13 +279,10 @@
         stroke: 0.5pt + border-color,
         above: 0.6em,
         below: 0.6em,
-        it.body.text(
-          size: 9.5pt,
-          family: "JuliaMono, 'JetBrains Mono', 'Fira Code', 'Courier New'",
-        )
+        it
       )
     } else {
-      text(size: 9.5pt, fill: rgb("#c01c28"), it.body)
+      it
     }
   }
 
