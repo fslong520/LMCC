@@ -1,4 +1,4 @@
-#import "../../../lmcc-theme.typ": *
+#import "../../../../lmcc-theme.typ": *
 
 #show: lmcc-theme.with(
   level: "赛项2·识物工坊 Python备赛",

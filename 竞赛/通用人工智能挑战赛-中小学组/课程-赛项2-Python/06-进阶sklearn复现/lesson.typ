@@ -1,4 +1,4 @@
-#import "../../../lmcc-theme.typ": *
+#import "../../../../lmcc-theme.typ": *
 
 #show: lmcc-theme.with(
   level: "赛项2·识物工坊 Python备赛",
@@ -169,8 +169,8 @@ ImageEnhance.Brightness(img).enhance(0.8).save("orange_dim.jpg")  # 调暗
 === 4.2 增强 vs 难例
 
 #warning[
-- **难例**（补真图）优先：橘子、不同光线橙子——真实分布，最有效
-- **增强**（变出图）辅助：旋转/亮度——扩充数量与变化
+- *难例*（补真图）优先：橘子、不同光线橙子——真实分布，最有效
+- *增强*（变出图）辅助：旋转/亮度——扩充数量与变化
 - 先补难例，再用增强锦上添花。扎实的真实数据永远是根本
 ])
 
