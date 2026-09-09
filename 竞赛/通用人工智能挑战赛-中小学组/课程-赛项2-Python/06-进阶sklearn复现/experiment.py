@@ -52,11 +52,58 @@ def feat_combined(img):
     return np.concatenate([feat_rich(img), feat_hsv_hist(img)])
 
 
+# ---------- 纹理与边缘维度（新增） ----------
+def _gray32(img):
+    return np.asarray(img.convert("L").resize((64, 64)), dtype=float) / 255.0
+
+def feat_texture(img):
+    """E：纹理特征——局部二值模式(LBP)粗版 + 梯度统计。
+
+    直觉：橙子皮是哑光麻点（毛孔纹理，局部明暗变化密而弱），
+    橘子/杏皮光滑有高光（局部变化疏而强）。LBP 直方图恰好刻画"麻点密度"。
+    """
+    g = _gray32(img)
+    # 3x3 窗口 LBP：中心与 8 邻居比较，输出 0~255 的"麻点编码"
+    h, w = g.shape
+    lbp = np.zeros((h - 2, w - 2))
+    for dy in (-1, 0, 1):
+        for dx in (-1, 0, 1):
+            if dy == 0 and dx == 0:
+                continue
+            lbp = lbp * 2 + (g[1 + dy:h - 1 + dy, 1 + dx:w - 1 + dx] > g[1:h - 1, 1:w - 1])
+    hist, _ = np.histogram(lbp.ravel(), bins=16, range=(0, 256), density=True)
+    # 梯度统计：纹理强弱的另一切面
+    gy, gx = np.gradient(g)
+    grad = np.sqrt(gx ** 2 + gy ** 2)
+    return np.concatenate([hist, [grad.mean(), grad.std()]])
+
+def feat_edges(img):
+    """F：边缘方向直方图——橙子整体圆润（边缘方向均匀），
+    键盘/建筑/书本有主导直线（边缘方向集中）。
+    """
+    g = _gray32(img)
+    gy, gx = np.gradient(g)
+    mag = np.sqrt(gx ** 2 + gy ** 2)
+    ang = np.arctan2(gy, gx)                    # -pi ~ pi
+    strong = mag > (mag.mean() + mag.std())     # 只看强边缘
+    if strong.sum() < 5:
+        return np.full(9, 1 / 9)                # 无明显边缘：均匀兜底
+    hist, _ = np.histogram(ang[strong], bins=9, range=(-np.pi, np.pi), density=True)
+    return hist
+
+def feat_full(img):
+    """G：D + E + F（颜色 + 空间 + 纹理 + 边缘，全家桶）"""
+    return np.concatenate([feat_combined(img), feat_texture(img), feat_edges(img)])
+
+
 FEATS = {
     "A_basic16": feat_basic,
     "B_rich32": feat_rich,
     "C_hsvhist": feat_hsv_hist,
+    "E_texture": feat_texture,
+    "F_edges": feat_edges,
     "D_combined": feat_combined,
+    "G_full": feat_full,
 }
 
 MODELS = {

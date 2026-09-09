@@ -10,7 +10,7 @@
 = 模型评估与优化——把分数提上去
 
 #objective[
-- 理准确率、混淆矩阵
+- 理解准确率、混淆矩阵
 - 分清"假阳性/假阴性"，理解误判类型
 - 掌握"补难例"优化流程：误判→分类→补图→重训→对比
 - 用保留测试集科学比较前后模型
@@ -20,6 +20,12 @@
 #warning[
 *本节定位*：训完不是终点，"评估—发现误判—补难例—重训"才是拿高分的关键循环。本节教你科学评估、精准补数据。
 ]
+
+== 课前准备（Windows 课堂环境）
+
+- 本讲只用标准库，无需装库
+- 课堂脚本：本讲 `课堂脚本/step1` 至 `step5`；step2 混淆矩阵先让学生手算，再用脚本对账
+- 讲完可回识物工坊平台实测一轮：误判→归档→补难例→重训→同一测试集对比
 
 == 〇、训练完怎么知道好不好（5分钟）
 
@@ -45,7 +51,7 @@ print(f"准确率：{correct / total * 100}%")
 
 + *准确率* = 答对 / 总数
 + 若"非橙子"占绝大多数，模型全猜非橙子也能高分——所以要看更细的指标
-])
+]
 
 === 1.2 混淆矩阵
 
@@ -80,7 +86,7 @@ false_negative = [r for r in results if r[2] == "漏认"]
 print("假阳性(把非橙认橙)：", len(false_positive))
 print("假阴性(漏认橙子)：", len(false_negative))
 ```
-])
+]
 
 === 2.2 为什么必须用保留测试集
 
@@ -102,7 +108,7 @@ print("假阴性(漏认橙子)：", len(false_negative))
 + ③ 保持两类数量平衡，重新做健康度检查
 + ④ 重新训练，用同一组保留测试图比较前后结果
 + ⑤ 确认改善，再下载新模型 ZIP，记录版本与日期
-])
+]
 
 === 3.2 补难例要诀
 
@@ -122,19 +128,21 @@ print("假阴性(漏认橙子)：", len(false_negative))
 ```python
 # 用同一测试集比较两个模型版本
 testset = ["t1.jpg", "t2.jpg", "t3.jpg", "t4.jpg", "t5.jpg"]
+truth   = [1, 0, 1, 1, 0]            # 真实标签：1=橙子，0=非橙子
 
-def eval_model(predictions):
-    # predictions 是模型对 testset 各图的判断
-    correct = sum(1 for i, p in enumerate(predictions) if p_correct[i])
-    return correct / len(testset)
+def accuracy(predictions):
+    correct = sum(1 for p, t in zip(predictions, truth) if p == t)
+    return correct / len(truth)
 
-print("v1 准确率：", eval_model(v1_pred))
-print("v2 准确率：", eval_model(v2_pred))
+v1_pred = [1, 0, 1, 0, 0]   # 模型v1的预测（t4认错）
+v2_pred = [1, 0, 1, 1, 0]   # 补难例重训后的模型v2
+print("v1 准确率：", accuracy(v1_pred))   # 0.8
+print("v2 准确率：", accuracy(v2_pred))   # 1.0
 ```
 
 + 同测试集对比，才看得出"这次的改进"是真有效还是碰运气
 + 保留原始训练数据和参数，方便回溯
-])
+]
 
 === 4.2 记录版本
 

@@ -76,5 +76,9 @@ def main():
         truth = "橙子" if y_test[i] == 1 else "非橙子"
         print(f"  预测={name}，真实={truth}")
 
+    print("\n想看'深度模型'长什么样？运行 python cnn_numpy.py ——")
+    print("  手写的两层卷积网络（纯 numpy），训练准确率 97%+ 但验证 ~60%：")
+    print("  现场演示'过拟合'——数据量是深度学习的水。")
+
 if __name__ == "__main__":
     main()
