@@ -28,6 +28,7 @@
 /// 学习目标框
 #let objective(body) = {
   block(
+    width: 100%,
     fill: rgb(216, 232, 248),
     inset: 12pt,
     radius: 4pt,
@@ -44,6 +45,7 @@
 /// 核心概念框
 #let key-concept(title, body) = {
   block(
+    width: 100%,
     fill: rgb(230, 245, 230),
     inset: 12pt,
     radius: 4pt,
@@ -60,6 +62,7 @@
 /// 实操提示框
 #let practice(body) = {
   block(
+    width: 100%,
     fill: rgb(255, 245, 220),
     inset: 12pt,
     radius: 4pt,
@@ -76,6 +79,7 @@
 /// 警告/注意框
 #let warning(body) = {
   block(
+    width: 100%,
     fill: rgb(252, 235, 235),
     inset: 12pt,
     radius: 4pt,
@@ -102,6 +106,7 @@
 /// 答案环境
 #let solution(body) = {
   block(
+    width: 100%,
     fill: bg-light,
     inset: 10pt,
     radius: 4pt,
@@ -117,6 +122,7 @@
 /// 定义环境
 #let definition(body) = {
   block(
+    width: 100%,
     inset: (left: 1em, top: 0.3em, bottom: 0.3em),
     stroke: (left: 3pt + primary-color),
     above: 0.5em,
