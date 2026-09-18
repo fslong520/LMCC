@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LV1-01 AI就在身边 · 智国学堂 LMCC</title>
+<style>
+  input[type=text]{border:none;border-bottom:1.5px solid #cbd5e1;background:#f8fafc;border-radius:4px 4px 0 0;padding:4px 8px;font-size:15px;font-family:inherit;color:#1f2937;min-width:150px;outline:none;transition:.15s}
+  input[type=text]:focus{border-bottom-color:#3b82f6;background:#eff6ff}
+  input[type=text].saved{border-bottom-color:#22c55e}
+  .savetip{position:fixed;right:18px;bottom:18px;background:#1e3a8a;color:#fff;font-size:13px;padding:7px 14px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none;font-family:inherit;z-index:99}
+  .savetip.show{opacity:.92}
+  @media print{.savetip{display:none}input[type=text]{background:transparent;border-bottom:1px solid #94a3b8}}
+</style>
+</head>
+<body>
+
+<div style="background:#eef1f5;padding:36px 16px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','HarmonyOS Sans SC','Noto Sans CJK SC',sans-serif;color:#1f2937;line-height:1.85;font-size:16px">
+<div style="max-width:820px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 4px 24px rgba(15,23,42,.08);padding:48px 56px">
+
+<h1 style="font-size:27px;line-height:1.4;margin:0 0 6px 0;color:#111827;letter-spacing:.5px;text-align:center;font-weight:bold">AI 就在身边</h1>
+<p style="text-align:center;color:#6b7280;font-size:14px;margin:0 0 4px 0">智国学堂 TeachZero · CCF 大模型能力认证（LMCC）课程</p>
+<p style="text-align:center;color:#6b7280;font-size:14px;margin:0 0 0 0">会用 AI（应用体验篇）第 01 课</p>
+<hr style="height:3px;border:none;border-radius:2px;background:linear-gradient(90deg,transparent,#3b82f6,#8b5cf6,transparent);margin:22px 0 26px 0" />
+
+<img src="../../imgs/lmcc-card.png" style="width:100%;border-radius:12px;display:block;margin:0 0 26px 0" alt="LMCC 课程">
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">这门课要学两件事</h2>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">一、学会驾驭 AI</div>
+  <p style="margin:5px 0">让 AI 替你干活，而不是被它牵着走。这是眼下最实用的本事。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">二、将来去考 LMCC</div>
+  <p style="margin:5px 0">CCF 大模型能力认证，中国计算机学会发的，考过了对升学有用。</p>
+</div>
+
+<p style="margin:14px 0">两件事一前一后。先学会用，学扎实了，后面考证就顺。</p>
+
+<table style="width:100%;border-collapse:collapse;margin:18px 0;font-size:15px">
+  <thead>
+    <tr>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:left;width:6em">项目</th>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:left">说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px"><b>全称</b></td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">CCF 大模型能力认证（Large Model Competence Certification）</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px"><b>谁办的</b></td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">中国计算机学会（CCF），就是办 NOI、CSP 的那家</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px"><b>考什么</b></td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">12 个模块，从"什么是 AI"到大模型原理、提示工程、智能体、伦理安全</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px"><b>怎么考</b></td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">上机实操为主，考的是"会不会用"，不是"背没背会"</td></tr>
+    <tr><td style="border-bottom:2px solid #111827;padding:9px 10px"><b>有什么用</b></td><td style="border-bottom:2px solid #111827;padding:9px 10px">证书能写进综合素质评价，升学、评优都用得上；往上还能接 NOAI 人工智能奥赛</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0">这门课就是照着 LMCC 的要求来排的。你会一路从"会用"走到"懂原理"，再到"自己造东西"，最后"想清楚 AI 跟人该怎么相处"。学完，考证和竞赛都有了底子。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">今天的五件事</h2>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <ol style="margin:0;padding-left:22px">
+    <li style="margin:6px 0"><b>编</b>一个根本不存在的东西，让 AI 介绍它</li>
+    <li style="margin:6px 0"><b>查</b>一查，身边到底有哪些 AI</li>
+    <li style="margin:6px 0"><b>做</b>一张海报</li>
+    <li style="margin:6px 0"><b>抓</b>——回头看看，它前面说的哪些是编的</li>
+    <li style="margin:6px 0"><b>重做</b>一版，这回不让它糊弄你</li>
+  </ol>
+  <p style="margin:9px 0 0">第一件事做完，先别下结论。答案在第五件。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">〇、开工：把 WorkBuddy 打开（5 分钟）</h2>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">开机三件事，一件一件来</div>
+  <ol style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">打开桌面上的 <b>WorkBuddy</b>。第一次打开会让你登录，点「登录」，浏览器弹出微信扫码，扫一下就进去了。</li>
+    <li style="margin:6px 0">看左边，有一个 <b>「新建任务」</b> 按钮，点它。</li>
+    <li style="margin:6px 0">中间出现一个输入框，这是你下命令的地方；右边那片空白的区域，是它干活和放结果的地方。</li>
+  </ol>
+  <p style="margin:9px 0 0"><b>卡住了举手</b>：装不上、登不上、找不到按钮，都举手。这五分钟就是专门用来解决这些的。</p>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0">接下来每一轮任务都这样操作：<b>左边点新建任务 → 中间输入框写要求 → 回车发送 → 右边看它干活 → 结果存到「产物」里</b>。后面就不重复讲了。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">一、先编一个不存在的东西（8 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">1.1 和同桌一起编（2 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">编一个<b>根本不存在</b>的东西的名字。</p>
+  <p style="margin:5px 0">一本书、一个地方、一种动物、一道菜，都行。要编得像真的。</p>
+  <ul style="margin:8px 0 0;padding-left:22px">
+    <li style="margin:6px 0">例：《月亮上的图书馆》、南极的彩虹企鹅、会唱歌的石头</li>
+    <li style="margin:6px 0">和同桌一起想，想出三个，挑一个最像真的</li>
+  </ul>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">1.2 发给 AI，让它介绍（4 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">在 WorkBuddy 里发这段话：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">请介绍一下《月亮上的图书馆》这本书：作者是谁、哪年出版、
+主要讲了什么。200 字以内。</pre>
+  <p style="margin:5px 0">把书名换成你们自己编的那个。发出去，看它怎么答。等它说完，把回答抄几句下来。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">记一行</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">我们编的是：<input type="text" placeholder="写你编的名字" style="min-width:160px"></li>
+    <li style="margin:6px 0">它答的是：<input type="text" placeholder="抄它说的作者/年份" style="min-width:220px"></li>
+    <li style="margin:6px 0">我们的判断，它是真知道还是在编：<input type="text" placeholder="真知道／在编" style="min-width:130px"></li>
+  </ul>
+</div>
+
+<div style="background:#fef9c3;border-radius:8px;padding:9px 13px;margin:12px 0;font-size:14.5px;color:#854d0e">
+  先别急着下结论。把这张纸留着。第五件事要用。
+</div>
+
+<img src="imgs/ip-doushabao.jpg" style="width:100%;border-radius:12px;display:block;margin:22px 0" alt="">
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">二、查一查，身边有哪些 AI（10 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.1 让它去搜（5 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">新开一个任务，发这段话：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">搜索一下，2026 年普通人手机上常用的 AI 功能有哪些。
+按用途分类，做成一张表，三列：功能名、它替人做了什么事、你多久用一次。
+不要开场白，直接给表。</pre>
+  <p style="margin:5px 0"><b>看右边</b>：它会自己去网上搜，边搜边干。做完，结果会存到「产物」里。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">记一行</div>
+  <p style="margin:0">它查到的哪一条，你以前不知道那是 AI？<input type="text" placeholder="写一条" style="min-width:100%"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.2 AI 到底能干什么（5 分钟）</h3>
+
+<p style="margin:12px 0">它给你的那张表只列了手机上的。其实 AI 能干的事，比表上多得多。下面这份是全景。</p>
+
+<table style="width:100%;border-collapse:collapse;margin:18px 0;font-size:15px">
+  <thead>
+    <tr>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:left">类别</th>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:left">能干什么</th>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:left">举个例子</th>
+      <th style="border-bottom:2px solid #111827;padding:9px 10px;text-align:center">第几课</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">文字</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">写文章、写诗、写剧本、改写、润色</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">写一篇班级活动报道</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">04</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">对话</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">问答、讲解、当老师、当陪练</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">讲清"什么是分数"，再出题考我</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">05</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">图画</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">按描述生成图片、海报、插画</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">画一张班级运动会海报</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">06</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">办公</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">做 PPT、排文档、整理表格</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">把这份笔记做成汇报 PPT</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">07</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">翻译</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">中英日韩互译、改写地道表达</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">把这封信翻成英文</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">08</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">摘要</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">长文变要点、读书笔记</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">把三千字的文章压成五条</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">09</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">数据</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">表格问答、找规律、出图表</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">这份成绩单，哪科拖后腿</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">10</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">编程</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">写代码、改 Bug、解释代码</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">写一个猜数字小游戏</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">今天</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">语音</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">听写、配音、语音转文字</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">把课堂录音变成文字稿</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">13</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">视频</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">生成短视频、配音、数字人</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">做一段十秒的片头</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">13</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">推理</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">解数学题、逻辑分析、分步骤想</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">鸡兔同笼，写程序解</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">今天</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">看图</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">识别图片内容、读图表、认字</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">这张照片里有什么</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">13</td></tr>
+    <tr><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">搜索</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">上网查资料、整理成表</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px">刚才那张表就是这么来的</td><td style="border-bottom:1px solid #e5e7eb;padding:9px 10px;text-align:center">今天</td></tr>
+    <tr><td style="border-bottom:2px solid #111827;padding:9px 10px">智能体</td><td style="border-bottom:2px solid #111827;padding:9px 10px">自己规划、调工具、连着干几件事</td><td style="border-bottom:2px solid #111827;padding:9px 10px">让它查资料再做成海报</td><td style="border-bottom:2px solid #111827;padding:9px 10px;text-align:center">今天</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">十四类，今天你只碰了四类：搜索、图画、编程、智能体。剩下的，往后的课一件一件来。</p>
+  <p style="margin:0">记一件事：<b>AI 不是只会聊天</b>。它能写字、能画图、能算数、能写代码、能自己上网查。凡是"坐在电脑前反复做的活"，它多半都能插一手。</p>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">注意你刚才做的事：你没有自己去搜，是让 AI 去搜的。这就是让它替你干活。</p>
+  <p style="margin:0">但它搜回来的东西，你就全信了吗？先记着这个问题。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">三、做成一张海报（8 分钟）</h2>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">不要新建任务，就在刚才这个对话里接着发：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">把刚才那张表做成一张海报，用 HTML 写，要求：
+一、A4 竖版，打印出来能贴墙上
+二、标题写"AI 就在身边"，下面一行小字"智国学堂 · 第一课"
+三、每条功能配一个 emoji 图标
+四、配色清爽，字要大，教室后排也能看清
+五、生成一个 .html 文件，存到桌面</pre>
+  <p style="margin:5px 0">做完去「产物」里找到这个 .html 文件，双击用浏览器打开，就能看到海报。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">动手改</div>
+  <p style="margin:5px 0">海报出来以后，挑一处不满意的地方，再发给它。比如：</p>
+  <ul style="margin:8px 0 0;padding-left:22px">
+    <li style="margin:6px 0">"标题再大一点"</li>
+    <li style="margin:6px 0">"换一个配色，现在太花"</li>
+    <li style="margin:6px 0">"第 3 条的字挡住了，修一下"</li>
+  </ul>
+  <p style="margin:9px 0 0"><b>改一次，看一次。</b>这就是"指挥"。</p>
+</div>
+
+<div style="background:#fef9c3;border-radius:8px;padding:9px 13px;margin:12px 0;font-size:14.5px;color:#854d0e">
+  海报丑、排版乱、字太小，都是常事。<b>不要自己动手改文件</b>，把不满意的地方说给它听。说清楚哪里不对、想要什么样，它就改得对。
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">四、加餐：让它写个游戏，当场玩（8 分钟）</h2>
+
+<p style="margin:12px 0">海报是给人看的。这个更带劲：让它写个能玩的游戏。</p>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">新开一个任务，发这段话：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">写一个猜数字的小游戏，用 HTML 写在一个文件里。
+规则：电脑想一个 1 到 100 的数，我来猜，猜大了猜小了都告诉我，
+猜中显示我猜了几次。要有输入框和按钮，界面大一点，配色好看。
+存成 .html 文件放桌面。</pre>
+  <p style="margin:5px 0">做完去「产物」或桌面找到它，双击用浏览器打开，<b>当场玩一局</b>。看谁猜中的次数最少。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">动手改</div>
+  <p style="margin:5px 0">玩两局，挑一处改。比如：</p>
+  <ul style="margin:8px 0 0;padding-left:22px">
+    <li style="margin:6px 0">"改成 1 到 1000，太难了"</li>
+    <li style="margin:6px 0">"加一个重新开始按钮"</li>
+    <li style="margin:6px 0">"猜中的时候放个烟花动画"</li>
+  </ul>
+  <p style="margin:9px 0 0"><b>你只管说想要什么，改代码是它的事。</b></p>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">你刚才做的事，叫"提需求"。你没写一行代码，游戏就跑起来了。</p>
+  <p style="margin:0">但你有没有发现一件事：<b>你没法一眼看出它写的代码对不对</b>。现在游戏能跑，是因为简单。往后要它写复杂的东西，你就得能看懂、能挑错——这就是这门课要练的。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">五、抓——回头看看它编了什么（14 分钟）</h2>
+
+<p style="margin:12px 0">现在，把第一件事那张纸拿出来。</p>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.1 先看第一件事（5 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">回头看开场那条回答</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">你编的那本书，它给了作者、给了年份、给了内容简介。<b>它凭什么知道？</b></li>
+    <li style="margin:6px 0">那本书<b>根本不存在</b>。作者是它编的，年份是它编的，简介也是它编的。</li>
+    <li style="margin:6px 0">更麻烦的是：它说得<b>那么肯定</b>，一点没犹豫。</li>
+  </ul>
+  <p style="margin:9px 0 0">现在去网上搜一下那个书名，看看搜得到什么。</p>
+</div>
+
+<div style="background:#fef2f2;border-radius:8px;padding:9px 13px;margin:12px 0;font-size:14.5px;color:#b91c1c">
+  这就是今天最要紧的一件事：<b>AI 会编，而且编得很像真的。</b>它不是在骗你，它自己也不知道自己在编。它只是接着往下说，说得越顺越像真的。
+</div>
+
+<img src="imgs/ip-mantou.jpg" style="width:100%;border-radius:12px;display:block;margin:22px 0" alt="">
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.2 再查它给的表（5 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">挑两条来核</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">从第二件事那张表里，挑两条你不太确定的</li>
+    <li style="margin:6px 0">一条一条去搜，看是不是真的</li>
+    <li style="margin:6px 0">如果搜不到，或者说法不一样，画个圈</li>
+  </ul>
+  <p style="margin:9px 0 0">记一行：我核的是 <input type="text" placeholder="核了什么" style="min-width:200px">；对的 <input type="text" placeholder="条数" style="min-width:56px"> 条，存疑 <input type="text" placeholder="条数" style="min-width:56px"> 条。</p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.3 最后试一次（4 分钟）</h3>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">新开一个任务，问它两件事：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">我上个月借给同桌的那本书，书名叫什么？</pre>
+  <p style="margin:5px 0">看它答什么。是老实说不知道，还是编一个书名给你？</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">《西游记》的作者是谁？他哪一年出生？</pre>
+  <p style="margin:5px 0">第一问它多半答对。第二问给的年份，自己去搜一遍，看对不对。</p>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">三件事做完，你手里有了三条证据。今天有三句话要记住，往后每节课都用：</p>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0"><b>AI 不能代替我学习。</b>它讲得再好，懂没懂只有我自己知道。</li>
+    <li style="margin:6px 0"><b>我先学会，再让 AI 去做重复枯燥的活。</b>会算了才让它算，会写了才让它写。</li>
+    <li style="margin:6px 0"><b>我必须能自己分辨对错。</b>看不出它的错，就不算学会。</li>
+  </ul>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">六、重做一版（10 分钟）</h2>
+
+<p style="margin:12px 0">既然它会编，那怎么让它少编？</p>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">把三样都写清楚</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0"><b>做什么</b>：要它交付什么</li>
+    <li style="margin:6px 0"><b>有什么</b>：手上有什么材料、什么限制</li>
+    <li style="margin:6px 0"><b>怎么样</b>：做成什么样才算合格</li>
+  </ul>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <p style="margin:5px 0">新开一个任务，照这个填：</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">帮我做一张海报（做什么）。
+我们班刚学完 AI 这一课，想把"AI 能替人做什么"讲给家长听（有什么）。
+要求：A4 竖版，标题"AI 能替我们做什么"，列 5 件事，每件事一句话讲清，
+配 emoji 图标，配色清爽，字要大。做成一个 .html 文件存到桌面（怎么样）。
+另外：凡是你不能确定的，标上"待核实"，不要猜（这一条最重要）。</pre>
+  <p style="margin:5px 0">最后那一句是关键。发出去，看它这一版有没有标"待核实"。</p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">对比</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">这一版和第三件事那张海报比，多了什么？<input type="text" placeholder="写一句" style="min-width:100%"></li>
+    <li style="margin:6px 0">你自己的结论，想让 AI 少编得怎么办：<input type="text" placeholder="写一句" style="min-width:100%"></li>
+  </ul>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">五件事做完，你其实练了五个动作：</p>
+  <ul style="margin:0 0 8px 0;padding-left:22px">
+    <li style="margin:6px 0"><b>编</b>：给它出一个它答不了的题，看它露馅</li>
+    <li style="margin:6px 0"><b>查</b>：让它替你去搜、去整理</li>
+    <li style="margin:6px 0"><b>做</b>：让它把原料做成能用的东西</li>
+    <li style="margin:6px 0"><b>抓</b>：看得出它哪里在编</li>
+    <li style="margin:6px 0"><b>重做</b>：把要求说清楚，让它改到能用</li>
+  </ul>
+  <p style="margin:0">这五个动作，就是这门课要一直练的本事。会用 AI，是说"我能让它出东西"；驾驭 AI，是说"我能对它出的东西负责"。我们要练的是后者。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">七、挂出来，一起说说（6 分钟）</h2>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">展示</div>
+  <p style="margin:5px 0">打开你第六件事做的海报，投到大屏上，说三句话：</p>
+  <ul style="margin:8px 0 0;padding-left:22px">
+    <li style="margin:6px 0">这张海报是给谁看的</li>
+    <li style="margin:6px 0">你改了几次，改了什么</li>
+    <li style="margin:6px 0">它哪一处让你不放心</li>
+  </ul>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">全班一起填</div>
+  <ul style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">AI 能干什么：<input type="text" placeholder="写一条" style="min-width:100%"></li>
+    <li style="margin:6px 0">AI 不能干什么：<input type="text" placeholder="写一条" style="min-width:100%"></li>
+    <li style="margin:6px 0">怎么让它干得好：<input type="text" placeholder="写一条" style="min-width:100%"></li>
+  </ul>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">八、让 Python 说第一句话（6 分钟）</h2>
+
+<p style="margin:12px 0">前面几件事，你用的都是别人做的 AI。这个学期，我们要做一个自己的。</p>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">print 和变量</div>
+  <p style="margin:5px 0"><code style="background:#eef1f4;border-radius:4px;padding:1px 5px">print()</code> 把一段话显示到屏幕上。<code style="background:#eef1f4;border-radius:4px;padding:1px 5px">变量</code> 把数据存进一个"盒子"，随时取用。</p>
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0"># 第一个程序：AI 打招呼
+name = "小智"                 # 变量：给 AI 起名
+print("大家好，我是" + name + "！")   # 让它说话</pre>
+  <p style="margin:5px 0">运行后屏幕显示：<code style="background:#eef1f4;border-radius:4px;padding:1px 5px">大家好，我是小智！</code></p>
+</div>
+
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin:16px 0">
+  <div style="color:#1e3a8a;font-weight:700;font-size:18px;margin:0 0 9px">动手做</div>
+  <ol style="margin:0;padding-left:22px">
+    <li style="margin:6px 0">新建一个文件 <code style="background:#eef1f4;border-radius:4px;padding:1px 5px">my_ai.py</code></li>
+    <li style="margin:6px 0">把上面两行代码抄进去，<code style="background:#eef1f4;border-radius:4px;padding:1px 5px">name</code> 换成你给 AI 起的名字</li>
+    <li style="margin:6px 0">运行它，看到它开口</li>
+    <li style="margin:6px 0">跑通的举手</li>
+  </ol>
+</div>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">它现在只会打招呼，还不会编。往后的课，我们让它越来越聪明，最后一课给它接上一个小模型，让它真正听懂你说话。</p>
+  <p style="margin:0">那时候你就要更小心了——越聪明的 AI，编得越像真的。</p>
+</div>
+
+<hr style="height:1px;border:none;background:#e5e7eb;margin:34px 0" />
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">课后作业</h2>
+
+<p style="margin:12px 0">回家做一件事，二选一：</p>
+<ul style="margin:8px 0;padding-left:22px">
+  <li style="margin:6px 0">给家里人做一张海报，内容自选（菜谱、旅行计划、生日邀请都行）</li>
+  <li style="margin:6px 0">找一个 AI 编造的实例：随便问它点什么，找到一处它编的地方，把证据记下来</li>
+</ul>
+<p style="margin:12px 0">带回来，下节课开一场"我的 AI 首秀"。</p>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:34px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">下集预告</h2>
+
+<div style="background:#f8fafc;border-radius:12px;padding:18px 22px;margin:18px 0">
+  <p style="margin:0 0 8px 0">下一课讲怎么把需求说清楚。今天你已经尝到了：说得清楚和说不清楚，它给的东西差得很远。</p>
+  <p style="margin:0">今天你站在算法之巅，那只是有限变量的精确推演；前面是大模型之海。从 NOI 到 LMCC，我们正要走进这片海。</p>
+</div>
+
+</div>
+</div>
+
+<div class="savetip" id="savetip">已自动保存</div>
+<script>
+(function(){
+  var KEY='lmcc-lv1-01-answers';
+  var inputs=[].slice.call(document.querySelectorAll('input[type=text]'));
+  inputs.forEach(function(el,i){ el.dataset.k='q'+i; });
+  var saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ saved={}; }
+  var tip=document.getElementById('savetip'), timer=null;
+  function flash(){
+    tip.classList.add('show');
+    clearTimeout(timer);
+    timer=setTimeout(function(){ tip.classList.remove('show'); },900);
+  }
+  inputs.forEach(function(el){
+    var k=el.dataset.k;
+    if(saved[k]){ el.value=saved[k]; el.classList.add('saved'); }
+    el.addEventListener('input',function(){
+      saved[k]=el.value;
+      el.classList.toggle('saved', el.value.length>0);
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); flash(); }catch(e){}
+    });
+  });
+  // 打印前把已填内容固定下来
+  window.addEventListener('beforeprint',function(){
+    inputs.forEach(function(el){ el.setAttribute('value', el.value); });
+  });
+})();
+</script>
+</body>
+</html>
