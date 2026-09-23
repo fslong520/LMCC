@@ -1,0 +1,272 @@
+{
+ "清洗_r13r14/合格非橙/非000_04e37f75.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.007
+ },
+ "清洗_r13r14/合格非橙/非001_08ebabee.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.938
+ },
+ "清洗_r13r14/合格非橙/非002_0a6af871.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.385
+ },
+ "清洗_r13r14/合格非橙/非003_0bf8cf5b.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.982
+ },
+ "清洗_r13r14/合格非橙/非005_105971e3.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.981
+ },
+ "清洗_r13r14/合格非橙/非011_21867f06.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.983
+ },
+ "清洗_r13r14/合格非橙/非013_27420ab8.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.997
+ },
+ "清洗_r13r14/合格非橙/非014_2c6aef7b.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.777
+ },
+ "清洗_r13r14/合格非橙/非017_397adbd2.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.033
+ },
+ "清洗_r13r14/合格非橙/非018_3af9dc31.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.11
+ },
+ "清洗_r13r14/合格非橙/非019_4107bbc6.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.87
+ },
+ "清洗_r13r14/合格非橙/非021_48ab0672.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.046
+ },
+ "清洗_r13r14/合格非橙/非022_49ad2cb7.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.969
+ },
+ "清洗_r13r14/合格非橙/非023_51f75507.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.724
+ },
+ "清洗_r13r14/合格非橙/非024_5899b90c.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 1.0
+ },
+ "清洗_r13r14/合格非橙/非025_58fc5bf0.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.0
+ },
+ "清洗_r13r14/合格非橙/非026_5a838ed5.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.069
+ },
+ "清洗_r13r14/合格非橙/非027_5cccf822.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.313
+ },
+ "清洗_r13r14/合格非橙/非029_6a2177ff.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.002
+ },
+ "清洗_r13r14/合格非橙/非032_704c14e3.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.993
+ },
+ "清洗_r13r14/合格非橙/非033_720cfeb5.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.026
+ },
+ "清洗_r13r14/合格非橙/非035_78337ef7.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.787
+ },
+ "清洗_r13r14/合格非橙/非038_8523668d.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.191
+ },
+ "清洗_r13r14/合格非橙/非042_938c5b1f.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.646
+ },
+ "清洗_r13r14/合格非橙/非043_9a322070.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.0
+ },
+ "清洗_r13r14/合格非橙/非045_a29ac473.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.985
+ },
+ "清洗_r13r14/合格非橙/非046_a6c5568c.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.996
+ },
+ "清洗_r13r14/合格非橙/非048_a9693468.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.669
+ },
+ "清洗_r13r14/合格非橙/非050_b5e19b93.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.087
+ },
+ "清洗_r13r14/合格非橙/非055_d2d5a08d.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.449
+ },
+ "清洗_r13r14/合格非橙/非057_dacbe0bf.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.039
+ },
+ "清洗_r13r14/合格非橙/非058_e2ee555f.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 1.0
+ },
+ "清洗_r13r14/合格非橙/非059_e34f2aff.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.99
+ },
+ "清洗_r13r14/合格非橙/非062_e92058c2.jpg": {
+  "expect": 1,
+  "pred": 0,
+  "p_orange": 0.998
+ },
+ "清洗_r13r14/合格非橙/非064_f52a5a78.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.092
+ },
+ "清洗_r13r14/合格非橙/非066_fc507cfc.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.425
+ },
+ "清洗_r13r14/合格非橙/非068_ff9ab6e6.jpg": {
+  "expect": 1,
+  "pred": 1,
+  "p_orange": 0.0
+ },
+ "清洗_r13r14/合格橙子/橙001_0e2a2024.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.894
+ },
+ "清洗_r13r14/合格橙子/橙009_3f8a4799.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.998
+ },
+ "清洗_r13r14/合格橙子/橙010_40dbe51d.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.023
+ },
+ "清洗_r13r14/合格橙子/橙012_489099fb.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.141
+ },
+ "清洗_r13r14/合格橙子/橙013_55042168.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.952
+ },
+ "清洗_r13r14/合格橙子/橙020_8c65115e.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 1.0
+ },
+ "清洗_r13r14/合格橙子/橙023_99b89098.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.128
+ },
+ "清洗_r13r14/合格橙子/橙028_a810130a.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.003
+ },
+ "清洗_r13r14/合格橙子/橙029_a8e22867.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.001
+ },
+ "清洗_r13r14/合格橙子/橙030_ab313e0d.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.414
+ },
+ "清洗_r13r14/合格橙子/橙033_c63b2feb.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.999
+ },
+ "清洗_r13r14/合格橙子/橙034_cd10086e.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.818
+ },
+ "清洗_r13r14/合格橙子/橙037_db1103be.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.99
+ },
+ "清洗_r13r14/合格橙子/橙038_df4c6e22.jpg": {
+  "expect": 0,
+  "pred": 1,
+  "p_orange": 0.151
+ },
+ "清洗_r13r14/合格橙子/橙040_e7826ab7.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 1.0
+ },
+ "清洗_r13r14/合格橙子/橙042_f4ee6aac.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.973
+ },
+ "清洗_r13r14/合格橙子/橙046_fc2ef509.jpg": {
+  "expect": 0,
+  "pred": 0,
+  "p_orange": 0.977
+ }
+}

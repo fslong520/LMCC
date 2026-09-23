@@ -1,0 +1,14 @@
+{
+ "orange": {
+  "label": "橙子",
+  "count": 74
+ },
+ "not_orange": {
+  "label": "非橙子（难例）",
+  "count": 65
+ },
+ "not_orange_easy": {
+  "label": "非橙子（易例）",
+  "count": 33
+ }
+}
