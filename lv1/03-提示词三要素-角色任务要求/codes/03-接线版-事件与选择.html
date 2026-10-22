@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人生模拟机 · 事件与选择（参考版）</title>
+<style>
+  body{margin:0;background:#eef1f5;font-family:-apple-system,'PingFang SC','Noto Sans CJK SC',sans-serif;color:#1f2937}
+  .wrap{max-width:720px;margin:24px auto;background:#fff;border-radius:16px;padding:24px 28px;box-shadow:0 4px 24px rgba(15,23,42,.08)}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:#6b7280;font-size:13px;margin:0 0 16px}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;background:#f8fafc;border-radius:10px;padding:10px 14px;font-size:14px}
+  .bar b{color:#1e3a8a}
+  .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;margin:16px 0}
+  .card h2{font-size:17px;margin:0 0 8px;color:#1e3a8a}
+  .card p{margin:6px 0;line-height:1.7;font-size:15px}
+  button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;font-size:15px;font-family:inherit;
+         background:#fff;border:1px solid #cbd5e1;border-radius:10px;cursor:pointer}
+  button:hover{border-color:#2563eb;background:#eff6ff}
+  button:disabled{color:#9ca3af;cursor:default}
+  .log{background:#f8fafc;border-radius:10px;padding:10px 14px;font-size:13.5px;line-height:1.8;max-height:180px;overflow:auto}
+  .log div{color:#4b5563}
+  .end{border:1px solid #fecaca;background:#fef2f2;border-radius:12px;padding:16px 18px;margin:16px 0}
+  .end b{color:#b91c1c}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>人生模拟机 · 事件与选择</h1>
+  <p class="sub">一年一件事，你替主角做决定。18 年走完看结局。</p>
+
+  <div class="bar" id="bar"></div>
+
+  <div id="stage"></div>
+
+  <div class="log" id="log"></div>
+</div>
+
+<script>
+// ======== 这一段是数据：让 AI 改写的就是它 ========
+const EVENTS = [
+  { min: 1, max: 12, title: "村里来了放映队",
+    desc: "天没黑，打谷场上就支起了白布。放的是打仗的片子，全村人都搬着小板凳去了。",
+    choices: [
+      { text: "跟着去占前排", effect: { luck: 2, wits: 1 }, result: "你挤到前排，看了一晚上，第二天跟同学讲了三天。" },
+      { text: "在家写作业", effect: { wits: 3 }, result: "作业写完了，第二天老师表扬了你，可同学说的事你一句也接不上。" }
+    ] },
+  { min: 2, max: 9, title: "学会骑自行车",
+    desc: "表哥的二八杠比你还高。他把车推到打谷场上，说：扶着你，你蹬。",
+    choices: [
+      { text: "上去蹬", effect: { body: 2, luck: 1 }, result: "摔了三跤，膝盖破了，天黑前你自己骑出了十米。" },
+      { text: "再等等，明年再说", effect: { wits: 1 }, result: "你在边上看了半天，回家在纸上画了张车链子的图。" }
+    ] },
+  { min: 4, max: 13, title: "外婆来家里住",
+    desc: "外婆提着一篮子鸡蛋进门，说住一阵子，顺便看你写作业。",
+    choices: [
+      { text: "天天让她检查作业", effect: { wits: 2, luck: 1 }, result: "她认字不多，但每天盯着你写完，错字圈得很准。" },
+      { text: "带她去赶集", effect: { luck: 2, money: -5 }, result: "你给她买了块布，她一路上念叨你是好孩子。" }
+    ] },
+  { min: 6, max: 15, title: "县里来招体育生",
+    desc: "体育老师在操场转了三圈，最后指着你说：明天来测一下。",
+    choices: [
+      { text: "去测", effect: { body: 3, wits: -1 }, result: "你跑了个第二名，进队了，从此每天早读改成跑圈。" },
+      { text: "不去，怕耽误功课", effect: { wits: 2 }, result: "你留在教室，卷子多做了一套，操场上少了一个人。" }
+    ] },
+  { min: 10, max: 18, title: "同学拉你摆摊",
+    desc: "暑假里，同桌说他表哥在县城卖冰棍，一天能挣五块，问你去不去。",
+    choices: [
+      { text: "去，本钱一人一半", effect: { money: -10, luck: 1 }, result: "冰棍化了两箱，最后算下来还赔了四块。你学会了看天。" },
+      { text: "不去，在家看书", effect: { wits: 2 }, result: "你把下学期的数学看了一半，开学第一次考试进了前十。" }
+    ] },
+  { min: 12, max: 18, title: "班主任找你谈话",
+    desc: "晚自习后，班主任叫住你：最近成绩掉得厉害，是不是家里有事？",
+    choices: [
+      { text: "说实话", effect: { luck: 2, wits: 1 }, result: "老师帮你申请了助学金，还给你调了座位。" },
+      { text: "说没事", effect: { body: -1 }, result: "你把话咽回去，晚上翻来覆去睡不着。" }
+    ] }
+];
+
+// ======== 这一段是程序：按状态挑事件、算后果 ========
+const S = { age: 1, wits: 10, body: 10, luck: 10, money: 0 };
+let used = new Set();
+let last = '';
+
+const bar = document.getElementById('bar');
+const stage = document.getElementById('stage');
+const logBox = document.getElementById('log');
+
+function clamp(v) { return Math.max(0, Math.min(99, v)); }
+
+function drawBar() {
+  bar.innerHTML =
+    `<span>年龄 <b>${S.age}</b> 岁</span><span>智力 <b>${S.wits}</b></span>` +
+    `<span>体质 <b>${S.body}</b></span><span>运气 <b>${S.luck}</b></span>` +
+    `<span>钱 <b>${S.money}</b> 块</span>`;
+}
+
+function pickEvent() {
+  let pool = EVENTS.filter(e => e.min <= S.age && S.age <= e.max && !used.has(e.title));
+  if (!pool.length) {
+    used.clear();
+    pool = EVENTS.filter(e => e.min <= S.age && S.age <= e.max && e.title !== last);
+  }
+  if (!pool.length) pool = EVENTS.filter(e => e.min <= S.age && S.age <= e.max);
+  if (!pool.length) return null;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+function addLog(t) {
+  const d = document.createElement('div');
+  d.textContent = t;
+  logBox.prepend(d);
+}
+
+function apply(effect) {
+  for (const k in effect) S[k] = clamp(S[k] + effect[k]);
+}
+
+function ending() {
+  const score = S.wits + S.body + S.luck + Math.floor(S.money / 50);
+  let text;
+  if (score >= 60) text = "结局：三条路都走通了，村里人拿你当例子讲了十年。";
+  else if (S.wits >= 30) text = "结局：你考出去了，走的时候带了一箱书。";
+  else if (S.money >= 200) text = "结局：你在县城盘下一间小铺子，日子稳当。";
+  else if (S.body >= 30) text = "结局：你留在队里当教练，天天听操场上的哨子声。";
+  else text = "结局：平平淡淡，日子照过。";
+  stage.innerHTML = `<div class="end"><b>${text}</b><p>智力 ${S.wits}　体质 ${S.body}　运气 ${S.luck}　钱 ${S.money} 块</p></div>`;
+  logBox.prepend(Object.assign(document.createElement('div'), { textContent: '18 年走完。刷新页面可以重开一局。' }));
+}
+
+function turn() {
+  if (S.age > 18) { ending(); return; }
+  drawBar();
+  const ev = pickEvent();
+  if (!ev) {
+    S.age++;
+    turn();
+    return;
+  }
+  used.add(ev.title);
+  last = ev.title;
+  stage.innerHTML = `<div class="card"><h2>${S.age} 岁 · ${ev.title}</h2><p>${ev.desc}</p></div>`;
+  const card = stage.querySelector('.card');
+  ev.choices.forEach((c, i) => {
+    const b = document.createElement('button');
+    b.textContent = String.fromCharCode(65 + i) + '．' + c.text;
+    b.onclick = () => {
+      const before = { wits: S.wits, body: S.body, luck: S.luck, money: S.money };
+      apply(c.effect);
+      addLog(`${S.age} 岁：${c.result}`);
+      const diff = Object.keys(c.effect).map(k => {
+        const d = S[k] - before[k];
+        const name = { wits: '智力', body: '体质', luck: '运气', money: '钱' }[k];
+        return `${name}${d >= 0 ? '+' : ''}${d}`;
+      }).join(' ');
+      card.insertAdjacentHTML('beforeend', `<p style="color:#1e3a8a">你选了「${c.text}」：${c.result}<br><span style="color:#6b7280;font-size:13px">${diff}</span></p>`);
+      card.querySelectorAll('button').forEach(x => x.disabled = true);
+      S.age++;
+      setTimeout(turn, 700);
+    };
+    card.appendChild(b);
+  });
+}
+
+turn();
+</script>
+</body>
+</html>
