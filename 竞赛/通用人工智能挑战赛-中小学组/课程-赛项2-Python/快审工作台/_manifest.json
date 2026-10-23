@@ -20,10 +20,18 @@
   "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r14_fetch/not_orange_r14",
   "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r12_fetch/orange_r12"
  ],
- "total": 1859,
- "pred_orange": 583,
- "pred_not": 1276,
+ "total": 1935,
+ "pred_orange": 618,
+ "pred_not": 1317,
  "items": [
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_15.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_15.jpg",
+   "pred": "橙子",
+   "p": 0.501,
+   "unc": 0.002
+  },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_174.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
@@ -119,6 +127,14 @@
    "pred": "非橙子",
    "p": 0.49,
    "unc": 0.019
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_19.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_19.jpg",
+   "pred": "非橙子",
+   "p": 0.49,
+   "unc": 0.02
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_b970170672.jpg",
@@ -217,6 +233,14 @@
    "unc": 0.042
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_034.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_034.jpg",
+   "pred": "非橙子",
+   "p": 0.476,
+   "unc": 0.049
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_d9f2b0f6c2.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9",
    "rel": "r9_orange_r9_d9f2b0f6c2.jpg",
@@ -305,12 +329,28 @@
    "unc": 0.067
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_039.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_039.jpg",
+   "pred": "非橙子",
+   "p": 0.465,
+   "unc": 0.071
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_94ecb6f06b.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7",
    "rel": "r7_notor_r7_94ecb6f06b.jpg",
    "pred": "非橙子",
    "p": 0.464,
    "unc": 0.072
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_016.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_016.jpg",
+   "pred": "非橙子",
+   "p": 0.464,
+   "unc": 0.073
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_02b0d1f9d0.jpg",
@@ -391,6 +431,14 @@
    "pred": "非橙子",
    "p": 0.454,
    "unc": 0.093
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_030.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_030.jpg",
+   "pred": "橙子",
+   "p": 0.547,
+   "unc": 0.094
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_c150164093.jpg",
@@ -497,6 +545,14 @@
    "unc": 0.12
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_009.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_009.jpg",
+   "pred": "橙子",
+   "p": 0.561,
+   "unc": 0.121
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_87a29be83b.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8",
    "rel": "r8_notor_r8_87a29be83b.jpg",
@@ -585,12 +641,44 @@
    "unc": 0.141
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/img_32.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "img_32.jpg",
+   "pred": "橙子",
+   "p": 0.571,
+   "unc": 0.142
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/22411131.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13",
    "rel": "22411131.jpg",
    "pred": "非橙子",
    "p": 0.429,
    "unc": 0.143
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/img_30.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "img_30.jpg",
+   "pred": "橙子",
+   "p": 0.572,
+   "unc": 0.144
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_027.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_027.jpg",
+   "pred": "非橙子",
+   "p": 0.428,
+   "unc": 0.144
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_013.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_013.jpg",
+   "pred": "橙子",
+   "p": 0.573,
+   "unc": 0.146
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_282c6f0937.jpg",
@@ -801,6 +889,14 @@
    "unc": 0.206
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_035.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_035.jpg",
+   "pred": "非橙子",
+   "p": 0.397,
+   "unc": 0.207
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_038a5a17c9.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7",
    "rel": "r7_notor_r7_038a5a17c9.jpg",
@@ -977,6 +1073,14 @@
    "unc": 0.25
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_042.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_042.jpg",
+   "pred": "橙子",
+   "p": 0.63,
+   "unc": 0.26
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_9d038ffd49.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5",
    "rel": "r5_notor_r5_9d038ffd49.jpg",
@@ -1049,6 +1153,14 @@
    "unc": 0.274
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_37.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_37.jpg",
+   "pred": "非橙子",
+   "p": 0.363,
+   "unc": 0.275
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_a5d697d3f1.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9",
    "rel": "r9_orange_r9_a5d697d3f1.jpg",
@@ -1071,6 +1183,14 @@
    "pred": "橙子",
    "p": 0.643,
    "unc": 0.286
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_011.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_011.jpg",
+   "pred": "非橙子",
+   "p": 0.356,
+   "unc": 0.287
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_13a98e73d6.jpg",
@@ -1263,6 +1383,14 @@
    "pred": "橙子",
    "p": 0.665,
    "unc": 0.33
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_37.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_37.jpg",
+   "pred": "非橙子",
+   "p": 0.334,
+   "unc": 0.331
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/hard_img_37.jpg",
@@ -1537,6 +1665,14 @@
    "unc": 0.396
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_004.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_004.jpg",
+   "pred": "橙子",
+   "p": 0.699,
+   "unc": 0.397
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_078.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn_078.jpg",
@@ -1753,6 +1889,14 @@
    "unc": 0.448
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_0.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_0.jpg",
+   "pred": "橙子",
+   "p": 0.725,
+   "unc": 0.45
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_139.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn2_139.jpg",
@@ -1873,6 +2017,22 @@
    "unc": 0.477
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_021.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_021.jpg",
+   "pred": "橙子",
+   "p": 0.742,
+   "unc": 0.484
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_033.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_033.jpg",
+   "pred": "非橙子",
+   "p": 0.256,
+   "unc": 0.487
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_2bf9c4a979.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5",
    "rel": "r5_orange_r5_2bf9c4a979.jpg",
@@ -1887,6 +2047,14 @@
    "pred": "橙子",
    "p": 0.744,
    "unc": 0.488
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_025.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_025.jpg",
+   "pred": "橙子",
+   "p": 0.745,
+   "unc": 0.491
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_fa27a40db8.jpg",
@@ -1959,6 +2127,14 @@
    "pred": "非橙子",
    "p": 0.245,
    "unc": 0.51
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_028.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_028.jpg",
+   "pred": "橙子",
+   "p": 0.756,
+   "unc": 0.511
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_081.jpg",
@@ -2601,6 +2777,14 @@
    "unc": 0.631
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_000.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_000.jpg",
+   "pred": "非橙子",
+   "p": 0.183,
+   "unc": 0.634
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13/33d70bf7.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13",
    "rel": "33d70bf7.jpg",
@@ -2833,6 +3017,14 @@
    "unc": 0.674
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_36.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_36.jpg",
+   "pred": "非橙子",
+   "p": 0.162,
+   "unc": 0.675
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/orange/046.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/orange",
    "rel": "046.jpg",
@@ -2878,6 +3070,14 @@
    "rel": "ovn_105.jpg",
    "pred": "橙子",
    "p": 0.839,
+   "unc": 0.678
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_043.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_043.jpg",
+   "pred": "非橙子",
+   "p": 0.161,
    "unc": 0.678
   },
   {
@@ -2935,6 +3135,14 @@
    "pred": "橙子",
    "p": 0.844,
    "unc": 0.688
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_26.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_26.jpg",
+   "pred": "橙子",
+   "p": 0.845,
+   "unc": 0.69
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/ov2_039.jpg",
@@ -3055,6 +3263,14 @@
    "pred": "橙子",
    "p": 0.85,
    "unc": 0.701
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_029.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_029.jpg",
+   "pred": "橙子",
+   "p": 0.851,
+   "unc": 0.702
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_092cab105a.jpg",
@@ -3281,6 +3497,14 @@
    "unc": 0.719
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_038.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_038.jpg",
+   "pred": "橙子",
+   "p": 0.859,
+   "unc": 0.719
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_fc7259f7b2.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5",
    "rel": "r5_orange_r5_fc7259f7b2.jpg",
@@ -3351,6 +3575,14 @@
    "pred": "橙子",
    "p": 0.864,
    "unc": 0.729
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_37.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_37.jpg",
+   "pred": "非橙子",
+   "p": 0.135,
+   "unc": 0.73
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_bcfa367609.jpg",
@@ -3439,6 +3671,14 @@
    "pred": "橙子",
    "p": 0.869,
    "unc": 0.738
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_024.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_024.jpg",
+   "pred": "非橙子",
+   "p": 0.131,
+   "unc": 0.739
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_75c0b24d6b.jpg",
@@ -3825,6 +4065,14 @@
    "unc": 0.782
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_39.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_39.jpg",
+   "pred": "橙子",
+   "p": 0.891,
+   "unc": 0.783
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_137.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_137.jpg",
@@ -3871,6 +4119,14 @@
    "pred": "橙子",
    "p": 0.894,
    "unc": 0.787
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_024.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_024.jpg",
+   "pred": "橙子",
+   "p": 0.894,
+   "unc": 0.788
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_505da16be8.jpg",
@@ -4127,6 +4383,14 @@
    "pred": "非橙子",
    "p": 0.096,
    "unc": 0.808
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_38.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_38.jpg",
+   "pred": "橙子",
+   "p": 0.905,
+   "unc": 0.809
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_9e6e540a91.jpg",
@@ -4953,6 +5217,14 @@
    "unc": 0.886
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_014.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_014.jpg",
+   "pred": "橙子",
+   "p": 0.943,
+   "unc": 0.886
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_080abe33c6.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5",
    "rel": "r5_orange_r5_080abe33c6.jpg",
@@ -5052,6 +5324,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_136.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_136.jpg",
+   "pred": "非橙子",
+   "p": 0.055,
+   "unc": 0.89
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_023.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_023.jpg",
    "pred": "非橙子",
    "p": 0.055,
    "unc": 0.89
@@ -5265,6 +5545,14 @@
    "unc": 0.906
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_38.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_38.jpg",
+   "pred": "非橙子",
+   "p": 0.047,
+   "unc": 0.907
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_136.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn2_136.jpg",
@@ -5351,6 +5639,14 @@
    "pred": "非橙子",
    "p": 0.044,
    "unc": 0.911
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_029.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_029.jpg",
+   "pred": "非橙子",
+   "p": 0.044,
+   "unc": 0.912
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_31.jpg",
@@ -5468,6 +5764,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_158.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn_158.jpg",
+   "pred": "非橙子",
+   "p": 0.041,
+   "unc": 0.919
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_36.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_36.jpg",
    "pred": "非橙子",
    "p": 0.041,
    "unc": 0.919
@@ -5641,6 +5945,14 @@
    "unc": 0.925
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_13.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_13.jpg",
+   "pred": "橙子",
+   "p": 0.963,
+   "unc": 0.926
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_d2de3c96de.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5",
    "rel": "r5_orange_r5_d2de3c96de.jpg",
@@ -5743,6 +6055,14 @@
    "pred": "非橙子",
    "p": 0.035,
    "unc": 0.93
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_032.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_032.jpg",
+   "pred": "非橙子",
+   "p": 0.034,
+   "unc": 0.931
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_122.jpg",
@@ -5855,6 +6175,14 @@
    "pred": "非橙子",
    "p": 0.033,
    "unc": 0.934
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_24.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_24.jpg",
+   "pred": "橙子",
+   "p": 0.967,
+   "unc": 0.935
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/ov_105.jpg",
@@ -6137,6 +6465,14 @@
    "unc": 0.941
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_1.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_1.jpg",
+   "pred": "橙子",
+   "p": 0.971,
+   "unc": 0.942
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_423a5c333e.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5",
    "rel": "r5_notor_r5_423a5c333e.jpg",
@@ -6167,6 +6503,14 @@
    "pred": "非橙子",
    "p": 0.029,
    "unc": 0.942
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/img_28.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "img_28.jpg",
+   "pred": "橙子",
+   "p": 0.972,
+   "unc": 0.943
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_057.jpg",
@@ -6881,6 +7225,14 @@
    "unc": 0.963
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_026.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_026.jpg",
+   "pred": "非橙子",
+   "p": 0.019,
+   "unc": 0.963
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_215.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn2_215.jpg",
@@ -7079,6 +7431,14 @@
    "pred": "非橙子",
    "p": 0.017,
    "unc": 0.966
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_004.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_004.jpg",
+   "pred": "非橙子",
+   "p": 0.016,
+   "unc": 0.967
   },
   {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/orange/040.jpg",
@@ -7873,6 +8233,14 @@
    "unc": 0.979
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_003.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_003.jpg",
+   "pred": "非橙子",
+   "p": 0.01,
+   "unc": 0.979
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/not_orange/085.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/not_orange",
    "rel": "085.jpg",
@@ -7980,6 +8348,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_169.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_169.jpg",
+   "pred": "非橙子",
+   "p": 0.01,
+   "unc": 0.98
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_040.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_040.jpg",
    "pred": "非橙子",
    "p": 0.01,
    "unc": 0.98
@@ -8196,6 +8572,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_091.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "ovn2_091.jpg",
+   "pred": "非橙子",
+   "p": 0.009,
+   "unc": 0.982
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_002.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_002.jpg",
    "pred": "非橙子",
    "p": 0.009,
    "unc": 0.982
@@ -8598,6 +8982,14 @@
    "rel": "ovn_103.jpg",
    "pred": "橙子",
    "p": 0.993,
+   "unc": 0.986
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_022.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_022.jpg",
+   "pred": "非橙子",
+   "p": 0.007,
    "unc": 0.986
   },
   {
@@ -9089,6 +9481,14 @@
    "unc": 0.989
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_23.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_23.jpg",
+   "pred": "橙子",
+   "p": 0.995,
+   "unc": 0.99
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_37.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "not_37.jpg",
@@ -9289,6 +9689,14 @@
    "unc": 0.99
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_28.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_28.jpg",
+   "pred": "橙子",
+   "p": 0.995,
+   "unc": 0.991
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/ov2_014.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "ov2_014.jpg",
@@ -9460,6 +9868,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_115.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_115.jpg",
+   "pred": "非橙子",
+   "p": 0.004,
+   "unc": 0.992
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_018.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_018.jpg",
    "pred": "非橙子",
    "p": 0.004,
    "unc": 0.992
@@ -10193,6 +10609,22 @@
    "unc": 0.995
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_007.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_007.jpg",
+   "pred": "非橙子",
+   "p": 0.002,
+   "unc": 0.995
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_032.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_032.jpg",
+   "pred": "橙子",
+   "p": 0.997,
+   "unc": 0.995
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_22.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
    "rel": "img_22.jpg",
@@ -10777,6 +11209,14 @@
    "unc": 0.997
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_027.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_027.jpg",
+   "pred": "橙子",
+   "p": 0.998,
+   "unc": 0.997
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_040.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "wm_orange_new_040.jpg",
@@ -10860,6 +11300,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_33.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
    "rel": "img_33.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.997
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_7.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_7.jpg",
    "pred": "非橙子",
    "p": 0.001,
    "unc": 0.997
@@ -11177,6 +11625,30 @@
    "unc": 0.998
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_27.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_27.jpg",
+   "pred": "橙子",
+   "p": 0.999,
+   "unc": 0.998
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_31.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "img_31.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.998
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_0.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_0.jpg",
+   "pred": "橙子",
+   "p": 0.999,
+   "unc": 0.998
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/ov2_000.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "ov2_000.jpg",
@@ -11324,6 +11796,14 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_180.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_180.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.998
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_5.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_5.jpg",
    "pred": "非橙子",
    "p": 0.001,
    "unc": 0.998
@@ -11833,6 +12313,38 @@
    "unc": 0.999
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/img_31.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "img_31.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_17.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_17.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_20.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_20.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_21.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_21.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 0.999
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_22.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "not_22.jpg",
@@ -12116,6 +12628,30 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_139.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
    "rel": "r2n_139.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_019.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_019.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_031.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_031.jpg",
+   "pred": "非橙子",
+   "p": 0.001,
+   "unc": 0.999
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/wm_notor_new_044.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "wm_notor_new_044.jpg",
    "pred": "非橙子",
    "p": 0.001,
    "unc": 0.999
@@ -12905,6 +13441,14 @@
    "unc": 1.0
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_1.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "orange_1.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 1.0
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_10.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "orange_10.jpg",
@@ -13049,6 +13593,14 @@
    "unc": 1.0
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_002.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
+   "rel": "wm_orange_new_002.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 1.0
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_016.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "wm_orange_new_016.jpg",
@@ -13068,6 +13620,46 @@
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/wm_orange_new_039.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange",
    "rel": "wm_orange_new_039.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/img_37.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "img_37.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_1.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_1.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_14.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_14.jpg",
+   "pred": "橙子",
+   "p": 1.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_16.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_16.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/not_19.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange",
+   "rel": "not_19.jpg",
    "pred": "橙子",
    "p": 1.0,
    "unc": 1.0
@@ -13577,9 +14169,25 @@
    "unc": 1.0
   },
   {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_39.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_39.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 1.0
+  },
+  {
    "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_4.jpg",
    "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
    "rel": "img_4.jpg",
+   "pred": "非橙子",
+   "p": 0.0,
+   "unc": 1.0
+  },
+  {
+   "id": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy/img_6.jpg",
+   "root": "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange_easy",
+   "rel": "img_6.jpg",
    "pred": "非橙子",
    "p": 0.0,
    "unc": 1.0
@@ -14896,5 +15504,99 @@
    "p": 0.0,
    "unc": 1.0
   }
- ]
+ ],
+ "decisions": {
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_174.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_d34fbd98fc.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/6b3f8b9e.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_118.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_e78aa1108b.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_62ffda9eb3.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_2edc06283f.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_f49c09d132.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_f4a0be5294.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_128.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13/05b9acbb.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_ec94787117.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_b970170672.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_106.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/pm_018.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_3a3c9a5ed8.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_a87ce8534a.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_ae1a48084c.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/r2_075.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_166.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_201.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_545aa78258.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13/4785de08.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_316350b809.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_d9f2b0f6c2.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_e9650a8f23.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_027.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_de6705465e.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_2834b9e9cb.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/orange_31.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_d1b6c17109.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/1946a09c.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/div_086.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_171.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_94f3cbf2dc.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_94ecb6f06b.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_02b0d1f9d0.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/img_30.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_77fc938764.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_163.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_142.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_007.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_a1367fa1ef.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_168.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_074.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_d03d5740a0.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_c150164093.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_48bb1958a8.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_a9e0206cec.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/d2d5a08d.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_a353fa8d69.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_19cb5df97e.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_133.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_dad1d10048.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_7cde65f732.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/orange/ov2_018.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r9/orange_r9/r9_orange_r9_51f14e48ea.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_7059e025d1.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_c90e6ce2fc.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_87a29be83b.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_8e9574ff74.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/32d4b9f4.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_192bc2671f.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_fd98aee49b.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_126.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_eaa07608c9.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_d61b5d0192.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/orange_r5/r5_orange_r5_ce324e0626.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_607c3198ea.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_r7_真实86/orange/042.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/not_orange_r13/22411131.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r10/notor_r10/r10_282c6f0937.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_178.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_a1e28d4ac4.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_65eabb1870.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_c05f15a73e.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r7/notor_r7/r7_notor_r7_deb9903e67.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_3b6eba6989.jpg": "橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13/ce6a9381.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn2_155.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_ad93b500fa.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_d71af24cd7.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_3848da1492.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r5/notor_r5/r5_notor_r5_8561eca049.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_d6b8c10c13.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_fb900b46f7.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_e6eb204339.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/r13_fetch/orange_r13/ab313e0d.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/_新增候选_r8/notor_r8/r8_notor_r8_557b45de8b.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/ovn_039.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/测试素材/not_orange/r2n_098.jpg": "非橙子",
+  "/home/fslong/Documents/blog/uploads/statics/lesson/LMCC/竞赛/通用人工智能挑战赛-中小学组/课程-赛项2-Python/赛项2定版_非橙88/orange/096.jpg": "橙子"
+ }
 }

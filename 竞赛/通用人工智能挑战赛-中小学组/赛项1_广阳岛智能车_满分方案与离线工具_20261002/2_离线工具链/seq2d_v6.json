@@ -1,0 +1,111 @@
+{
+ "ticks": 5538,
+ "total": 5826,
+ "seq": [
+  {
+   "label": "start",
+   "pid": 0,
+   "cp": 0,
+   "done": 0,
+   "hold": null
+  },
+  {
+   "label": "cp#0@270",
+   "pid": 352,
+   "cp": 1,
+   "done": 0,
+   "hold": null
+  },
+  {
+   "label": "cp#1@270",
+   "pid": 368,
+   "cp": 2,
+   "done": 0,
+   "hold": null
+  },
+  {
+   "label": "grab(distractor-2)",
+   "pid": 8,
+   "cp": 2,
+   "done": 0,
+   "hold": "guangyang-distractor-2"
+  },
+  {
+   "label": "drop(distractor-2)",
+   "pid": 9,
+   "cp": 2,
+   "done": 8,
+   "hold": null
+  },
+  {
+   "label": "grab(target-1)",
+   "pid": 2,
+   "cp": 2,
+   "done": 8,
+   "hold": "guangyang-target-1"
+  },
+  {
+   "label": "cp#2@0",
+   "pid": 370,
+   "cp": 3,
+   "done": 8,
+   "hold": "guangyang-target-1"
+  },
+  {
+   "label": "cp#3@240",
+   "pid": 407,
+   "cp": 4,
+   "done": 8,
+   "hold": "guangyang-target-1"
+  },
+  {
+   "label": "cp#4@90",
+   "pid": 422,
+   "cp": 5,
+   "done": 8,
+   "hold": "guangyang-target-1"
+  },
+  {
+   "label": "drop(target-1)",
+   "pid": 3,
+   "cp": 5,
+   "done": 9,
+   "hold": null
+  },
+  {
+   "label": "grab(distractor-1)",
+   "pid": 4,
+   "cp": 5,
+   "done": 9,
+   "hold": "guangyang-distractor-1"
+  },
+  {
+   "label": "drop(distractor-1)",
+   "pid": 5,
+   "cp": 5,
+   "done": 11,
+   "hold": null
+  },
+  {
+   "label": "cp#5@165",
+   "pid": 450,
+   "cp": 6,
+   "done": 11,
+   "hold": null
+  },
+  {
+   "label": "grab(target-2)",
+   "pid": 6,
+   "cp": 6,
+   "done": 11,
+   "hold": "guangyang-target-2"
+  },
+  {
+   "label": "drop(target-2)",
+   "pid": 7,
+   "cp": 6,
+   "done": 15,
+   "hold": null
+  }
+ ]
+}

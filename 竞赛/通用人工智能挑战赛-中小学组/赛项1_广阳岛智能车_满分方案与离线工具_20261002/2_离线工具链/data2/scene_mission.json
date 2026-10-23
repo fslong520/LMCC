@@ -1,0 +1,18 @@
+{
+ "start": [
+  -2.4865,
+  -7.6757,
+  3.141592653589793
+ ],
+ "goal": [
+  -2.4865,
+  -7.6757
+ ],
+ "checkpoints": [],
+ "deliveries": [],
+ "packageRadius": 0.28,
+ "roads": [],
+ "speedZones": [],
+ "prohibitedZones": [],
+ "objective": null
+}

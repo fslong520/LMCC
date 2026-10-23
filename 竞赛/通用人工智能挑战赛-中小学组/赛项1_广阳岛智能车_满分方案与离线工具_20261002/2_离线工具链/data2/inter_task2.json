@@ -1,0 +1,71 @@
+{
+ "schemaVersion": "chenlong.package-interaction/v2",
+ "packageRadius": 0.28,
+ "stackKeyDigits": 3,
+ "bounds": {
+  "minX": -20,
+  "maxX": 20,
+  "minZ": -12,
+  "maxZ": 12
+ },
+ "grab": {
+  "minForward": 0.38,
+  "maxForward": 1.35,
+  "maxLateral": 0.38
+ },
+ "release": {
+  "forwardOffset": 1.1,
+  "lateralOffset": 0,
+  "stackSnapDistance": 0.62
+ },
+ "packages": [
+  {
+   "id": "guangyang-target-1",
+   "x": 0.5097,
+   "z": 4.4324,
+   "stackLevel": 0,
+   "role": "target",
+   "radius": 0.28
+  },
+  {
+   "id": "guangyang-distractor-1",
+   "x": -8.0772,
+   "z": 5.4826,
+   "stackLevel": 0,
+   "role": "distractor",
+   "radius": 0.28
+  },
+  {
+   "id": "guangyang-target-2",
+   "x": 9.3127,
+   "z": -3.2587,
+   "stackLevel": 0,
+   "role": "target",
+   "radius": 0.28
+  },
+  {
+   "id": "guangyang-distractor-2",
+   "x": 6.7799,
+   "z": 4.6795,
+   "stackLevel": 0,
+   "role": "distractor",
+   "radius": 0.28
+  },
+  {
+   "id": "guangyang-obstacle-1",
+   "x": 15.2741,
+   "z": 2.3938,
+   "stackLevel": 0,
+   "role": "obstacle",
+   "radius": 0.52
+  },
+  {
+   "id": "guangyang-obstacle-2",
+   "x": 1.1274,
+   "z": -0.7568,
+   "stackLevel": 0,
+   "role": "obstacle",
+   "radius": 0.52
+  }
+ ]
+}

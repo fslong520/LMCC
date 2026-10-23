@@ -1,0 +1,26 @@
+{
+ "schemaVersion": "chenlong.simulation/v1",
+ "stepMs": 20,
+ "seed": 0,
+ "initialPose": {
+  "x": -2.4865,
+  "z": -7.6757,
+  "heading": 3.141592653589793
+ },
+ "vehicle": {
+  "version": "chenlong.vehicle/v1",
+  "radius": 0.44,
+  "collisionSkin": 0.005,
+  "maxLinearSpeed": 2.5,
+  "maxAngularSpeed": 2.8
+ },
+ "world": {
+  "bounds": {
+   "minX": -20,
+   "maxX": 20,
+   "minZ": -12,
+   "maxZ": 12
+  },
+  "colliders": []
+ }
+}

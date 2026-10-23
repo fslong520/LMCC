@@ -1,0 +1,261 @@
+{
+ "source": "T3_baseline_98.0.py",
+ "result": {
+  "score": 98,
+  "task": 40,
+  "rules": 25,
+  "auto": 15,
+  "eff": 18,
+  "durationSeconds": 210.5,
+  "completed": "18/18",
+  "taskFinished": true,
+  "eventDeduction": 0,
+  "offroadEpisodes": 0,
+  "endTick": 10529
+ },
+ "stats": {
+  "ops": 168,
+  "turns": 70,
+  "turnDeg": 5049.67,
+  "drives": 86,
+  "forwardCm": 2510.57,
+  "backwardCm": 94.08,
+  "grabs": 6,
+  "releases": 6
+ },
+ "interactions": [
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-distractor-2",
+   "role": "distractor",
+   "pose": {
+    "x": 7.948,
+    "z": -9.0446,
+    "h": -1.246689
+   },
+   "forward": 1.2115,
+   "lateral": 0.0003
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-distractor-2",
+   "role": "distractor",
+   "pose": {
+    "x": 8.1799,
+    "z": -8.3545,
+    "h": -2.817485
+   },
+   "forward": -0.7277,
+   "lateral": 1.2114,
+   "resultPosition": null
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-target-2",
+   "role": "target",
+   "pose": {
+    "x": 11.5732,
+    "z": 6.1482,
+    "h": -1.18089
+   },
+   "forward": 1.3461,
+   "lateral": 0.0006
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-target-2",
+   "role": "target",
+   "pose": {
+    "x": -9.6053,
+    "z": -6.5342,
+    "h": 0.336849
+   },
+   "forward": -18.8987,
+   "lateral": 17.1408,
+   "resultPosition": null
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-distractor-1",
+   "role": "distractor",
+   "pose": {
+    "x": -8.6362,
+    "z": 4.5222,
+    "h": -2.615725
+   },
+   "forward": 1.1112,
+   "lateral": 0.0014
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-distractor-1",
+   "role": "distractor",
+   "pose": {
+    "x": -9.2174,
+    "z": 4.8595,
+    "h": 2.096664
+   },
+   "forward": -0.6734,
+   "lateral": 1.1113,
+   "resultPosition": null
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-distractor-3",
+   "role": "distractor",
+   "pose": {
+    "x": -8.9961,
+    "z": 4.1347,
+    "h": 0.699877
+   },
+   "forward": 1.3068,
+   "lateral": 0
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-distractor-3",
+   "role": "distractor",
+   "pose": {
+    "x": -9.2042,
+    "z": 4.3099,
+    "h": 2.270673
+   },
+   "forward": -0.2721,
+   "lateral": 1.3067,
+   "resultPosition": null
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-target-3",
+   "role": "target",
+   "pose": {
+    "x": -0.7939,
+    "z": 4.4058,
+    "h": -1.590693
+   },
+   "forward": 1.3039,
+   "lateral": 0.0007
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-target-3",
+   "role": "target",
+   "pose": {
+    "x": -9.6024,
+    "z": -6.5355,
+    "h": 0.337023
+   },
+   "forward": -13.6947,
+   "lateral": 5.9164,
+   "resultPosition": null
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-target-1",
+   "role": "target",
+   "pose": {
+    "x": 8.013,
+    "z": -3.254,
+    "h": -1.57132
+   },
+   "forward": 1.2997,
+   "lateral": 0.0054
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-target-1",
+   "role": "target",
+   "pose": {
+    "x": -9.6023,
+    "z": -6.5355,
+    "h": 0.336499
+   },
+   "forward": -9.3385,
+   "lateral": 16.7722,
+   "resultPosition": null
+  }
+ ],
+ "events": [
+  {
+   "type": "checkpoint",
+   "tick": 1110,
+   "index": 0,
+   "checkpointId": "checkpoint-ds-lake"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 1659,
+   "index": 1,
+   "checkpointId": "checkpoint-egret"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 3348,
+   "index": 2,
+   "checkpointId": "checkpoint-rapeseed"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 3661,
+   "index": 3,
+   "checkpointId": "checkpoint-camp"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 5576,
+   "index": 4,
+   "checkpointId": "checkpoint-central-north"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 7545,
+   "index": 5,
+   "checkpointId": "checkpoint-central-south"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 8274,
+   "index": 6,
+   "checkpointId": "checkpoint-west-middle"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 10325,
+   "index": 7,
+   "checkpointId": "checkpoint-east-outer"
+  },
+  {
+   "type": "goal_reached",
+   "tick": 10526
+  },
+  {
+   "type": "task_completed",
+   "tick": 10526
+  }
+ ],
+ "rejected": []
+}

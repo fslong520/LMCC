@@ -1,0 +1,339 @@
+{
+ "events": [
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 14020,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 15740,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 15740,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 22155.178,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 33136.739,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 45060,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 66915.302,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 73194.613,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 95080,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 95080,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 111439.454,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 119000,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 120660,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 120660,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 123300,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 126220,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 126220,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 136320,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 150855.872,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 157640,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 157640,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 165477.838,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_grabbed",
+   "tick": null,
+   "t": 177120,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_released",
+   "tick": null,
+   "t": 195660,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "package_delivered",
+   "tick": null,
+   "t": 195660,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "checkpoint",
+   "tick": null,
+   "t": 206495.302,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "goal_reached",
+   "tick": null,
+   "t": 210435.372,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  },
+  {
+   "type": "run_finished",
+   "tick": null,
+   "t": 210440,
+   "pkg": null,
+   "role": null,
+   "reason": null,
+   "pos": null,
+   "cpIndex": null,
+   "cpId": null
+  }
+ ],
+ "simTick": 10522,
+ "samples": 2444,
+ "result": {
+  "score": 98,
+  "taskScore": 40,
+  "ruleScore": 25,
+  "autonomousScore": 15,
+  "efficiencyScore": 18,
+  "ruleDeduction": 0,
+  "eventDeduction": 0,
+  "durationDeduction": 0,
+  "durationSeconds": 210.4,
+  "completedTasks": 18,
+  "totalTasks": 18,
+  "taskValid": true,
+  "taskFinished": true,
+  "violationMetrics": {
+   "off_road": {
+    "episodes": 0,
+    "durationMs": 0,
+    "maxSeverity": 0
+   }
+  },
+  "violations": [],
+  "reason": "completed",
+  "simulationTick": 10522
+ }
+}

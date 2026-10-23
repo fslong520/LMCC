@@ -1,0 +1,105 @@
+{
+ "world": {
+  "bounds": {
+   "minX": -20,
+   "maxX": 20,
+   "minZ": -12,
+   "maxZ": 12
+  },
+  "colliders": [
+   {
+    "id": "object:guangyang-obstacle-1",
+    "type": "circle",
+    "x": 15.2741,
+    "z": 2.3938,
+    "radius": 0.52
+   },
+   {
+    "id": "object:guangyang-obstacle-2",
+    "type": "circle",
+    "x": 1.1274,
+    "z": -0.7568,
+    "radius": 0.52
+   },
+   {
+    "id": "object:guangyang-obstacle-3",
+    "type": "circle",
+    "x": -10.9498,
+    "z": 2.0849,
+    "radius": 0.52
+   },
+   {
+    "id": "package-stack:-10.28,-7.865",
+    "type": "circle",
+    "x": -10.280091438432,
+    "z": -7.86513446025,
+    "radius": 0.28
+   },
+   {
+    "id": "package-stack:-10.174,4.986",
+    "type": "circle",
+    "x": -10.174169811824,
+    "z": 4.9860779266,
+    "radius": 0.28
+   },
+   {
+    "id": "package-stack:12.819,5.637",
+    "type": "circle",
+    "x": 12.8185,
+    "z": 5.6371,
+    "radius": 0.28
+   },
+   {
+    "id": "package-stack:8.409,-7.044",
+    "type": "circle",
+    "x": 8.408818207392,
+    "z": -7.044206663487,
+    "radius": 0.28
+   },
+   {
+    "id": "package-stack:0.51,4.432",
+    "type": "circle",
+    "x": 0.5097,
+    "z": 4.4324,
+    "radius": 0.28
+   }
+  ]
+ },
+ "sim": {
+  "schemaVersion": "chenlong.simulation/v1",
+  "stepMs": 20,
+  "seed": 0,
+  "initialPose": {
+   "x": -2.4865,
+   "z": -7.6757,
+   "heading": 3.141592653589793
+  },
+  "vehicle": {
+   "version": "chenlong.vehicle/v1",
+   "radius": 0.44,
+   "collisionSkin": 0.005,
+   "maxLinearSpeed": 2.5,
+   "maxAngularSpeed": 2.8
+  },
+  "world": {
+   "bounds": {
+    "minX": -20,
+    "maxX": 20,
+    "minZ": -12,
+    "maxZ": 12
+   },
+   "colliders": []
+  }
+ },
+ "robotPose": {
+  "x": -2.4865,
+  "z": -7.6757,
+  "heading": 3.141592653589793
+ },
+ "missionStart": [
+  -2.4865,
+  -7.6757,
+  3.141592653589793
+ ],
+ "colliders": 8
+}

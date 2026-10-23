@@ -1,0 +1,28 @@
+{
+ "configKeys": [
+  "taskId",
+  "mapId",
+  "mapVersion",
+  "taskVersion",
+  "ruleVersion",
+  "displayName",
+  "timeLimitSeconds",
+  "world",
+  "start",
+  "goal",
+  "objectTaskOverlay",
+  "task",
+  "checkpoints",
+  "obstacles",
+  "roads",
+  "trafficLights",
+  "speedZones",
+  "prohibitedZones",
+  "landmarks",
+  "scoring",
+  "rules",
+  "difficulty",
+  "mapConfig"
+ ],
+ "rules": null
+}

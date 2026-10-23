@@ -1,0 +1,52 @@
+{
+ "bounds": {
+  "minX": -20,
+  "maxX": 20,
+  "minZ": -12,
+  "maxZ": 12
+ },
+ "colliders": [
+  {
+   "id": "object:guangyang-obstacle-1",
+   "type": "circle",
+   "x": 15.2741,
+   "z": 2.3938,
+   "radius": 0.52
+  },
+  {
+   "id": "object:guangyang-obstacle-2",
+   "type": "circle",
+   "x": 1.1274,
+   "z": -0.7568,
+   "radius": 0.52
+  },
+  {
+   "id": "package-stack:0.51,4.432",
+   "type": "circle",
+   "x": 0.5097,
+   "z": 4.4324,
+   "radius": 0.28
+  },
+  {
+   "id": "package-stack:-8.077,5.483",
+   "type": "circle",
+   "x": -8.0772,
+   "z": 5.4826,
+   "radius": 0.28
+  },
+  {
+   "id": "package-stack:9.313,-3.259",
+   "type": "circle",
+   "x": 9.3127,
+   "z": -3.2587,
+   "radius": 0.28
+  },
+  {
+   "id": "package-stack:6.78,4.68",
+   "type": "circle",
+   "x": 6.7799,
+   "z": 4.6795,
+   "radius": 0.28
+  }
+ ]
+}

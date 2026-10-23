@@ -1,0 +1,515 @@
+{
+ "events": [
+  {
+   "t": 14020,
+   "type": "package_grabbed",
+   "pkg": "guangyang-distractor-2",
+   "role": "distractor",
+   "pos": [
+    9.0965,
+    -9.4301
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": 7.9481,
+    "z": -9.0446,
+    "h": -1.2467,
+    "tick": 701
+   }
+  },
+  {
+   "t": 15740,
+   "type": "package_released",
+   "pkg": "guangyang-distractor-2",
+   "role": "distractor",
+   "pos": [
+    8.530200382852,
+    -7.311726156476
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": 8.1799,
+    "z": -8.3545,
+    "h": -2.8175,
+    "tick": 787
+   }
+  },
+  {
+   "t": 15740,
+   "type": "package_delivered",
+   "pkg": "guangyang-distractor-2",
+   "role": "distractor",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": 8.1799,
+    "z": -8.3545,
+    "h": -2.8175,
+    "tick": 787
+   }
+  },
+  {
+   "t": 22155.178,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 0,
+   "cp": "checkpoint-ds-lake",
+   "pose": {
+    "x": 6.6812,
+    "z": -4.2592,
+    "h": -2.678,
+    "tick": 1105
+   }
+  },
+  {
+   "t": 33136.739,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 1,
+   "cp": "checkpoint-egret",
+   "pose": {
+    "x": 5.2263,
+    "z": 6.1173,
+    "h": 2.33,
+    "tick": 1655
+   }
+  },
+  {
+   "t": 45060,
+   "type": "package_grabbed",
+   "pkg": "guangyang-target-2",
+   "role": "target",
+   "pos": [
+    12.8185,
+    5.6371
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": 11.5732,
+    "z": 6.1482,
+    "h": -1.1809,
+    "tick": 2253
+   }
+  },
+  {
+   "t": 66915.302,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 2,
+   "cp": "checkpoint-rapeseed",
+   "pose": {
+    "x": 12.7283,
+    "z": 1.128,
+    "h": -1.5319,
+    "tick": 3345
+   }
+  },
+  {
+   "t": 73194.613,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 3,
+   "cp": "checkpoint-camp",
+   "pose": {
+    "x": 7.1802,
+    "z": 1.344,
+    "h": 0.6596,
+    "tick": 3656
+   }
+  },
+  {
+   "t": 95080,
+   "type": "package_released",
+   "pkg": "guangyang-target-2",
+   "role": "target",
+   "pos": [
+    -9.968877739983,
+    -7.572406753035
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6053,
+    "z": -6.5342,
+    "h": 0.3368,
+    "tick": 4754
+   }
+  },
+  {
+   "t": 95080,
+   "type": "package_delivered",
+   "pkg": "guangyang-target-2",
+   "role": "target",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6053,
+    "z": -6.5342,
+    "h": 0.3368,
+    "tick": 4754
+   }
+  },
+  {
+   "t": 111439.454,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 4,
+   "cp": "checkpoint-central-north",
+   "pose": {
+    "x": -2.4895,
+    "z": 3.3332,
+    "h": 3.1414,
+    "tick": 5570
+   }
+  },
+  {
+   "t": 119000,
+   "type": "package_grabbed",
+   "pkg": "guangyang-distractor-1",
+   "role": "distractor",
+   "pos": [
+    -8.0772,
+    5.4826
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -8.6362,
+    "z": 4.5222,
+    "h": -2.6157,
+    "tick": 5950
+   }
+  },
+  {
+   "t": 120660,
+   "type": "package_released",
+   "pkg": "guangyang-distractor-1",
+   "role": "distractor",
+   "pos": [
+    -10.168806863838,
+    5.411657034185
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.2174,
+    "z": 4.8595,
+    "h": 2.0967,
+    "tick": 6033
+   }
+  },
+  {
+   "t": 120660,
+   "type": "package_delivered",
+   "pkg": "guangyang-distractor-1",
+   "role": "distractor",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.2174,
+    "z": 4.8595,
+    "h": 2.0967,
+    "tick": 6033
+   }
+  },
+  {
+   "t": 123300,
+   "type": "package_grabbed",
+   "pkg": "guangyang-distractor-3",
+   "role": "distractor",
+   "pos": [
+    -9.8378,
+    3.1351
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -8.9961,
+    "z": 4.1347,
+    "h": 0.6999,
+    "tick": 6165
+   }
+  },
+  {
+   "t": 126220,
+   "type": "package_released",
+   "pkg": "guangyang-distractor-3",
+   "role": "distractor",
+   "pos": [
+    -10.168806863838,
+    5.411657034185
+   ],
+   "stack": 1,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.2042,
+    "z": 4.3099,
+    "h": 2.2707,
+    "tick": 6311
+   }
+  },
+  {
+   "t": 126220,
+   "type": "package_delivered",
+   "pkg": "guangyang-distractor-3",
+   "role": "distractor",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.2042,
+    "z": 4.3099,
+    "h": 2.2707,
+    "tick": 6311
+   }
+  },
+  {
+   "t": 136320,
+   "type": "package_grabbed",
+   "pkg": "guangyang-target-3",
+   "role": "target",
+   "pos": [
+    0.5097,
+    4.4324
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -0.7939,
+    "z": 4.4058,
+    "h": -1.5907,
+    "tick": 6816
+   }
+  },
+  {
+   "t": 150855.872,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 5,
+   "cp": "checkpoint-central-south",
+   "pose": {
+    "x": -10.4787,
+    "z": -0.7615,
+    "h": 1.5704,
+    "tick": 7540
+   }
+  },
+  {
+   "t": 157640,
+   "type": "package_released",
+   "pkg": "guangyang-target-3",
+   "role": "target",
+   "pos": [
+    -9.968877739983,
+    -7.572406753035
+   ],
+   "stack": 1,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6024,
+    "z": -6.5355,
+    "h": 0.337,
+    "tick": 7882
+   }
+  },
+  {
+   "t": 157640,
+   "type": "package_delivered",
+   "pkg": "guangyang-target-3",
+   "role": "target",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6024,
+    "z": -6.5355,
+    "h": 0.337,
+    "tick": 7882
+   }
+  },
+  {
+   "t": 165477.838,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 6,
+   "cp": "checkpoint-west-middle",
+   "pose": {
+    "x": -3.6337,
+    "z": -5.4887,
+    "h": -1.5757,
+    "tick": 8270
+   }
+  },
+  {
+   "t": 177120,
+   "type": "package_grabbed",
+   "pkg": "guangyang-target-1",
+   "role": "target",
+   "pos": [
+    9.3127,
+    -3.2587
+   ],
+   "stack": 0,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": 8.013,
+    "z": -3.254,
+    "h": -1.5713,
+    "tick": 8856
+   }
+  },
+  {
+   "t": 195660,
+   "type": "package_released",
+   "pkg": "guangyang-target-1",
+   "role": "target",
+   "pos": [
+    -9.968877739983,
+    -7.572406753035
+   ],
+   "stack": 2,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6023,
+    "z": -6.5355,
+    "h": 0.3365,
+    "tick": 9783
+   }
+  },
+  {
+   "t": 195660,
+   "type": "package_delivered",
+   "pkg": "guangyang-target-1",
+   "role": "target",
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -9.6023,
+    "z": -6.5355,
+    "h": 0.3365,
+    "tick": 9783
+   }
+  },
+  {
+   "t": 206495.302,
+   "type": "checkpoint",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": 7,
+   "cp": "checkpoint-east-outer",
+   "pose": {
+    "x": -2.4863,
+    "z": -3.6237,
+    "h": 3.1411,
+    "tick": 10320
+   }
+  },
+  {
+   "t": 210435.372,
+   "type": "goal_reached",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -2.4848,
+    "z": -6.5815,
+    "h": -0.0005,
+    "tick": 10520
+   }
+  },
+  {
+   "t": 210440,
+   "type": "run_finished",
+   "pkg": null,
+   "role": null,
+   "pos": null,
+   "stack": null,
+   "idx": null,
+   "cp": null,
+   "pose": {
+    "x": -2.4847,
+    "z": -6.6315,
+    "h": -0.0005,
+    "tick": 10522
+   }
+  }
+ ],
+ "simTick": 10522,
+ "result": {
+  "score": 98,
+  "taskScore": 40,
+  "ruleScore": 25,
+  "autonomousScore": 15,
+  "efficiencyScore": 18,
+  "ruleDeduction": 0,
+  "eventDeduction": 0,
+  "durationDeduction": 0,
+  "durationSeconds": 210.4,
+  "completedTasks": 18,
+  "totalTasks": 18,
+  "taskValid": true,
+  "taskFinished": true,
+  "violationMetrics": {
+   "off_road": {
+    "episodes": 0,
+    "durationMs": 0,
+    "maxSeverity": 0
+   }
+  },
+  "violations": [],
+  "reason": "completed",
+  "simulationTick": 10522
+ },
+ "samples": 2444
+}

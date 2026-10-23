@@ -1,0 +1,195 @@
+{
+ "source": "任务2_云端记录98.2_20260925恢复.py",
+ "result": {
+  "score": 98.2,
+  "task": 40,
+  "rules": 25,
+  "auto": 15,
+  "eff": 18.2,
+  "durationSeconds": 165,
+  "completed": "13/13",
+  "taskFinished": true,
+  "eventDeduction": 0,
+  "offroadEpisodes": 0,
+  "endTick": 8256
+ },
+ "stats": {
+  "ops": 134,
+  "turns": 46,
+  "turnDeg": 2938.26,
+  "drives": 80,
+  "forwardCm": 1939.46,
+  "backwardCm": 220.5,
+  "grabs": 4,
+  "releases": 4
+ },
+ "interactions": [
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-target-1",
+   "role": "target",
+   "tick": 631,
+   "pose": {
+    "x": -0.49481267312,
+    "z": 4.518807226884,
+    "h": -1.483878930053
+   },
+   "forward": 1.0082,
+   "lateral": 0.0011
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-target-1",
+   "role": "target",
+   "tick": 1566,
+   "pose": {
+    "x": -9.606102999496,
+    "z": -6.569986696837,
+    "h": 0.641233967186
+   },
+   "forward": -14.868,
+   "lateral": 1.5249
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-target-2",
+   "role": "target",
+   "tick": 2498,
+   "pose": {
+    "x": 8.314690633018,
+    "z": -3.257724857314,
+    "h": -1.570970859707
+   },
+   "forward": 0.998,
+   "lateral": 0.0011
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-target-2",
+   "role": "target",
+   "tick": 3774,
+   "pose": {
+    "x": -9.605945846923,
+    "z": -6.57342332172,
+    "h": 0.641059434287
+   },
+   "forward": -13.9708,
+   "lateral": 13.1802
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-distractor-1",
+   "role": "distractor",
+   "tick": 4459,
+   "pose": {
+    "x": -8.627458066484,
+    "z": 4.700055686842,
+    "h": -2.527411289786
+   },
+   "forward": 0.9566,
+   "lateral": 0.0013
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-distractor-1",
+   "role": "distractor",
+   "tick": 4590,
+   "pose": {
+    "x": -9.813076660013,
+    "z": 3.973786486942,
+    "h": 2.184977690602
+   },
+   "forward": -0.5491,
+   "lateral": 2.2334
+  },
+  {
+   "op": "grab",
+   "accepted": true,
+   "reason": "grabbed",
+   "packageId": "guangyang-distractor-2",
+   "role": "distractor",
+   "tick": 5455,
+   "pose": {
+    "x": 6.034246551822,
+    "z": 5.344740274315,
+    "h": -0.836885376326
+   },
+   "forward": 0.9993,
+   "lateral": 0.0054
+  },
+  {
+   "op": "release",
+   "accepted": true,
+   "reason": "released",
+   "packageId": "guangyang-distractor-2",
+   "role": "distractor",
+   "tick": 5591,
+   "pose": {
+    "x": 5.65530651755,
+    "z": 4.945560351938,
+    "h": 0.759392757528
+   },
+   "forward": -0.5813,
+   "lateral": 0.9988
+  }
+ ],
+ "events": [
+  {
+   "type": "checkpoint",
+   "tick": 168,
+   "index": 0,
+   "checkpointId": "checkpoint-ds-lake"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 2736,
+   "index": 1,
+   "checkpointId": "checkpoint-egret"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 4926,
+   "index": 2,
+   "checkpointId": "checkpoint-rapeseed"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 5260,
+   "index": 3,
+   "checkpointId": "checkpoint-camp"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 6431,
+   "index": 4,
+   "checkpointId": "checkpoint-central-north"
+  },
+  {
+   "type": "checkpoint",
+   "tick": 7305,
+   "index": 5,
+   "checkpointId": "checkpoint-central-south"
+  },
+  {
+   "type": "goal_reached",
+   "tick": 8248
+  },
+  {
+   "type": "task_completed",
+   "tick": 8248
+  }
+ ],
+ "rejected": []
+}
