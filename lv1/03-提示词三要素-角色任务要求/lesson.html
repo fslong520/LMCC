@@ -27,7 +27,30 @@
   .code{background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0}
   .savetip{position:fixed;right:18px;bottom:18px;background:#1e3a8a;color:#fff;font-size:13px;padding:7px 14px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none;font-family:inherit;z-index:99}
   .savetip.show{opacity:.92}
-  @media print{.savetip{display:none}input[type=text],textarea{background:transparent;border-color:#94a3b8}details{display:block}details>*{display:block}}
+  .w{background:#fff;border:1px solid #dbe3ef;border-radius:12px;padding:14px 16px;margin:16px 0}
+  .w .hd{font-size:13px;color:#64748b;margin:0 0 10px}
+  .w .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .w .tiles{display:flex;flex-wrap:wrap;align-items:center;gap:2px;margin:8px 0}
+  .w .ch{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:38px;padding:0 6px;background:#f8fafc;border:1px solid #d1d5db;border-radius:6px;font-size:17px;color:#1f2937}
+  .w .gap{width:12px;height:38px;border-radius:3px;background:#eef2f7;cursor:pointer}
+  .w .gap:hover{background:#dbeafe}
+  .w .gap.on{background:#2563eb}
+  .w .chip{display:inline-block;padding:5px 10px;border-radius:999px;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-size:14px;margin:2px 4px 2px 0}
+  .w .chip.sel{background:#1e3a8a;color:#fff;border-color:#1e3a8a}
+  .w .chip.end{background:#1f2937;color:#fff;border-color:#111827}
+  .w button{font-family:inherit;font-size:14px;padding:7px 14px;border-radius:8px;border:1px solid #93c5fd;background:#fff;color:#1e3a8a;cursor:pointer;margin:8px 8px 0 0}
+  .w button:hover{background:#eff6ff}
+  .w button:disabled{opacity:.45;cursor:default}
+  .w .out{min-height:38px;background:#f8fafc;border-radius:8px;padding:8px 10px;font-size:16px;color:#1f2937;margin:8px 0 0}
+  .w .msg{font-size:13.5px;color:#475569;margin:8px 0 0;min-height:20px}
+  .w .bars{display:grid;grid-template-columns:64px 1fr 44px;gap:6px 8px;align-items:center;margin:10px 0 0;font-size:14px}
+  .w .bar{height:16px;border-radius:4px;background:#2563eb}
+  .w .grid{display:grid;grid-template-columns:repeat(3,66px);gap:6px;margin:8px 0}
+  .w .cell{width:66px;height:48px;border:1px dashed #cbd5e1;border-radius:8px;background:#f8fafc;display:flex;align-items:center;justify-content:center;font-size:15px;color:#1f2937;cursor:pointer}
+  .w .cell.on{background:#dbeafe;border-style:solid;border-color:#93c5fd}
+  .w .cell.ghost{color:#94a3b8;font-size:12px}
+  @media print{.savetip{display:none}input[type=text],textarea{background:transparent;border-color:#94a3b8}details{display:block}details>*{display:block}.w{background:#fff;border-style:dashed}.w .row,.w .out,.w .bars,.w .grid,.w .chips,.w .msg{display:none}}
+  @page{size:A4;margin:14mm}
 </style>
 </head>
 <body>
@@ -106,7 +129,7 @@
 <p style="margin:12px 0">WorkBuddy 新开一个任务，把这一句发过去：</p>
 <pre class="code">用 Python 写一个分词器：我输入一句话，你把它切成一块一块，逐块打印出来，最后打印一共几块。</pre>
 
-<p style="margin:12px 0">代码存成 <code style="background:#f1f5f9;border-radius:4px;padding:1px 5px">fenci.py</code>，运行它，输入这一句：</p>
+<p style="margin:12px 0">代码存成 <code style="background:#f1f5f9;border-radius:4px;padding:1px 5px">03-分词器.py</code>，放进 <code style="background:#f1f5f9;border-radius:4px;padding:1px 5px">我的Agent/</code> 文件夹，运行它，输入这一句：</p>
 <pre class="code">帮我做个网页版的人生模拟机</pre>
 
 <div class="card">
@@ -224,8 +247,18 @@
   <p style="margin:0"><b>背①：AI 读的是切好的块。一块叫 Token。中文一个字常常切成 1 到 2 块。</b></p>
 </div>
 
-<p style="margin:14px 0">老师这里还有一个分词机，可以当场比一比：你在上面切，它在下面给出模型词表的切法。</p>
-<pre class="code">python3 codes/04-分词机.py</pre>
+<div class="w" id="w-fenci">
+  <p class="hd">你来切一刀：点两个字中间的空隙，切完看自己切了几块，再对照模型的切法（示意）。</p>
+  <div class="tiles" id="w-fenci-tiles"></div>
+  <div class="out" id="w-fenci-out"></div>
+  <p class="msg" id="w-fenci-msg">还没切，整句是一块。</p>
+  <div class="row">
+    <button type="button" id="w-fenci-model">看模型的切法</button>
+    <button type="button" id="w-fenci-clear">清空重来</button>
+  </div>
+</div>
+
+<p style="margin:14px 0">也可以在电脑上跑 <code>codes/04-分词机.py</code>，自己切一刀，让它同时给出模型词表的切法。</p>
 
 <h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">三、一句话怎么变成一段回答（27 分钟）</h2>
 
@@ -245,6 +278,17 @@
 <p style="margin:12px 0">猜下一个块，就是它的全部工作。猜出一个，接上去，再猜下一个；再接上去，再猜下一个。你看到的那一大篇回答，是一个块一个块接出来的，中间没有停。</p>
 
 <p style="margin:12px 0">它写程序写得好，靠的是见过海量的程序，「一个 if 后面常常跟着什么」它都记着。</p>
+
+<div class="w" id="w-next">
+  <p class="hd">你替它点一下：每按一次，只接一块。看看一段话是怎么长出来的。</p>
+  <p style="margin:4px 0;color:#1f2937">今天我走进教室，看到黑板上写着<span id="w-next-inline" style="font-weight:700;color:#1e3a8a"></span></p>
+  <div class="out" id="w-next-chips"></div>
+  <p class="msg" id="w-next-msg">已接 0 块。</p>
+  <div class="row">
+    <button type="button" id="w-next-btn">接下一块</button>
+    <button type="button" id="w-next-reset">重来</button>
+  </div>
+</div>
 
 <div class="note">
   <p style="margin:0"><b>背②：大模型的核心工作是预测下一个块（下一个词），一次只猜一个，猜完接着猜。</b></p>
@@ -282,11 +326,18 @@
 </svg>
 </figure>
 
-<p style="margin:12px 0">验一次：把上节课你问过的同一句话，再问一遍，比对两遍的答案：</p>
-<div class="card">
-  <p style="margin:5px 0">第一遍：<input type="text" placeholder="抄头几个字" style="min-width:35%">　第二遍：<input type="text" placeholder="抄头几个字" style="min-width:35%"></p>
-  <p style="margin:6px 0">两遍一样吗：<input type="text" placeholder="一样／不一样" style="min-width:120px"></p>
+<div class="w" id="w-queue">
+  <p class="hd">它心里的候选，已经按「像不像」排好。按一次「让它选」，看它这次取了第几名。</p>
+  <div class="out" id="w-queue-out">（还没选）</div>
+  <div class="bars" id="w-queue-bars"></div>
+  <p class="msg" id="w-queue-msg">多数时候取第一名，有时取中间的。取中间那次，答案就变了。</p>
+  <div class="row">
+    <button type="button" id="w-queue-btn">让它选一次</button>
+    <button type="button" id="w-queue-reset">清空记录</button>
+  </div>
 </div>
+
+<p style="margin:12px 0">再用 AI 把 3.1 那句「今天我走进教室，看到黑板上写着」问两遍，比对两遍的答案，看是不是也会变。</p>
 
 <div class="note">
   <p style="margin:0"><b>背③：它给每个候选按「像不像」排队，最像的排最前；有时取中间的，所以同一句问两遍答案会不一样。</b></p>
@@ -316,7 +367,7 @@
 
   <rect x="190" y="34" width="150" height="52" rx="8" fill="#fff" stroke="#93c5fd"/>
   <text x="208" y="58" font-size="14" fill="#1f2937">切成块</text>
-  <text x="208" y="76" font-size="13" fill="#6b7280">今天 / 天气 / 真 / 好</text>
+  <text x="208" y="76" font-size="13" fill="#6b7280">今天 / 天气 / 真好</text>
 
   <rect x="360" y="34" width="150" height="52" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
   <text x="378" y="58" font-size="14" fill="#1e3a8a">换成编号</text>
@@ -359,16 +410,18 @@
 </svg>
 </figure>
 
-<p style="margin:12px 0">往里走的时候，每一块也先换成一串数字再交给模型去算；往外走的时候，再按编号查表换回文字。两个方向用的是同一张词表。</p>
+<p style="margin:12px 0">编号只是词表里的门牌号。模型内部算的是每一块对应的一串数字（下一小节讲），算完给出下一个编号，再按编号查表取字。</p>
 
 <div class="alert">
   <p style="margin:0"><b>半个字是怎么回事：</b>有些编号只对应一个汉字的一半（一个字节）。要两个编号拼起来，屏幕上才出现一个完整的字。你在分词机里看到灰底的「半个字」，就是这个原因。</p>
 </div>
 
-<div class="card">
-  <p style="margin:5px 0">① 它每一步猜出来的，是一个编号还是一段文字：<input type="text" placeholder="写一个" style="min-width:230px"></p>
-  <p style="margin:6px 0">② 编号变成文字，中间做了什么：<input type="text" placeholder="查表／猜／复制" style="min-width:230px"></p>
-  <p style="margin:6px 0">③ 为什么有时会看到半个字：<input type="text" placeholder="写一句" style="min-width:100%"></p>
+<div class="w" id="w-lookup">
+  <p class="hd">你来当一次模型：只会拿到编号。按编号取块，一块块接下去，接到结束块就停。</p>
+  <div class="row" id="w-lookup-nums"></div>
+  <div class="out" id="w-lookup-out">（还没接）</div>
+  <p class="msg" id="w-lookup-msg">第 0 步。每一步只拿到一个编号。</p>
+  <div class="row"><button type="button" id="w-lookup-reset">重新拼一次</button></div>
 </div>
 
 <h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">3.5 块变成坐标：一串数字（4 分钟）</h3>
@@ -419,11 +472,18 @@
 
 <p style="margin:12px 0">所以它读一句话，是把这句里的块一块块摆进这片坐标，在坐标上算一遍，再算出下一个块的编号。它不会背句子，它在算数字。</p>
 
-<div class="card">
-  <p style="margin:5px 0">给你五个词：<b>猫、小猫、石头、跑、考试</b>。拿一张纸，画一个坐标，把它们摆上去，意思近的放近，意思远的放远。摆完说一句为什么。</p>
-  <p style="margin:6px 0">哪两个你摆得最近：<input type="text" placeholder="写两个词" style="min-width:230px">，为什么：<input type="text" placeholder="写一句" style="min-width:45%"></p>
-  <p style="margin:6px 0">哪一个你摆得最远：<input type="text" placeholder="写一个词" style="min-width:150px">，它离谁最远：<input type="text" placeholder="写一个词" style="min-width:150px"></p>
+<div class="w" id="w-map">
+  <p class="hd">把五个词摆进这片坐标：先点一个词，再点一个格子。意思近的，摆得近一点。</p>
+  <div class="row" id="w-map-words"></div>
+  <div class="grid" id="w-map-grid"></div>
+  <p class="msg" id="w-map-msg">选一个词，再点格子。</p>
+  <div class="row">
+    <button type="button" id="w-map-ref">看参考摆法</button>
+    <button type="button" id="w-map-reset">重摆</button>
+  </div>
 </div>
+
+<p style="margin:12px 0;color:#6b7280;font-size:14px">没有电脑就跟老师要一张纸，摆法一样，摆完说一句为什么。</p>
 
 <div class="note">
   <p style="margin:0"><b>一句话记住：模型把每一块换成一串数字（坐标），意思近的坐标近；它算的是数字，最后再把编号变回文字。</b></p>
@@ -473,9 +533,15 @@
 
 <p style="margin:12px 0">两块之间没有线连着，是算出来的：算「它」的时候，把「书」和「桌」各自看了多少，按分数算进去。同一个「它」，看谁多，就指谁。</p>
 
-<div class="card">
-  <p style="margin:5px 0">① 「书放桌上，它太重了」里，「它」指：<input type="text" placeholder="写一个词" style="min-width:150px">　凭什么：<input type="text" placeholder="写一句" style="min-width:45%"></p>
-  <p style="margin:6px 0">② 「书放桌上，它太矮了」里，「它」指：<input type="text" placeholder="写一个词" style="min-width:150px">　凭什么：<input type="text" placeholder="写一句" style="min-width:45%"></p>
+<div class="w" id="w-attn">
+  <p class="hd">点一下「它」认为该指的那个词，看看它把多少分给了谁。</p>
+  <p style="margin:4px 0;font-size:17px" id="w-attn-sent"></p>
+  <p class="msg" id="w-attn-msg">先读句子：它回头看了谁，看谁看得多，就指谁。</p>
+  <div class="bars" id="w-attn-bars"></div>
+  <div class="row">
+    <button type="button" id="w-attn-heavy">换成「太重了」</button>
+    <button type="button" id="w-attn-short">换成「太矮了」</button>
+  </div>
 </div>
 
 <div class="note">
@@ -509,10 +575,21 @@
 </svg>
 </figure>
 
-<div class="card">
-  <p style="margin:5px 0">① 让它只回答两个字，它照做没有：<input type="text" placeholder="照做／没照做，它答了几个字" style="min-width:55%"></p>
-  <p style="margin:6px 0">② 让它分三段回答，数了几个换行：<input type="text" placeholder="几个" style="min-width:70px">　跟你数的一样吗：<input type="text" placeholder="一样／不一样" style="min-width:105px"></p>
+<div class="w" id="w-stop">
+  <p class="hd">一直接，接到结束块为止。每次停的位置不一定一样。</p>
+  <div class="out" id="w-stop-out">（还没接）</div>
+  <p class="msg" id="w-stop-msg">按「接一块」开始。</p>
+  <div class="row">
+    <button type="button" id="w-stop-btn">接一块</button>
+    <button type="button" id="w-stop-reset">再开一局</button>
+  </div>
 </div>
+
+<p style="margin:12px 0">再用 AI 做两个小实验，两句都原样发出去：</p>
+<pre class="code">今天天气怎么样？只回答两个字，不要解释。</pre>
+<p style="margin:6px 0">数它答了几个字。多说了，说明什么时候停它自己也在拿主意，你的要求只算加了一道闸。</p>
+<pre class="code">说说你周末怎么过。分三段，每段不超过 20 字。</pre>
+<p style="margin:6px 0">数它摆了几个换行。换行也是块：你让它分段，它就多猜出几个换行块。</p>
 
 <div class="note">
   <p style="margin:0"><b>一句话记住：回答是一块块接出来的，碰到结束块就停；停在哪、分几段，它自己定，你的要求也能管住它。</b></p>
@@ -692,15 +769,15 @@
 [{"min":6,"max":15,"title":"事件名","desc":"发生了什么，40 字内",
   "choices":[{"text":"选项一","effect":{"wits":2},"result":"选完发生什么"},
              {"text":"选项二","effect":{"body":1},"result":"选完发生什么"}]}]
-要求：事件符合那个年代和地方；每条两个选项，两个选项都得有得有失；
-effect 里只能出现 wits、body、luck、money 四个键。</pre>
+要求：事件符合那个年代和地方；每条事件的 min 和 max 写它适合的年龄，合起来要盖住 1 到 18 岁；
+每条两个选项，两个选项都得有得有失；effect 里只能出现 wits、body、luck、money 四个键。</pre>
   <p style="margin:8px 0 0 0">我用的年代是 <input type="text" placeholder="比如 1990 年" style="min-width:110px">，地方是 <input type="text" placeholder="比如 云南小镇" style="min-width:140px"></p>
 </div>
 
 <div class="card">
   <p style="margin:4px 0"><b>第二步　把事件贴进文件。</b>用记事本或 VS Code 打开你的模拟机 html，找到下面这一行开头：</p>
   <pre class="code" style="background:#fff">const EVENTS = [</pre>
-  <p style="margin:8px 0 4px">把方括号里的整段内容换成 AI 给的那段，存盘。方括号和后面的分号留着。</p>
+  <p style="margin:8px 0 4px">把原来的方括号连同里面的内容整段删掉，换成 AI 给的那对方括号和内容；<code>const EVENTS =</code> 和结尾的 <code>;</code> 留着，存盘。</p>
   <p style="margin:8px 0 0 0">我贴进去 <input type="text" placeholder="几条" style="min-width:70px"> 条事件</p>
 </div>
 
@@ -798,6 +875,236 @@ effect 的数值不要超过 3；desc 里不要写结果，只写当时的情景
 </div>
 
 <div class="savetip" id="savetip">已自动保存</div>
+<script>
+(function(){
+  function $(id){return document.getElementById(id);}
+  function mk(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
+  function on(id,fn){var e=$(id);if(e)e.addEventListener('click',fn);}
+
+  /* A 分词：点选切割 */
+  (function(){
+    var root=$('w-fenci');if(!root)return;
+    var text='帮我做个网页版的人生模拟机';
+    var model=['帮我','做','个','网页','版','的','人生','模拟','机'];
+    var cuts={},box=$('w-fenci-tiles'),out=$('w-fenci-out'),msg=$('w-fenci-msg');
+    function update(){
+      var blocks=[],cur='';
+      for(var j=0;j<text.length;j++){cur+=text[j];if(cuts[j]){blocks.push(cur);cur='';}}
+      if(cur)blocks.push(cur);
+      out.innerHTML='';
+      blocks.forEach(function(b){out.appendChild(mk('span','chip',b));});
+      msg.textContent='你切成 '+blocks.length+' 块。';
+    }
+    function build(){
+      box.innerHTML='';
+      for(var i=0;i<text.length;i++){
+        box.appendChild(mk('span','ch',text[i]));
+        if(i<text.length-1){
+          var g=mk('span','gap');
+          g.setAttribute('data-i',i);box.appendChild(g);
+        }
+      }
+      update();
+    }
+    box.addEventListener('click',function(e){
+      var g=e.target.closest('.gap');if(!g)return;
+      var i=+g.getAttribute('data-i');cuts[i]=!cuts[i];
+      if(cuts[i])g.classList.add('on');else g.classList.remove('on');
+      update();
+    });
+    on('w-fenci-model',function(){
+      out.innerHTML='';
+      model.forEach(function(b){out.appendChild(mk('span','chip',b));});
+      msg.textContent='模型的切法（示意）：'+model.length+' 块。跟你切的比一比，哪几块不一样。';
+    });
+    on('w-fenci-clear',function(){cuts={};build();msg.textContent='清空了，整句又变回一块。';});
+    build();
+  })();
+
+  /* B 一次只接一块 */
+  (function(){
+    var root=$('w-next');if(!root)return;
+    var seq=['安静','两','个','字','。'],i=0;
+    var chips=$('w-next-chips'),msg=$('w-next-msg'),inline=$('w-next-inline'),btn=$('w-next-btn');
+    function draw(){
+      inline.textContent=seq.slice(0,i).join('');
+      chips.innerHTML='';
+      seq.slice(0,i).forEach(function(b){chips.appendChild(mk('span','chip',b));});
+    }
+    btn.addEventListener('click',function(){
+      if(i>=seq.length)return;
+      i++;draw();
+      msg.textContent='已接 '+i+' 块。一次只长一块。';
+      if(i===seq.length){btn.disabled=true;msg.textContent='接完了：共 '+i+' 块。每一步只猜一块，猜完再猜下一块。';}
+    });
+    on('w-next-reset',function(){i=0;btn.disabled=false;draw();msg.textContent='已接 0 块。';});
+    draw();
+  })();
+
+  /* C 候选排队，选一次可能换名次 */
+  (function(){
+    var root=$('w-queue');if(!root)return;
+    var cands=[['安静',48],['作业',26],['值日',18],['一个名字',8]];
+    var bars=$('w-queue-bars'),out=$('w-queue-out'),msg=$('w-queue-msg'),hist=[];
+    cands.forEach(function(c){
+      bars.appendChild(mk('span','',c[0]));
+      var wrap=mk('div',''),bar=mk('div','bar');
+      bar.style.width=c[1]+'%';wrap.appendChild(bar);bars.appendChild(wrap);
+      bars.appendChild(mk('span','',c[1]+'%'));
+    });
+    on('w-queue-btn',function(){
+      var r=Math.random()*100,idx=0,acc=0;
+      for(var i=0;i<cands.length;i++){acc+=cands[i][1];if(r<acc){idx=i;break;}}
+      hist.push(cands[idx][0]+'（第'+(idx+1)+'名）');
+      out.innerHTML='';
+      out.appendChild(mk('span','chip sel',cands[idx][0]));
+      msg.textContent='这次取了第 '+(idx+1)+' 名：'+cands[idx][0]+'。'+(idx>0?'名次靠后，答案就跟上次不一样了。':'');
+      if(hist.length>1)msg.textContent+=' 最近几次：'+hist.slice(-4).join(' / ')+'。';
+    });
+    on('w-queue-reset',function(){hist=[];out.textContent='（还没选）';msg.textContent='多数时候取第一名，有时取中间的。取中间那次，答案就变了。';});
+  })();
+
+  /* D 编号查表拼句 */
+  (function(){
+    var root=$('w-lookup');if(!root)return;
+    var items=[[21305,'今天'],[1043,'天气'],[917,'真'],[88,'好'],[3002,'，'],[7,'结束块']];
+    var nums=$('w-lookup-nums'),out=$('w-lookup-out'),msg=$('w-lookup-msg'),step=0,ended=false;
+    items.forEach(function(it){
+      var b=mk('button','',it[0]);
+      b.type='button';
+      b.addEventListener('click',function(){
+        if(ended)return;
+        if(step===0&&!out.querySelector('.chip'))out.textContent='';
+        if(it[1]==='结束块'){
+          out.appendChild(mk('span','chip end','结束块'));
+          ended=true;step++;
+          msg.textContent='碰到结束块，停。一共接了 '+step+' 步。';
+          return;
+        }
+        out.appendChild(mk('span','chip',it[1]));
+        step++;msg.textContent='第 '+step+' 步：编号 '+it[0]+' 查出来是「'+it[1]+'」。';
+      });
+      nums.appendChild(b);
+    });
+    on('w-lookup-reset',function(){
+      out.textContent='（还没接）';step=0;ended=false;msg.textContent='第 0 步。每一步只拿到一个编号。';
+    });
+  })();
+
+  /* E 坐标摆放 */
+  (function(){
+    var root=$('w-map');if(!root)return;
+    var words=['猫','小猫','石头','跑','考试'];
+    var placed={},sel=null;
+    var row=$('w-map-words'),grid=$('w-map-grid'),msg=$('w-map-msg');
+    var ref={0:'猫',1:'小猫',3:'跑',6:'石头',8:'考试'};
+    function draw(){
+      row.innerHTML='';
+      words.forEach(function(w){
+        var taken=Object.keys(placed).some(function(k){return placed[k]===w;});
+        if(taken)return;
+        var c=mk('span','chip'+(sel===w?' sel':''),w);
+        c.addEventListener('click',function(){sel=w;msg.textContent='选了「'+w+'」，再点一个格子。';draw();});
+        row.appendChild(c);
+      });
+      grid.innerHTML='';
+      for(var i=0;i<9;i++){
+        var c=mk('div','cell');
+        var w=null;
+        for(var k in placed){if(placed[k]===i)w=k;}
+        if(w){c.textContent=w;c.className='cell on';}
+        c.setAttribute('data-i',i);
+        c.addEventListener('click',function(e){
+          var idx=+e.currentTarget.getAttribute('data-i');
+          var here=null;
+          for(var k in placed){if(placed[k]===idx)here=k;}
+          if(here){delete placed[here];sel=here;msg.textContent='把「'+here+'」拿回来了。';draw();return;}
+          if(!sel){msg.textContent='先在左边点一个词。';return;}
+          placed[sel]=idx;
+          msg.textContent='「'+sel+'」放好了。';
+          sel=null;draw();
+        });
+        grid.appendChild(c);
+      }
+      if(sel===null&&!Object.keys(placed).length)msg.textContent='选一个词，再点格子。';
+    }
+    on('w-map-ref',function(){
+      msg.textContent='参考：猫和小猫挨着，跑挨着猫；石头和考试在另一头，离它们远。坐标是训练出来的，不是人一张张贴的。';
+    });
+    on('w-map-reset',function(){placed={};sel=null;draw();msg.textContent='选一个词，再点格子。';});
+    draw();
+  })();
+
+  /* F 注意力：点谁指谁 */
+  (function(){
+    var root=$('w-attn');if(!root)return;
+    var mode='heavy';
+    var data={
+      heavy:{x:'重',top:'书',w:{书:62,桌:21,上:9,太:5,了:3},why:'「重」说的是分量，书才有分量。'},
+      short:{x:'矮',top:'桌',w:{桌:58,书:24,上:11,太:4,了:3},why:'「矮」说的是高度，桌才有高度。'}
+    };
+    var sent=$('w-attn-sent'),bars=$('w-attn-bars'),msg=$('w-attn-msg');
+    function draw(){
+      var d=data[mode];
+      sent.innerHTML='';
+      ['书','放','桌','上','，','它','太',d.x,'了'].forEach(function(t){
+        var c=mk('span','chip'+(t==='它'?' sel':''),t);
+        if(t==='书'||t==='桌'||t==='上'){
+          c.style.cursor='pointer';
+          c.addEventListener('click',function(){
+            if(t===d.top){
+              msg.textContent='对了，指「'+t+'」。'+d.why;
+              bars.innerHTML='';
+              ['书','桌'].forEach(function(k){
+                bars.appendChild(mk('span','',k));
+                var wrap=mk('div',''),bar=mk('div','bar');
+                bar.style.width=d.w[k]+'%';wrap.appendChild(bar);bars.appendChild(wrap);
+                bars.appendChild(mk('span','',d.w[k]+'%'));
+              });
+            }else{
+              msg.textContent='再看一眼后面那个「'+d.x+'」：它更像在说谁？';
+            }
+          });
+        }
+        sent.appendChild(c);
+        sent.appendChild(document.createTextNode(' '));
+      });
+      bars.innerHTML='';msg.textContent='先读句子：它回头看了谁，看谁看得多，就指谁。';
+    }
+    on('w-attn-heavy',function(){mode='heavy';draw();});
+    on('w-attn-short',function(){mode='short';draw();});
+    draw();
+  })();
+
+  /* G 接到结束块 */
+  (function(){
+    var root=$('w-stop');if(!root)return;
+    var pool=['今年','天气','不错','，','适合','出门','。'];
+    var out=$('w-stop-out'),msg=$('w-stop-msg'),btn=$('w-stop-btn');
+    var i=0,stopAt=0,ended=false;
+    function reset(){
+      i=0;ended=false;btn.disabled=false;
+      stopAt=4+Math.floor(Math.random()*4);
+      out.textContent='（还没接）';
+      msg.textContent='按「接一块」开始。这一局停在哪，它自己定。';
+    }
+    btn.addEventListener('click',function(){
+      if(ended)return;
+      if(out.textContent==='（还没接）')out.textContent='';
+      if(i<stopAt){
+        out.appendChild(mk('span','chip',pool[i]));
+        i++;msg.textContent='已接 '+i+' 块。';
+        return;
+      }
+      out.appendChild(mk('span','chip end','结束块'));
+      ended=true;btn.disabled=true;
+      msg.textContent='碰到结束块，停在 '+i+' 块。再开一局，停的位置可能不一样。';
+    });
+    on('w-stop-reset',reset);
+    reset();
+  })();
+})();
+</script>
 <script>
 (function(){
   var KEY='lmcc-lv1-03-answers';
