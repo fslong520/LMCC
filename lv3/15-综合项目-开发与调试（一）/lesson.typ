@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈—〉｜NOAI〈—〉｜CAICP〈—〉
 = 综合项目-开发与调试（一）
 
 #objective[

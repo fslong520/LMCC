@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈考点18 规划与智能体〉｜NOAI〈B区〉｜CAICP〈AI知识〉
 = 智能体与工具调用-会自己动手的AI
 
 #objective[

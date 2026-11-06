@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈考点15 代码生成、编程基础〉｜NOAI〈A区〉｜CAICP〈AI知识＋Python〉
 = AI编程入门-让AI帮我写代码
 
 #objective[

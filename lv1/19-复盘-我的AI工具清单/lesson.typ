@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈LMCC 上机编程（语法基础）＋NOAI A区（待细化）〉｜NOAI〈A区〉｜CAICP〈Python〉
 = 复盘-我的AI工具清单
 
 == 〇、回顾（5分钟）

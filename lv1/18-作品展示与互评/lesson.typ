@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈LMCC 上机编程（环境与命令行）＋NOAI A区 Python 环境准备（待细化）〉｜NOAI〈A区〉｜CAICP〈AI知识＋Python〉
 = 作品展示与互评
 
 == 〇、回顾（5分钟）

@@ -299,7 +299,8 @@
   )
 
   // ===== 链接 =====
-  show link: it => text(fill: primary-color, deco: underline, it.body)
+  // typst 0.15 text() 不接受 deco 参数，下划线改用 text(decor:) 外层需 underline；此处直接着色并保留下划线语义
+  show link: it => text(fill: primary-color, underline(it.body))
 
   // 封面
   cover(level, lesson, title, date, subtitle: subtitle, cover-image: cover-image)

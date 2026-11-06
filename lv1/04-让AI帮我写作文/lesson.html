@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LV1-04 让AI帮我写作文 · 智国学堂 LMCC</title>
+<style>
+  input[type=text],input[type=number]{border:none;border-bottom:1.5px solid #cbd5e1;background:#f8fafc;border-radius:4px 4px 0 0;padding:4px 8px;font-size:15px;font-family:inherit;color:#1f2937;min-width:120px;outline:none}
+  input[type=text]:focus,input[type=number]:focus{border-bottom-color:#3b82f6;background:#eff6ff}
+  input[type=text].saved,input[type=number].saved{border-bottom-color:#22c55e}
+  textarea{border:1px solid #cbd5e1;border-radius:8px;padding:10px;font-size:15px;font-family:inherit;background:#f8fafc;outline:none;width:100%}
+  textarea:focus{border-color:#3b82f6;background:#eff6ff}
+  .round{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:14px 18px;margin:16px 0}
+  .round b{color:#1e3a8a}
+  .quote{background:#ffffff;border:1px solid #dbe3ee;border-left:4px solid #94a3b8;border-radius:8px;padding:12px 16px;margin:10px 0;line-height:1.9}
+  details{background:#f1f5f9;border:1px solid #cbd5e1;border-radius:10px;padding:12px 16px;margin:14px 0}
+  details summary{cursor:pointer;color:#1e3a8a;font-weight:600;font-size:15px}
+  figure{margin:20px 0;text-align:center}
+  figure svg{max-width:100%;height:auto}
+  figcaption{font-size:13px;color:#6b7280;margin-top:6px}
+  .savetip{position:fixed;right:18px;bottom:18px;background:#1e3a8a;color:#fff;font-size:13px;padding:7px 14px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none;font-family:inherit;z-index:99}
+  .savetip.show{opacity:.92}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14.5px}
+  th,td{border:1px solid #dbe3ee;padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#eff6ff;color:#1e3a8a;font-weight:600}
+  .check{background:#fefdf8;border:1px solid #fcd34d;border-radius:12px;padding:14px 18px;margin:16px 0}
+  .check h4{margin:0 0 10px 0;color:#92400e;font-size:16px}
+  .check ol{margin:0;padding-left:22px}
+  .check li{margin:7px 0;line-height:1.7}
+  .check input[type=checkbox]{width:17px;height:17px;margin-right:8px;vertical-align:-3px;cursor:pointer}
+  .key{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:12px 16px;margin:14px 0}
+  .key b{color:#047857}
+  .score{background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:14px 18px;margin:16px 0}
+  .score h4{margin:0 0 10px 0;color:#1d4ed8;font-size:16px}
+  @media print{.savetip{display:none}input[type=text],input[type=number],textarea{background:transparent;border-color:#94a3b8}details{display:block}details>*{display:block}}
+</style>
+</head>
+<body>
+
+<div style="background:#eef1f5;padding:36px 16px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','HarmonyOS Sans SC','Noto Sans CJK SC',sans-serif;color:#1f2937;line-height:1.85;font-size:15.5px">
+<div style="max-width:820px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 4px 24px rgba(15,23,42,.08);padding:48px 56px">
+
+<h1 style="font-size:27px;line-height:1.4;margin:0 0 6px 0;color:#111827;letter-spacing:.5px;text-align:center;font-weight:bold">让AI帮我写作文</h1>
+<p style="text-align:center;color:#6b7280;font-size:14px;margin:0 0 4px 0">智国学堂 TeachZero · CCF 大模型能力认证（LMCC）课程</p>
+<p style="text-align:center;color:#6b7280;font-size:14px;margin:0 0 0 0">会用 AI（应用体验篇）第 04 课</p>
+<hr style="height:3px;border:none;border-radius:2px;background:linear-gradient(90deg,transparent,#3b82f6,#8b5cf6,transparent);margin:22px 0 26px 0" />
+
+<p style="margin:16px 0;font-size:17px"><b>先有大纲，再有作文。</b></p>
+<p style="margin:16px 0;font-size:17px"><b>作文是改出来的。</b></p>
+<p style="margin:16px 0">今天两句话，走完整整一道真题：从审题、列大纲，到成文，再改三遍，最后打分。你会留下<b>四个版本</b>，每一版都打一次分——分数怎么涨上去的，你自己看得见。</p>
+
+<div class="round" style="background:#fff7ed;border:1px solid #fed7aa">
+  <p style="margin:0 0 8px 0"><b>今天五步（正常人写作文就是这么写的）：</b></p>
+  <ol style="margin:0;padding-left:22px">
+    <li style="margin:6px 0"><b>审题</b>：圈出题眼——写谁、写什么、什么体裁、多少字</li>
+    <li style="margin:6px 0"><b>列大纲</b>：定中心句、分段、每段写什么、用哪个细节</li>
+    <li style="margin:6px 0"><b>成文</b>：按大纲写</li>
+    <li style="margin:6px 0"><b>改</b>：按评分表找低分项，逐项改</li>
+    <li style="margin:6px 0"><b>定稿</b>：收口、查错别字、誊清</li>
+  </ol>
+  <p style="margin:10px 0 0 0;color:#92400e"><b>AI 全程只能用在这五步里，而「大纲定稿」和「打分」这两件事，只能你来。</b></p>
+</div>
+
+<figure>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif" text-anchor="middle">
+    <rect x="6" y="20" width="106" height="54" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.6"/>
+    <text x="59" y="43" fill="#1e3a8a" font-weight="700" font-size="14">① 审题</text>
+    <text x="59" y="62" fill="#475569" font-size="11.5">你圈题眼</text>
+
+    <line x1="114" y1="47" x2="128" y2="47" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <rect x="130" y="20" width="112" height="54" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2.2"/>
+    <text x="186" y="43" fill="#b45309" font-weight="700" font-size="14">② 列大纲</text>
+    <text x="186" y="62" fill="#92400e" font-size="11.5">AI草拟→你定稿</text>
+
+    <line x1="244" y1="47" x2="258" y2="47" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <rect x="260" y="20" width="106" height="54" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.6"/>
+    <text x="313" y="43" fill="#15803d" font-weight="700" font-size="14">③ 成文</text>
+    <text x="313" y="62" fill="#475569" font-size="11.5">AI 按大纲写</text>
+
+    <line x1="368" y1="47" x2="382" y2="47" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <rect x="384" y="20" width="106" height="54" rx="10" fill="#faf5ff" stroke="#8b5cf6" stroke-width="2.2"/>
+    <text x="437" y="43" fill="#6d28d9" font-weight="700" font-size="14">④ 改</text>
+    <text x="437" y="62" fill="#6d28d9" font-size="11.5">你打分→再改</text>
+
+    <line x1="492" y1="47" x2="506" y2="47" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#ar)"/>
+
+    <rect x="508" y="20" width="84" height="54" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.6"/>
+    <text x="550" y="43" fill="#1e3a8a" font-weight="700" font-size="14">⑤ 定稿</text>
+    <text x="550" y="62" fill="#475569" font-size="11.5">你收口</text>
+
+    <path d="M437 76 L437 100 L186 100 L186 76" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+    <text x="313" y="124" fill="#6d28d9" font-size="12.5">改 → 打分 → 再改：这一圈要转三遍</text>
+    <text x="300" y="152" fill="#94a3b8" font-size="12">四个版本都留着，最后比分数</text>
+    <text x="300" y="176" fill="#94a3b8" font-size="12">「大纲定稿」和「打分」两件事，只能你干，AI 不许代</text>
+  </g>
+</svg>
+<figcaption>五步走完，中间「改—打分」转三圈。</figcaption>
+</figure>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">〇、开场：同一道题，四个版本（8 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">0.1 先看一张表</h3>
+
+<p style="margin:12px 0">这道题是 <b>2025 年高考北京卷</b>的「当数字闪耀时」（真题原文见附录 D）。同一个人，四个版本，按今天的评分表各打一次分：</p>
+
+<table>
+  <tr><th style="width:16%">版本</th><th style="width:34%">做了什么</th><th style="width:14%">总分</th><th>主要扣在哪</th></tr>
+  <tr><td><b>初稿</b></td><td>拿到题目直接让 AI 写</td><td><b>55</b></td><td>选材空、语言全是套话</td></tr>
+  <tr><td><b>二稿</b></td><td>补了大纲：定了中心、定了三段</td><td><b>72</b></td><td>结构对了，细节还是假</td></tr>
+  <tr><td><b>三稿</b></td><td>塞进两个真细节、九查清完</td><td><b>84</b></td><td>结尾还想拔高</td></tr>
+  <tr><td><b>定稿</b></td><td>结尾砍掉、错别字清一遍</td><td><b>88</b></td><td>—</td></tr>
+</table>
+
+<div class="round">
+  <p style="margin:6px 0">1. 从 55 到 88，涨的这 33 分，是"写"出来的还是"改"出来的？<input type="text" placeholder="因为……" style="min-width:360px"></p>
+  <p style="margin:6px 0">2. 从初稿到二稿一跳涨 17 分——那一版多做了什么？<input type="text" placeholder="多做的是……" style="min-width:360px"></p>
+</div>
+
+<details>
+<summary>再想一层（先自己答完再点开）</summary>
+<p style="margin:8px 0">初稿到二稿那 17 分，多做的事只有一件：<b>列了大纲</b>。中心句从"明白了成长的意义"变成了"妈妈住院那晚我第一次煮面"，段落从"开头—经过—结尾"变成了"现场—出错—那句话—回家路上"。</p>
+<p style="margin:8px 0">这就是今天的第一个重点：<b>先有大纲，再有作文。</b>你只给 AI 一个题目，它给的就是大家都写的那篇。</p>
+</details>
+
+<div class="key">
+  <p style="margin:0"><b>今天只记一句原理：</b>它按「大多数人会怎么写」来猜（03 课讲过）。你不给大纲，它就照大多数人的平均作文给你。所以——<b>大纲你定，它只负责照着写。</b></p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #1d4ed8;line-height:1.4">一、正常人怎么写作文（10 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">1.1 五步，每步谁干</h3>
+
+<table>
+  <tr><th style="width:8%">步</th><th style="width:34%">做什么</th><th style="width:26%">谁干</th><th>你要交什么</th></tr>
+  <tr><td>①</td><td>审题：圈题眼——写谁、写什么、什么体裁、多少字</td><td>你</td><td>审题单四个空</td></tr>
+  <tr><td>②</td><td>列大纲：中心句、分段、每段写什么、用哪个细节</td><td><b>AI 草拟 → 你改 → 你定稿</b></td><td>大纲三稿</td></tr>
+  <tr><td>③</td><td>成文：按大纲写</td><td>AI</td><td>初稿</td></tr>
+  <tr><td>④</td><td>改：按评分表找低分项，逐项改</td><td>你指挥 + 你自己动手</td><td>二稿、三稿</td></tr>
+  <tr><td>⑤</td><td>定稿：收口、查错别字、誊清</td><td>你</td><td>定稿</td></tr>
+</table>
+
+<p style="margin:12px 0">如果跳过②，直接让 AI 写，会怎样？写一句你的猜想：</p>
+<textarea rows="2" placeholder="我猜它会……"></textarea>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">1.2 今天用它来打分：五维百分制</h3>
+
+<table>
+  <tr><th style="width:16%">维度</th><th style="width:10%">分值</th><th style="width:38%">看什么</th><th>怎么扣</th></tr>
+  <tr><td><b>① 审题</b></td><td>20</td><td>有没有扣住题眼，体裁对不对</td><td>跑题扣 10-20；体裁错扣 10</td></tr>
+  <tr><td><b>② 立意</b></td><td>20</td><td>有没有一句说得清的中心</td><td>没中心扣 10；中心空泛扣 5</td></tr>
+  <tr><td><b>③ 选材</b></td><td>20</td><td>有没有具体、真实的事和细节</td><td>全是大道理扣 10；细节假扣 5</td></tr>
+  <tr><td><b>④ 结构</b></td><td>20</td><td>有没有按大纲走、段落分得清</td><td>没分段扣 5；与大纲不符扣 5-10</td></tr>
+  <tr><td><b>⑤ 语言</b></td><td>20</td><td>顺不顺、<b>有没有 AI 味</b></td><td><b>九查每勾中一条扣 2 分</b></td></tr>
+</table>
+
+<div class="round" style="background:#fef2f2;border-color:#fecaca">
+  <p style="margin:0"><b>说清楚：</b>这张表是<b>课堂上自己用的简化百分制</b>，不是任何地区中考的官方评分细则。它不给你定级，只帮你回答一个问题——<b>这篇好在哪、差在哪</b>。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #f59e0b;line-height:1.4">二、示范：老师带做一道（16 分钟）</h2>
+
+<p style="margin:12px 0">题目（<b>2025 年高考北京卷</b>，原文照引）：</p>
+
+<div class="quote" style="border-left-color:#1d4ed8">
+生活中，到处都有数字在闪耀，如比赛记分牌、新年倒计时、车站电子时刻表、智能家电显示屏等。数字闪耀之时，可能是激动的时刻，可能是收获的见证，也可能是幸福的日常……<br>
+请以<b>「当数字闪耀时」</b>为题，写一篇<b>记叙文</b>。<br>
+<span style="color:#6b7280;font-size:14px">要求：思想健康；内容充实、合理，<b>有细节描写</b>；语言流畅，书写清晰。（真题不少于 700 字，本课写 300—400 字片段，只练审题和大纲）</span>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.1 审题：四问</h3>
+
+<table>
+  <tr><th style="width:22%">问</th><th style="width:30%">示范答案</th><th>为什么</th></tr>
+  <tr><td>写谁？</td><td>我自己，或我亲眼看见的人</td><td>记叙文要有人在场</td></tr>
+  <tr><td>写什么事？</td><td><b>一件事</b>——某个"数字"亮起来的那一小段时间</td><td>不是写一堆数字，是写一个时刻</td></tr>
+  <tr><td>什么体裁？</td><td><b>记叙文</b>（题目写死了）</td><td>写成议论文直接跑体裁，扣 10 分</td></tr>
+  <tr><td><b>题眼是哪个词？</b></td><td><b>"闪耀"</b>——不是数字本身，是它<b>亮起来的那一下</b></td><td>只写"数字"就成统计报告；只写"感慨"就没有那一刻</td></tr>
+</table>
+
+<p style="margin:12px 0">题目末尾那句"<b>有细节描写</b>"也是要害——它就是评分表里"<b>③ 选材</b>"那一维的判据。写不出细节，这一维至少扣 5 分。</p>
+
+<p style="margin:12px 0"><b>这道题最常见的三种跑题</b>：</p>
+<ol style="margin:12px 0 12px 22px;padding:0">
+  <li style="margin:5px 0"><b>写成统计报告</b>——通篇讲数字怎么涨、怎么重要，没有人、没有那一刻</li>
+  <li style="margin:5px 0"><b>只有感慨没有细节</b>——"我很激动""我热泪盈眶"，却说不出手上在干什么</li>
+  <li style="margin:5px 0"><b>数字选得太大太远</b>——GDP、人口、地球人口，写不具体，只能喊口号</li>
+</ol>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.2 让 AI 出大纲，看它有多平庸</h3>
+
+<p style="margin:12px 0">照这句发（你等下自己那道题也用这个句式）：</p>
+
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">帮我给《当数字闪耀时》列一个作文大纲，题目要求写记叙文、要有细节描写。只要大纲不要正文，分成三到四段，每段写清楚写什么。</pre>
+
+<p style="margin:12px 0"><b>它大概会给你这样一个大纲</b>（这是教学示例，你机器上的会略有不同）：</p>
+
+<div class="quote" style="border-left-color:#dc2626">
+<b>中心</b>：通过一个闪耀的数字，我感受到了生活的美好与温暖。<br>
+<b>第一段</b>：开头，生活中到处都有数字在闪耀，引出下文。<br>
+<b>第二段</b>：写一个让我印象深刻的数字，说说它为什么闪耀。<br>
+<b>第三段</b>：我深受感动，明白了数字背后蕴含着人们的努力和情感。<br>
+<b>第四段</b>：结尾，呼吁大家用心留意生活中那些闪耀的数字。
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.3 挑它的毛病：三处</h3>
+
+<table>
+  <tr><th style="width:16%">毛病</th><th style="width:34%">哪里不对</th><th>应该改成什么</th></tr>
+  <tr><td><b>中心是空话</b></td><td>"感受到了生活的美好与温暖"——换谁写都这句</td><td>换成一件具体的事：「期末考最后一分钟，倒计时牌从 00:01 跳到 00:00，我的笔刚好落下」</td></tr>
+  <tr><td><b>关键段没内容</b></td><td>"印象深刻的数字，说说为什么"——等于没说</td><td>把那一刻拆成"前—跳—后"三段：最后三分钟、跳表、铃响</td></tr>
+  <tr><td><b>全段是感受</b></td><td>"深受感动""明白了背后蕴含的情感"——说不出手上在干什么</td><td>换成动作：「铃响时我放下笔，发现笔杆上有一圈指甲印」</td></tr>
+</table>
+
+<p style="margin:12px 0">这三处毛病，正好对上九查的第 8 条（说感受不给动作）和第 6 条（大词）。而且它<b>连题目要求的"细节描写"一个字都没给</b>——这就是为什么它的大纲不能直接用。<b>大纲一平庸，正文一定平庸。</b></p>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">2.4 改好的大纲长什么样</h3>
+
+<div class="quote" style="border-left-color:#22c55e">
+<b>中心</b>：期末考最后一分钟，墙上的倒计时牌从 00:01 跳到 00:00，我手里的笔刚好落下。<br>
+<b>第一段（80字）</b>：直接进现场——考场后排，墙上红色倒计时牌，空调在响，前面同学在翻卷子。<br>
+<b>第二段（150字）</b>：最后三分钟我在算最后一道大题，笔尖抖，橡皮掉到地上，没敢弯腰去捡。<br>
+<b>第三段（100字）</b>：00:01 → 00:00，铃响，我放下笔，发现笔杆上印着一圈指甲印。<br>
+<b>第四段（40字）</b>：不总结，只写走出考场时回头看了一眼那块牌子。
+</div>
+
+<p style="margin:12px 0">对比看差别：<b>初版四段全是"要写什么"的占位，定稿四段全是"具体写什么"</b>；而且定稿每一段都是能看、能听、能摸的东西——这正是题目要求的"细节描写"。这就是大纲要做的事。</p>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #3b82f6;line-height:1.4">三、我的题：审题（10 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">3.1 挑一道</h3>
+
+<table>
+  <tr><th style="width:20%">出处</th><th style="width:26%">题目</th><th>体裁与要求</th></tr>
+  <tr><td>2025 高考北京卷</td><td><b>当数字闪耀时</b></td><td>记叙文，有细节描写（练习写 300-400 字片段）</td></tr>
+  <tr><td>2024 高考北京卷</td><td><b>打开</b></td><td>记叙文，有细节描写（练习写 300-400 字片段）</td></tr>
+  <tr><td>2023 高考新课标 I 卷</td><td><b>故事是有力量的</b></td><td>议论文（材料作文，偏难，只做审题练习）</td></tr>
+  <tr><td>2025 高考全国一卷</td><td>老舍／艾青／穆旦三则材料</td><td>议论文（最难，用来看审题门槛）</td></tr>
+</table>
+
+<p style="margin:12px 0">完整原文与出处见<b>附录 D</b>。这四道都是<b>真实高考真题</b>，已按教育部政务新媒体、央视网发布版本录入。老师也可以换成本地近三年中考真题——中考题字数要求更贴近你现在的水平。</p>
+
+<div class="round">
+  <p style="margin:6px 0">我选的是：<input type="text" placeholder="把题目抄全" style="min-width:380px"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">3.2 审题单：四个空</h3>
+
+<div class="round">
+  <p style="margin:8px 0"><b>① 写谁</b>：<input type="text" placeholder="我／某个人" style="min-width:260px"></p>
+  <p style="margin:8px 0"><b>② 写什么事</b>：<input type="text" placeholder="一件事／两件事／一个过程" style="min-width:300px"></p>
+  <p style="margin:8px 0"><b>③ 什么体裁、多少字</b>：<input type="text" placeholder="记叙文，练习写300-400字片段" style="min-width:320px"></p>
+  <p style="margin:8px 0"><b>④ 题眼是哪个词</b>（最关键）：<input type="text" placeholder="题眼是「……」" style="min-width:320px"></p>
+</div>
+
+<details>
+<summary>卡住了点这里：怎么找题眼</summary>
+<p style="margin:8px 0">题眼就是那个"换个词题目就变意思"的地方。三招：</p>
+<ul style="margin:8px 0 8px 22px;padding:0">
+  <li style="margin:5px 0"><b>删词法</b>：把题目里的词一个个删掉，删哪个题目就废了，那个就是要害</li>
+  <li style="margin:5px 0"><b>副词陷阱</b>：「那一刻」「也」「终于」「再」——这种小词最容易被忽略，也最容易跑题</li>
+  <li style="margin:5px 0"><b>问一句</b>：「这个题目如果写砸了，最可能砸在哪儿？」答案往往就是题眼</li>
+</ul>
+</details>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #f59e0b;line-height:1.4">四、我的题：大纲三稿（10 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">4.1 第一稿：让 AI 出（照抄这句）</h3>
+
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">帮我给《……（你的题目）》列一个作文大纲，只要大纲不要正文，分成三到四段，每段写清楚这一段具体写什么、用什么细节。</pre>
+
+<p style="margin:12px 0">它给你的大纲，抄下来：</p>
+<textarea rows="6" placeholder="AI 给的第一稿大纲……"></textarea>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">4.2 挑毛病：至少三处</h3>
+
+<div class="round">
+  <p style="margin:6px 0">毛病一（中心句是空话吗？）：<input type="text" placeholder="它的中心是「……」，太泛" style="min-width:360px"></p>
+  <p style="margin:6px 0">毛病二（关键段有没有具体内容？）：<input type="text" placeholder="第……段只写「……」" style="min-width:360px"></p>
+  <p style="margin:6px 0">毛病三（有没有全是感受的段？）：<input type="text" placeholder="第……段全是「我……」" style="min-width:340px"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">4.3 第二稿：你自己改（三个固定动作）</h3>
+
+<p style="margin:12px 0">改不动就照这三个动作做，做完就算改过：</p>
+<ol style="margin:12px 0 12px 22px;padding:0">
+  <li style="margin:5px 0"><b>把中心句改成人话</b>——写一件具体的事，别写"明白了什么道理"</li>
+  <li style="margin:5px 0"><b>删掉一段空话段</b>——"引出下文""点明主题"这种段直接砍</li>
+  <li style="margin:5px 0"><b>塞进两个只有你知道的细节</b>——几点的钟、谁说的哪句话、手上拿着什么</li>
+</ol>
+
+<textarea rows="6" placeholder="我改的第二稿大纲……"></textarea>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">4.4 定稿：交出去之前检查四样</h3>
+
+<div class="round">
+  <p style="margin:6px 0">☑ 有一句说得清的中心（写的是具体的事，不是道理）：<input type="text" placeholder="我的中心句是……" style="min-width:320px"></p>
+  <p style="margin:6px 0">☑ 分了几段、每段写什么：<input type="text" placeholder="……段：__／__段：__／__段：__" style="min-width:360px"></p>
+  <p style="margin:6px 0">☑ 两个真细节是哪两个：<input type="text" placeholder="①……　②……" style="min-width:360px"></p>
+  <p style="margin:6px 0">☑ 我改掉了 AI 的哪三处毛病：<input type="text" placeholder="……" style="min-width:360px"></p>
+</div>
+
+<div class="key">
+  <p style="margin:0"><b>大纲没过这一关，不许往下写。</b>它一平庸，正文一定平庸——今天的功夫就白费了。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #22c55e;line-height:1.4">五、按大纲写 ＋ 第一次打分（14 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.1 一句话让它写（照抄这句）</h3>
+
+<pre style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:14px 16px;overflow-x:auto;font-size:14.5px;line-height:1.7;margin:12px 0">按下面这个大纲写一篇 300-400 字的记叙文片段，一段一段按大纲来，不要自己加段也不要改中心，每段都要有能看见或听见的细节。大纲：……（贴你的定稿大纲）</pre>
+
+<textarea rows="2" placeholder="我实际发出去的那句……"></textarea>
+
+<p style="margin:12px 0">拿到初稿，存成 <code style="background:#eef1f4;border-radius:4px;padding:1px 5px">初稿.md</code>。<b>这一版一定要留着</b>，等下要跟后面的比分数。</p>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.2 先过九查</h3>
+
+<div class="check">
+<h4>AI 味九查 · 初稿</h4>
+<ol>
+  <li><input type="checkbox" data-k="a1"><b>假对比</b>：「不是X，而是Y」「不只是X，更是Y」「不在于X，而在于Y」</li>
+  <li><input type="checkbox" data-k="a2"><b>伪深度</b>：「本质上」「归根结底」「真正的核心是」</li>
+  <li><input type="checkbox" data-k="a3"><b>三个一组</b>：硬凑三点、整齐排比、连着几句一样长</li>
+  <li><input type="checkbox" data-k="a4"><b>空开场</b>：「随着…」「在这个…的时代」</li>
+  <li><input type="checkbox" data-k="a5"><b>拔高结尾</b>：「总之」「让我们一起」「书写…篇章」</li>
+  <li><input type="checkbox" data-k="a6"><b>大词</b>：「赋能」「底层逻辑」「闭环」「深度融合」</li>
+  <li><input type="checkbox" data-k="a7"><b>念不顺</b>：一句四个"的"、四字词一串、读着换气</li>
+  <li><input type="checkbox" data-k="a8"><b>说感受不给动作</b>：「我很感动」却说不出手上在干什么</li>
+  <li><input type="checkbox" data-k="a9"><b>模糊权威</b>：「研究表明」「大家都知道」</li>
+</ol>
+<p style="margin:10px 0 0 0">勾中的第一处，是哪一句？<input type="text" placeholder="它写「……」，这是第……条" style="min-width:380px"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">5.3 第一次打分（初稿）</h3>
+
+<div class="score">
+<h4>五维打分 · 初稿</h4>
+<table>
+  <tr><th style="width:14%">维度</th><th style="width:9%">满分</th><th style="width:15%">我给的分</th><th>为什么给这个分（一句话，必须写）</th></tr>
+  <tr><td>① 审题</td><td>20</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="因为……" style="min-width:220px"></td></tr>
+  <tr><td>② 立意</td><td>20</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="因为……" style="min-width:220px"></td></tr>
+  <tr><td>③ 选材</td><td>20</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="因为……" style="min-width:220px"></td></tr>
+  <tr><td>④ 结构</td><td>20</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="因为……" style="min-width:220px"></td></tr>
+  <tr><td>⑤ 语言</td><td>20</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="九查勾中……条，扣……分" style="min-width:220px"></td></tr>
+  <tr><td><b>总分</b></td><td>100</td><td><input type="number" min="0" max="100" placeholder="__"></td><td>五项加起来</td></tr>
+</table>
+</div>
+
+<div class="round" style="background:#fef2f2;border-color:#fecaca">
+  <p style="margin:0"><b>第一次一定打得不准。</b>没关系，你打三次，第三次就准了。<b>唯一不许偷懒的是"为什么"那一栏</b>——写不出理由的分，划掉重打。</p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #8b5cf6;line-height:1.4">六、改：对着低分项下手（16 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">6.1 找最低的那一维</h3>
+
+<div class="round">
+  <p style="margin:6px 0">我最低的一维是：<input type="text" placeholder="第……维，得了……分" style="min-width:280px"></p>
+  <p style="margin:6px 0">它低在哪（举一句原文）：<input type="text" placeholder="原文「……」，问题在……" style="min-width:380px"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">6.2 按维度改，每个维度有专用说法（挑一条抄）</h3>
+
+<table>
+  <tr><th style="width:14%">低分维度</th><th>照着这句发（可抄）</th></tr>
+  <tr><td><b>① 审题</b></td><td>你写偏了，题目要的是「……（题眼）」，不是「……（它写的）」。按题眼重写全文，别的都别改。</td></tr>
+  <tr><td><b>② 立意</b></td><td>你的中心是「明白了什么道理」，太空。改成一件具体的事：……（你的事）。全文围绕这件事重写。</td></tr>
+  <tr><td><b>③ 选材</b></td><td>第三段全是概括，没有一件具体的事。把这句「……（原文）」换成我真实经历的那件事：……（写清谁、在哪、做了什么）。</td></tr>
+  <tr><td><b>④ 结构</b></td><td>你没有按大纲走。按这个分段重写：……（贴大纲）。每段不超过……字。</td></tr>
+  <tr><td><b>⑤ 语言</b></td><td>把这九处改掉：……（列出九查勾中的）。不要用「不是…而是…」这种句式，直接说后半句的意思。</td></tr>
+</table>
+
+<textarea rows="2" placeholder="我实际发出去的那句……"></textarea>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">6.3 二稿 ＋ 第二次打分</h3>
+
+<p style="margin:12px 0">拿到二稿，存成 <code style="background:#eef1f4;border-radius:4px;padding:1px 5px">二稿.md</code>，再打一次分：</p>
+
+<div class="score">
+<h4>五维打分 · 二稿</h4>
+<table>
+  <tr><th style="width:14%">维度</th><th style="width:14%">我给的分</th><th style="width:12%">比初稿</th><th>为什么</th></tr>
+  <tr><td>① 审题</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>② 立意</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>③ 选材</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>④ 结构</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>⑤ 语言</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td><b>总分</b></td><td><input type="number" min="0" max="100" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td>跟初稿比，涨了几分</td></tr>
+</table>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #ef4444;line-height:1.4">七、润色 ＋ 自己去味 ＋ 第三次打分（16 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">7.1 去味三动作（这一节关掉 AI）</h3>
+
+<table>
+  <tr><th style="width:16%">动作</th><th style="width:42%">怎么做</th><th>为什么有效</th></tr>
+  <tr><td><b>A 念出来</b></td><td>把二稿读出声。读到哪句你绝不会这么说，那句就是。</td><td>眼睛会骗人，嘴巴不会。念不顺的地方，就是它最不像你的地方。</td></tr>
+  <tr><td><b>B 盖住重说</b></td><td>把 AI 那版盖住，自己说一遍这件事，说完再翻开对照。</td><td>AI 味的病根不是词，是骨架。在原句上换词，骨架还是它的。</td></tr>
+  <tr><td><b>C 删前补后</b></td><td>删掉被否定的那半句，补上"谁、在哪、做了什么、结果怎样"。</td><td>「不是工具，而是你会不会用」——删掉前半，剩下的"会不会用"是空话。补成「把工具接进每天要干的活里，它才有用」，才落地。</td></tr>
+</table>
+
+<p style="margin:12px 0"><b>护栏：</b>补具体要用<b>你自己真有的东西</b>，不许为了具体而编数。「效率提高了很多」换成「一天从三条变成一条」——但这个数得是你真做到的。没有就不写具体，宁可写"快了些"。</p>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">7.2 手改一处（不许用 AI）</h3>
+
+<p style="margin:12px 0">从二稿里挑<b>最像 AI 写的那一段</b>，抄到下面，然后自己动手改。不许让 AI 改——用 AI 改"AI 味重的东西"，它会改得更重。</p>
+
+<textarea rows="3" placeholder="原文这一段：……"></textarea>
+<textarea rows="5" placeholder="我自己改的：……"></textarea>
+
+<div class="round">
+  <p style="margin:6px 0">我改掉了哪几处：<input type="text" placeholder="①……　②……" style="min-width:380px"></p>
+  <p style="margin:6px 0">改完念一遍，顺了吗：<input type="text" placeholder="顺了／还有一句拗，是……" style="min-width:340px"></p>
+</div>
+
+<details>
+<summary>卡住了点这里：手改的六刀（按顺序砍）</summary>
+<ol style="margin:8px 0 8px 22px;padding:0">
+  <li style="margin:5px 0"><b>先砍开场的大道理</b>——从具体的事开始</li>
+  <li style="margin:5px 0"><b>再砍结尾的总结</b>——结尾说最后发生了什么</li>
+  <li style="margin:5px 0"><b>删假对比的前半</b>——「不是A而是B」只留 B 的意思，直接说</li>
+  <li style="margin:5px 0"><b>删「本质上」「研究表明」</b>——说不出是谁就删</li>
+  <li style="margin:5px 0"><b>大词换成你平时会说的词</b></li>
+  <li style="margin:5px 0"><b>补一件真事</b>——谁、在哪、做了什么</li>
+</ol>
+</details>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">7.3 三稿 ＋ 第三次打分</h3>
+
+<p style="margin:12px 0">把手改的成果并回全文，存成 <code style="background:#eef1f4;border-radius:4px;padding:1px 5px">三稿.md</code>，再打一次分：</p>
+
+<div class="score">
+<h4>五维打分 · 三稿</h4>
+<table>
+  <tr><th style="width:14%">维度</th><th style="width:14%">我给的分</th><th style="width:12%">比二稿</th><th>为什么</th></tr>
+  <tr><td>① 审题</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>② 立意</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>③ 选材</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>④ 结构</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="因为……" style="min-width:190px"></td></tr>
+  <tr><td>⑤ 语言</td><td><input type="number" min="0" max="20" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td><input type="text" placeholder="九查勾中……条" style="min-width:190px"></td></tr>
+  <tr><td><b>总分</b></td><td><input type="number" min="0" max="100" placeholder="__"></td><td><input type="text" placeholder="+/−" style="min-width:60px"></td><td>跟二稿比，涨了几分</td></tr>
+</table>
+</div>
+
+<div class="key">
+  <p style="margin:0"><b>这一节记一句：</b>润色这些活 AI 能干得漂亮，但它干得越漂亮越不像你。<b>最后那一刀必须你自己下。</b></p>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #ef4444;line-height:1.4">八、定稿 ＋ 回头看（12 分钟）</h2>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">8.1 定稿：只做三件事</h3>
+
+<ol style="margin:12px 0 12px 22px;padding:0">
+  <li style="margin:5px 0"><b>砍掉结尾的总结</b>——如果还有"总之""通过这件事我明白了"</li>
+  <li style="margin:5px 0"><b>念一遍</b>——读到拗口就拆句</li>
+  <li style="margin:5px 0"><b>查错别字和标点</b>——存成 <code style="background:#eef1f4;border-radius:4px;padding:1px 5px">定稿.md</code></li>
+</ol>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">8.2 四版分数并排</h3>
+
+<table>
+  <tr><th style="width:12%">版本</th><th style="width:12%">总分</th><th style="width:20%">涨分最多的一维</th><th>那一维为什么涨</th></tr>
+  <tr><td>初稿</td><td><input type="text" placeholder="__" style="min-width:60px"></td><td>—</td><td>—</td></tr>
+  <tr><td>二稿</td><td><input type="text" placeholder="__" style="min-width:60px"></td><td><input type="text" placeholder="第……维" style="min-width:100px"></td><td><input type="text" placeholder="因为……" style="min-width:200px"></td></tr>
+  <tr><td>三稿</td><td><input type="text" placeholder="__" style="min-width:60px"></td><td><input type="text" placeholder="第……维" style="min-width:100px"></td><td><input type="text" placeholder="因为……" style="min-width:200px"></td></tr>
+  <tr><td><b>定稿</b></td><td><input type="text" placeholder="__" style="min-width:60px"></td><td><input type="text" placeholder="第……维" style="min-width:100px"></td><td><input type="text" placeholder="因为……" style="min-width:200px"></td></tr>
+</table>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">8.3 答三问</h3>
+
+<div class="round">
+  <p style="margin:6px 0">1. 从初稿到定稿一共涨了几分？涨分最多的是哪一步带来的？<input type="text" placeholder="涨了……分，主要是……带来的" style="min-width:380px"></p>
+  <p style="margin:6px 0">2. "作文是改出来的"——照你今天自己的数据，具体指什么？<input type="text" placeholder="指……" style="min-width:360px"></p>
+  <p style="margin:6px 0">3. 如果重来一次，你会把时间多花在哪一步？<input type="text" placeholder="……" style="min-width:320px"></p>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">8.4 点题（教师讲 3 分钟）</h3>
+
+<p style="margin:12px 0">它为什么老给你一篇平均作文？因为它照"大多数人会怎么写"来猜，不是照"你想怎么写"。</p>
+<p style="margin:12px 0">而你身上那些别人写不出来的东西——九点半才动笔、猫被推下去三次又跳上来三次、手上的泡——它猜不到，因为它不在现场。<b>大纲就是把那些东西提前写进去；改，就是把它们一次次要回来。</b></p>
+<p style="margin:12px 0">今天你从 <input type="text" placeholder="__" style="min-width:56px"> 分改到 <input type="text" placeholder="__" style="min-width:56px"> 分。这个数不是老师给的，是你自己一分一分打出来的。</p>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:36px 0 14px 0;padding-left:12px;border-left:4px solid #64748b;line-height:1.4">九、存档 ＋ 作业（8 分钟）</h2>
+
+<p style="margin:12px 0"><b>存两个文件</b>（都在 `我的Agent/` 里）：</p>
+
+<ul style="margin:12px 0 12px 22px;padding:0">
+  <li style="margin:6px 0"><code style="background:#eef1f4;border-radius:4px;padding:1px 5px">04-好素材.txt</code>：定稿全文。将来那个 Agent 要学会"你说话的样子"，就得有你写的东西。</li>
+  <li style="margin:6px 0"><code style="background:#eef1f4;border-radius:4px;padding:1px 5px">04-作文改稿档案.md</code>：四版分数、每轮改了哪一维、九查扣分记录。以后写别的作文，照这个流程再走一遍。</li>
+</ul>
+
+<div class="round">
+  <p style="margin:6px 0">两个文件都存好了吗：<input type="text" placeholder="都好了／差……" style="min-width:300px"></p>
+</div>
+
+<p style="margin:12px 0"><b>作业</b>：回家用另一道真题（或老师给的那道），只做前三步——审题、AI 出大纲、自己改大纲。不写正文，下次带来一起看大纲。</p>
+
+<textarea rows="2" placeholder="我打算用哪道题……"></textarea>
+
+<hr style="height:1px;border:none;background:#e5e7eb;margin:30px 0 18px 0" />
+
+<div class="round" style="background:#eff6ff;border-color:#bfdbfe">
+  <p style="margin:0 0 6px 0"><b>今天带走四件事：</b></p>
+  <ol style="margin:0;padding-left:22px">
+    <li style="margin:5px 0"><b>先大纲后成文</b>：大纲你定稿，AI 只照写</li>
+    <li style="margin:5px 0"><b>五维打分</b>：审题／立意／选材／结构／语言，每维 20</li>
+    <li style="margin:5px 0"><b>一次只改一维</b>：先改最低的那一维</li>
+    <li style="margin:5px 0"><b>最后那一刀自己下</b>：九查清味，手改一处</li>
+  </ol>
+</div>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:40px 0 14px 0;padding-left:12px;border-left:4px solid #1d4ed8;line-height:1.4">附录 A · 五维评分表（可撕下来带走）</h2>
+
+<table>
+  <tr><th style="width:16%">维度</th><th style="width:10%">分值</th><th style="width:38%">看什么</th><th>怎么扣</th></tr>
+  <tr><td><b>① 审题</b></td><td>20</td><td>有没有扣住题眼，体裁对不对</td><td>跑题扣 10-20；体裁错扣 10</td></tr>
+  <tr><td><b>② 立意</b></td><td>20</td><td>有没有一句说得清的中心</td><td>没中心扣 10；中心空泛扣 5</td></tr>
+  <tr><td><b>③ 选材</b></td><td>20</td><td>有没有具体、真实的事和细节</td><td>全是大道理扣 10；细节假扣 5</td></tr>
+  <tr><td><b>④ 结构</b></td><td>20</td><td>有没有按大纲走、段落分得清</td><td>没分段扣 5；与大纲不符扣 5-10</td></tr>
+  <tr><td><b>⑤ 语言</b></td><td>20</td><td>顺不顺、有没有 AI 味</td><td>九查每勾中一条扣 2 分</td></tr>
+</table>
+
+<p style="margin:14px 0;color:#6b7280;font-size:13.5px">这是课堂自用的简化百分制，不是任何地区中考的官方评分细则。</p>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:40px 0 14px 0;padding-left:12px;border-left:4px solid #92400e;line-height:1.4">附录 B · AI 味九查卡（可撕下来带走）</h2>
+
+<table>
+  <tr><th style="width:6%">#</th><th style="width:24%">马脚</th><th style="width:34%">长什么样</th><th>一句话改法</th></tr>
+  <tr><td>1</td><td><b>假对比</b></td><td>不是X，而是Y／不只是X，更是Y／不在于X，而在于Y</td><td>不要用这种句式，直接说Y</td></tr>
+  <tr><td>2</td><td><b>伪深度</b></td><td>本质上／归根结底／真正的核心是</td><td>删掉"本质上"，直接说是什么</td></tr>
+  <tr><td>3</td><td><b>三个一组</b></td><td>硬凑三点、整齐排比、连着几句一样长</td><td>不要凑三点，该几点就几点</td></tr>
+  <tr><td>4</td><td><b>空开场</b></td><td>随着…的发展／在这个…的时代</td><td>从一件具体的事开始</td></tr>
+  <tr><td>5</td><td><b>拔高结尾</b></td><td>总之／让我们一起／书写…篇章</td><td>结尾写最后发生了什么，不总结</td></tr>
+  <tr><td>6</td><td><b>大词</b></td><td>赋能／底层逻辑／闭环／深度融合</td><td>换成我平时会说的词</td></tr>
+  <tr><td>7</td><td><b>念不顺</b></td><td>一句四个"的"、四字词一串、读着换气</td><td>拆成两句，每句不超过十五个字</td></tr>
+  <tr><td>8</td><td><b>说感受不给动作</b></td><td>我很感动／十分温暖，但说不出手上在干什么</td><td>别写感受，写我当时手上在做什么</td></tr>
+  <tr><td>9</td><td><b>模糊权威</b></td><td>研究表明／大家都知道／有专家指出</td><td>说不出是谁，就删掉这句</td></tr>
+</table>
+
+<p style="margin:14px 0"><b>优先级：第 1 条假对比最先清</b>——它藏得最深，看着最像金句，最容易被当成好句子留下。</p>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:40px 0 14px 0;padding-left:12px;border-left:4px solid #64748b;line-height:1.4">附录 C · 审题三招</h2>
+
+<table>
+  <tr><th style="width:18%">招</th><th>怎么做</th></tr>
+  <tr><td><b>删词法</b></td><td>把题目里的词一个个删掉，删哪个题目就废了，那个就是要害</td></tr>
+  <tr><td><b>副词陷阱</b></td><td>「那一刻」「也」「终于」「再」——这种小词最容易被忽略，也最容易跑题</td></tr>
+  <tr><td><b>问一句</b></td><td>「这个题目如果写砸了，最可能砸在哪儿？」答案往往就是题眼</td></tr>
+</table>
+
+<h2 style="color:#1e3a8a;font-weight:700;font-size:20px;margin:40px 0 14px 0;padding-left:12px;border-left:4px solid #b91c1c;line-height:1.4">附录 D · 高考真题原文（2023 / 2024 / 2025）</h2>
+
+<p style="margin:12px 0;color:#6b7280;font-size:13.5px">以下六道全部是<b>真实高考作文题</b>，按教育部政务新媒体「微言教育」、央视网发布版本录入。出处列在每道题后面。</p>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D1 · 2025 北京卷（第二节示范用的就是这道）</h3>
+
+<div class="quote">
+<b>（2）</b>生活中，到处都有数字在闪耀，如比赛记分牌、新年倒计时、车站电子时刻表、智能家电显示屏等。数字闪耀之时，可能是激动的时刻，可能是收获的见证，也可能是幸福的日常……<br>
+请以<b>「当数字闪耀时」</b>为题，写一篇记叙文。<br>
+<b>要求</b>：思想健康；内容充实、合理，<b>有细节描写</b>；语言流畅，书写清晰。<span style="color:#6b7280;font-size:13.5px">（不少于 700 字）</span>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D2 · 2024 北京卷</h3>
+
+<div class="quote">
+<b>（2）</b>个人成长需要打开视野，人际交往需要打开心扉，科技创新需要打开思路……打开，发现新的自己；打开，带来新的气象。每一次"打开"，都有一段故事。<br>
+请以<b>「打开」</b>为题目，写一篇记叙文。<br>
+<b>要求</b>：思想健康；内容充实、合理，<b>有细节描写</b>；语言流畅，书写清晰。<span style="color:#6b7280;font-size:13.5px">（不少于 700 字；北京卷此题为二选一，另一题是议论文《历久弥新》）</span>
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D3 · 2025 全国一卷（三则材料，最难）</h3>
+
+<div class="quote">
+<i>他想要给孩子们唱上一段，可是心里直翻腾，开不了口。</i>——老舍《鼓书艺人》<br>
+<i>假如我是一只鸟，我也应该用嘶哑的喉咙歌唱</i>——艾青《我爱这土地》<br>
+<i>我要以带血的手和你们一一拥抱，因为一个民族已经起来</i>——穆旦《赞美》<br>
+以上材料引发了你怎样的联想和思考？请写一篇文章。<br>
+<b>要求</b>：选准角度，确定立意，明确文体，自拟标题；不要套作，不得抄袭；不得泄露个人信息；不少于 800 字。
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D4 · 2025 全国二卷</h3>
+
+<div class="quote">
+"昨夜闲潭梦落花""我欲因之梦吴越""铁马冰河入梦来"……梦往往以一种独特的方式呈现我们的感受和期冀，为我们打开更浩瀚的天空。我们也常常向别人讲述自己的梦，用文字记录自己的梦，以行动实现自己的梦。<br>
+如果有一天，我们能够将梦赠予他人……<br>
+以上材料引发了你怎样的联想和思考？请写一篇文章。<br>
+<b>要求</b>：选准角度，确定立意，明确文体，自拟标题；不要套作，不得抄袭；不得泄露个人信息；不少于 800 字。
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D5 · 2024 新课标 I 卷（和我们这门课最贴）</h3>
+
+<div class="quote">
+随着互联网的普及、人工智能的应用，越来越多的问题能很快得到答案。那么，我们的问题是否会越来越少？<br>
+以上材料引发了你怎样的联想和思考？请写一篇文章。<br>
+<b>要求</b>：选准角度，确定立意，明确文体，自拟标题；不要套作，不得抄袭；不得泄露个人信息；不少于 800 字。
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">D6 · 2023 新课标 I 卷</h3>
+
+<div class="quote">
+好的故事，可以帮我们更好地表达和沟通，可以触动心灵、启迪智慧；好的故事，可以改变一个人的命运，可以展现一个民族的形象……故事是有力量的。<br>
+以上材料引发了你怎样的联想和思考？请写一篇文章。<br>
+<b>要求</b>：选准角度，确定立意，明确文体，自拟标题；不要套作，不得抄袭；不得泄露个人信息；不少于 800 字。
+</div>
+
+<h3 style="color:#1e3a8a;font-weight:700;font-size:17px;margin:26px 0 10px 0">出处</h3>
+
+<table>
+  <tr><th style="width:26%">年份·卷别</th><th>发布来源</th></tr>
+  <tr><td>2025 各卷</td><td>央视网转「微言教育」（教育部政务新媒体），2025-06-07</td></tr>
+  <tr><td>2024 各卷</td><td>央视网转「微言教育」，2024-06-07</td></tr>
+  <tr><td>2023 各卷</td><td>教育部政务新媒体，2023-06-09</td></tr>
+</table>
+
+<p style="margin:14px 0;color:#6b7280;font-size:13.5px">本课 2026-11-04 联网核对过原文。若今后年份更新，请以当年官方发布为准。</p>
+
+<p style="margin:24px 0 0 0;color:#9ca3af;font-size:13px;text-align:center">填写内容自动存在本机浏览器，换机器就没了。重要的还是抄到纸上。</p>
+
+</div>
+</div>
+
+<div class="savetip" id="savetip">已保存</div>
+
+<script>
+(function(){
+  var KEY='lmcc-lv1-04-answers';
+  var inputs=[].slice.call(document.querySelectorAll('input[type=text],input[type=number],textarea,input[type=checkbox]'));
+  var saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ saved={}; }
+  var tip=document.getElementById('savetip'), timer=null;
+  function flash(){
+    tip.classList.add('show');
+    clearTimeout(timer);
+    timer=setTimeout(function(){ tip.classList.remove('show'); },900);
+  }
+  function store(){
+    try{ localStorage.setItem(KEY, JSON.stringify(saved)); flash(); }catch(e){}
+  }
+  inputs.forEach(function(el){
+    var k=el.dataset.k;
+    if(!k){ k='q'+inputs.indexOf(el); el.dataset.k=k; }
+    if(el.type==='checkbox'){
+      if(saved[k]==='1'){ el.checked=true; }
+      el.addEventListener('change',function(){ saved[k]=el.checked?'1':''; store(); });
+    } else {
+      if(saved[k]){ el.value=saved[k]; el.classList.add('saved'); }
+      el.addEventListener('input',function(){
+        saved[k]=el.value;
+        el.classList.toggle('saved', el.value.length>0);
+        store();
+      });
+    }
+  });
+  window.addEventListener('beforeprint',function(){
+    inputs.forEach(function(el){ if(el.type!=='checkbox'){ el.setAttribute('value', el.value); } });
+    document.querySelectorAll('details').forEach(function(d){ d.open=true; });
+  });
+})();
+</script>
+</body>
+</html>

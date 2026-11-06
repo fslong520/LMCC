@@ -7,6 +7,7 @@
   date: "2026年",
 )
 
+// 三体系考点：LMCC〈考点15 API调用〉｜NOAI〈A区〉｜CAICP〈AI知识＋Python〉
 = API初识-程序如何调用AI
 
 #objective[
